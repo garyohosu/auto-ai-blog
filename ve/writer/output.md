@@ -1,9 +1,9 @@
-# Writer Output: 2026-02-18
+# Writer Output: 2026-02-19
 
 ## Generated Article
-- File: `2026-02-18-ai-customer-support-chatbot-guide.md`
-- Title: AIチャットボットでカスタマーサポートを自動化する方法【導入手順つき】
-- Character count: 7546
+- File: `2026-02-19-best-ai-video-generators.md`
+- Title: 【2026年】AI動画生成ツール おすすめ6選｜Runway・Pika・Soraを徹底比較
+- Character count: 6877
 - Status: ✅ Complete
 - AI Summary Optimization: ✅ Included
 

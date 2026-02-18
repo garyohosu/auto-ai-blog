@@ -1,17 +1,17 @@
-# Writer Input: 2026-02-18
+# Writer Input: 2026-02-19
 
 ## Selected Keyword
-- Slug: ai-customer-support-chatbot-guide
-- Title: AIチャットボットでカスタマーサポートを自動化する方法【導入手順つき】
-- Tags: AIチャットボット, カスタマーサポート, 自動化
+- Slug: best-ai-video-generators
+- Title: 【2026年】AI動画生成ツール おすすめ6選｜Runway・Pika・Soraを徹底比較
+- Tags: AI動画生成, Runway, Sora
 
 ## SEO Instructions
 # SEO Keyword Selection: 2026-02-18
 
 ## 選定キーワード
-- slug: ai-customer-support-chatbot-guide
-- title: AIチャットボットでカスタマーサポートを自動化する方法【導入手順つき】
-- tags: [AIチャットボット, カスタマーサポート, 自動化]
+- slug: best-ai-video-generators
+- title: 【2026年】AI動画生成ツール おすすめ6選｜Runway・Pika・Soraを徹底比較
+- tags: [AI動画生成, Runway, Sora]
 
 ## 競合分析
 - 既存上位記事: 3000字前後

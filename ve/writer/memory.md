@@ -43,3 +43,13 @@ Writer Agent の記事生成履歴を記録します。
 - Tags: AIチャットボット, カスタマーサポート, 自動化
 - Quality: ✅  Pass (AI-optimized)
 - AI Summary: ✅ Optimized for Google AI Overview, ChatGPT, Perplexity
+
+
+
+## 2026-02-19
+- Keyword: best-ai-video-generators
+- Title: 【2026年】AI動画生成ツール おすすめ6選｜Runway・Pika・Soraを徹底比較
+- Characters: 6877
+- Tags: AI動画生成, Runway, Sora
+- Quality: ✅  Pass (AI-optimized)
+- AI Summary: ✅ Optimized for Google AI Overview, ChatGPT, Perplexity

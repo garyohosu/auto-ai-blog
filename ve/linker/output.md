@@ -1,7 +1,7 @@
 # Linker Agent - リンク処理結果
 
-**日時**: 2026-02-18T13:17:38.181Z
-**記事**: _posts/2026-02-18-ai-customer-support-chatbot-guide.md
+**日時**: 2026-02-18T22:30:59.086Z
+**記事**: _posts/2026-02-19-best-ai-video-generators.md
 
 ---
 
