@@ -3,6 +3,7 @@ layout: post
 title: "【2026年】AI翻訳ツール おすすめ7選｜DeepL vs Google翻訳 vs ChatGPT"
 date: 2026-02-18 00:00:00 +0900
 tags: ["AI翻訳","DeepL","多言語"]
+image: "/assets/images/2026-02-18-best-ai-translation-tools-hero.png"
 ---
 
 # 【2026年】AI翻訳ツール おすすめ7選｜DeepL vs Google翻訳 vs ChatGPT

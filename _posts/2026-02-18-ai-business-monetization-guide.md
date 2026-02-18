@@ -3,6 +3,7 @@ layout: post
 title: "AIビジネス完全ガイド｜2026年版収益化・副業から起業まで"
 date: 2026-02-18 00:00:00 +0900
 tags: ["AIビジネス","収益化","副業"]
+image: "/assets/images/2026-02-18-ai-business-monetization-guide-hero.png"
 ---
 
 ## はじめに
