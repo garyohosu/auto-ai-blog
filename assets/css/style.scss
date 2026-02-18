@@ -1,0 +1,77 @@
+---
+---
+
+// Minima の content-width を上書き（デフォルト ~800px → 1100px）
+$content-width: 1100px;
+$spacing-unit:  30px;
+
+@import "minima";
+
+// ── コンテンツ幅の拡張 ─────────────────────────────────────────
+.wrapper {
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+}
+
+@media screen and (min-width: 1400px) {
+  .wrapper {
+    max-width: calc(1300px - (#{$spacing-unit} * 2));
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    max-width: calc(100% - #{$spacing-unit});
+  }
+}
+
+// ── 記事本文のスタイル改善 ──────────────────────────────────────
+.post-content {
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: block;
+    margin: 1.5rem auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+
+    th, td {
+      padding: 0.6rem 1rem;
+      border: 1px solid #e0e0e0;
+      text-align: left;
+    }
+
+    th {
+      background: #f4f7ff;
+      font-weight: 600;
+    }
+
+    tr:hover td {
+      background: #f8f9fa;
+    }
+  }
+
+  pre, code {
+    border-radius: 4px;
+  }
+
+  pre {
+    padding: 1rem 1.2rem;
+  }
+
+  h2 {
+    border-bottom: 2px solid #e8e8e8;
+    padding-bottom: 0.3rem;
+    margin-top: 2rem;
+  }
+
+  h3 {
+    margin-top: 1.5rem;
+  }
+}
