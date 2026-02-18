@@ -20,7 +20,7 @@ AIプレゼン作成ツールは、**構成案の自動生成・文章の整形�
 
 
 
-![Decision tree or guide diagram for choosing the best ai presentation tools solution](/assets/images/2026-02-18-ai-presentation-tools-1.png)
+![Decision tree or guide diagram for choosing the best ai presentation tools solution]({{ "/assets/images/2026-02-18-ai-presentation-tools-1.png" | relative_url }})
 
 ## AIプレゼン作成ツールの選び方（失敗しない基準）
 
@@ -74,7 +74,7 @@ Gammaの魅力は、**ドキュメントのように書いた文章を、スラ�
 
 
 
-![Professional illustration for blog section about 2) Beautiful.ai：デザインが崩れない“自動レイアウト特化” related to ai presentation tools](/assets/images/2026-02-18-ai-presentation-tools-2.png)
+![Professional illustration for blog section about 2) Beautiful.ai：デザインが崩れない“自動レイアウト特化” related to ai presentation tools]({{ "/assets/images/2026-02-18-ai-presentation-tools-2.png" | relative_url }})
 
 ## 2) Beautiful.ai：デザインが崩れない“自動レイアウト特化”
 
@@ -125,7 +125,7 @@ Tomeは、短いプロンプトからストーリー仕立てのページ/スラ
 
 
 
-![Professional illustration for blog section about 5) Microsoft Copilot（PowerPoint）：既存PPT文化 related to ai presentation tools](/assets/images/2026-02-18-ai-presentation-tools-3.png)
+![Professional illustration for blog section about 5) Microsoft Copilot（PowerPoint）：既存PPT文化 related to ai presentation tools]({{ "/assets/images/2026-02-18-ai-presentation-tools-3.png" | relative_url }})
 
 ## 5) Microsoft Copilot（PowerPoint）：既存PPT文化なら最短距離
 
@@ -192,7 +192,7 @@ CTA設計（資料→問い合わせ導線）も重要なら、こちらも参�
 
 
 
-![FAQ illustration showing common questions about ai presentation tools with answer bubbles](/assets/images/2026-02-18-ai-presentation-tools-4.png)
+![FAQ illustration showing common questions about ai presentation tools with answer bubbles]({{ "/assets/images/2026-02-18-ai-presentation-tools-4.png" | relative_url }})
 
 ## よくある質問（FAQ）
 
@@ -215,7 +215,7 @@ PowerPoint文化なら、**Copilot（PowerPoint）**が最短です。次点で�
 
 
 
-![Summary infographic of key takeaways and next steps for ai presentation tools](/assets/images/2026-02-18-ai-presentation-tools-5.png)
+![Summary infographic of key takeaways and next steps for ai presentation tools]({{ "/assets/images/2026-02-18-ai-presentation-tools-5.png" | relative_url }})
 
 ## まとめ：迷ったら「用途」で1つ決めて、今日1本作る
 

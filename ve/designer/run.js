@@ -238,9 +238,9 @@ async function main() {
         // マーカーを Markdown 画像記法に置換
         content = content.replace(
           fullMatch.trim(),
-          `\n![${description}](${relativeInlinePath})\n`
+          `\n![${description}]({{ "${relativeInlinePath}" | relative_url }})\n`
         );
-        log(`✅ マーカー → ![...](${relativeInlinePath}) に置換`);
+        log(`✅ マーカー → ![...]({{ "${relativeInlinePath}" | relative_url }}) に置換`);
       }
 
       fs.writeFileSync(fullArticlePath, content, 'utf8');

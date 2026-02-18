@@ -10,7 +10,7 @@ image: /assets/images/2026-02-18-best-free-ai-image-generators.png
 ---
 
 
-![Professional illustration for blog section about AI画像生成ツールとは？2026年の最新事情 related to best free ai image generators](/assets/images/2026-02-18-best-free-ai-image-generators-1.png)
+![Professional illustration for blog section about AI画像生成ツールとは？2026年の最新事情 related to best free ai image generators]({{ "/assets/images/2026-02-18-best-free-ai-image-generators-1.png" | relative_url }})
 
 ## AI画像生成ツールとは？2026年の最新事情
 
@@ -38,7 +38,7 @@ AI画像生成ツールを使えば、**テキストを入力するだけで高�
 
 
 
-![Professional illustration for blog section about 各ツール詳細レビュー related to best free ai image generators](/assets/images/2026-02-18-best-free-ai-image-generators-2.png)
+![Professional illustration for blog section about 各ツール詳細レビュー related to best free ai image generators]({{ "/assets/images/2026-02-18-best-free-ai-image-generators-2.png" | relative_url }})
 
 ## 各ツール詳細レビュー
 
@@ -216,7 +216,7 @@ Microsoft 365に統合されたAI画像生成。Bing Image Creatorベース。
 
 
 
-![FAQ illustration showing common questions about best free ai image generators with answer bubbles](/assets/images/2026-02-18-best-free-ai-image-generators-3.png)
+![FAQ illustration showing common questions about best free ai image generators with answer bubbles]({{ "/assets/images/2026-02-18-best-free-ai-image-generators-3.png" | relative_url }})
 
 ## よくある質問（FAQ）
 
@@ -233,7 +233,7 @@ A. Canva AI、DALL-E 3（ChatGPTアプリ）、Ideogramはスマホアプリに�
 
 
 
-![Summary infographic of key takeaways and next steps for best free ai image generators](/assets/images/2026-02-18-best-free-ai-image-generators-4.png)
+![Summary infographic of key takeaways and next steps for best free ai image generators]({{ "/assets/images/2026-02-18-best-free-ai-image-generators-4.png" | relative_url }})
 
 ## まとめ
 

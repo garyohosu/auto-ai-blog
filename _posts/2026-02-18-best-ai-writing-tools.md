@@ -10,7 +10,7 @@ image: /assets/images/2026-02-18-best-ai-writing-tools.png
 ---
 
 
-![Step-by-step workflow diagram illustrating how to use best ai writing tools](/assets/images/2026-02-18-best-ai-writing-tools-1.png)
+![Step-by-step workflow diagram illustrating how to use best ai writing tools]({{ "/assets/images/2026-02-18-best-ai-writing-tools-1.png" | relative_url }})
 
 ## AI文章作成ツールで執筆時間を1/10にする方法
 
@@ -40,7 +40,7 @@ image: /assets/images/2026-02-18-best-ai-writing-tools.png
 
 
 
-![Decision tree or guide diagram for choosing the best best ai writing tools solution](/assets/images/2026-02-18-best-ai-writing-tools-2.png)
+![Decision tree or guide diagram for choosing the best best ai writing tools solution]({{ "/assets/images/2026-02-18-best-ai-writing-tools-2.png" | relative_url }})
 
 ## 用途別 おすすめツール詳細
 
@@ -166,7 +166,7 @@ Google Docs、Sheetsとシームレスに連携。リサーチ力が高い。
 
 
 
-![FAQ illustration showing common questions about best ai writing tools with answer bubbles](/assets/images/2026-02-18-best-ai-writing-tools-3.png)
+![FAQ illustration showing common questions about best ai writing tools with answer bubbles]({{ "/assets/images/2026-02-18-best-ai-writing-tools-3.png" | relative_url }})
 
 ## よくある質問（FAQ）
 
@@ -183,7 +183,7 @@ A. はい。ほとんどのツールが英語に対応しており、多くは�
 
 
 
-![Summary infographic of key takeaways and next steps for best ai writing tools](/assets/images/2026-02-18-best-ai-writing-tools-4.png)
+![Summary infographic of key takeaways and next steps for best ai writing tools]({{ "/assets/images/2026-02-18-best-ai-writing-tools-4.png" | relative_url }})
 
 ## まとめ
 

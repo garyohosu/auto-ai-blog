@@ -11,7 +11,7 @@ image: "/assets/images/2026-02-18-ai-customer-support-chatbot-guide-hero.png"
 
 
 
-![Professional illustration for blog section about この記事で分かること related to ai customer support chatbot guide](/assets/images/2026-02-18-ai-customer-support-chatbot-guide-1.png)
+![Professional illustration for blog section about この記事で分かること related to ai customer support chatbot guide]({{ "/assets/images/2026-02-18-ai-customer-support-chatbot-guide-1.png" | relative_url }})
 
 ## この記事で分かること
 - **ai customer support chatbot guide** として、AIチャットボットでカスタマーサポートを自動化する全体像（目的設計〜運用改善）  
@@ -68,7 +68,7 @@ AIチャットボットには大きく2系統あります。導入時点で混�
 
 
 
-![Professional illustration for blog section about ai customer support chatbot guide：導入前に決め related to ai customer support chatbot guide](/assets/images/2026-02-18-ai-customer-support-chatbot-guide-2.png)
+![Professional illustration for blog section about ai customer support chatbot guide：導入前に決め related to ai customer support chatbot guide]({{ "/assets/images/2026-02-18-ai-customer-support-chatbot-guide-2.png" | relative_url }})
 
 ## ai customer support chatbot guide：導入前に決めるべきKPI（失敗しない設計）
 ツール選定の前に、成功条件を数値で定義します。KPIがないと「便利そう」で終わり、改善の打ち手も迷子になります。
@@ -143,7 +143,7 @@ AIチャットボットには大きく2系統あります。導入時点で混�
 
 
 
-![Step-by-step workflow diagram illustrating how to use ai customer support chatbot guide](/assets/images/2026-02-18-ai-customer-support-chatbot-guide-3.png)
+![Step-by-step workflow diagram illustrating how to use ai customer support chatbot guide]({{ "/assets/images/2026-02-18-ai-customer-support-chatbot-guide-3.png" | relative_url }})
 
 ## ai customer support chatbot guide：導入5ステップ（そのまま使える手順）
 ここからが実践編です。最短で成果を出すための「5ステップ」を、運用まで含めてまとめます。
@@ -265,7 +265,7 @@ AIチャットボットには大きく2系統あります。導入時点で混�
 
 
 
-![FAQ illustration showing common questions about ai customer support chatbot guide with answer bubbles](/assets/images/2026-02-18-ai-customer-support-chatbot-guide-4.png)
+![FAQ illustration showing common questions about ai customer support chatbot guide with answer bubbles]({{ "/assets/images/2026-02-18-ai-customer-support-chatbot-guide-4.png" | relative_url }})
 
 ## FAQ（ai customer support chatbot guide）
 ### Q1. ルールベースと生成AI、結局どちらから始めるべき？
@@ -302,7 +302,7 @@ AIチャットボットには大きく2系統あります。導入時点で混�
 
 
 
-![Summary infographic of key takeaways and next steps for ai customer support chatbot guide](/assets/images/2026-02-18-ai-customer-support-chatbot-guide-5.png)
+![Summary infographic of key takeaways and next steps for ai customer support chatbot guide]({{ "/assets/images/2026-02-18-ai-customer-support-chatbot-guide-5.png" | relative_url }})
 
 ## まとめ（ai customer support chatbot guide）：次にやること（CTA）
 AIチャットボットでカスタマーサポートを自動化する鍵は、ツール選び以上に**スコープ設計・ナレッジ整備・ガードレール・KPI運用**です。まずは上位FAQから小さく始め、週次で改善すれば、自己解決率20〜40%を狙える現実的なラインが見えてきます。

@@ -7,7 +7,7 @@ image: "/assets/images/2026-02-18-ai-business-monetization-guide-hero.png"
 ---
 
 
-![Professional illustration for blog section about はじめに related to ai business monetization guide](/assets/images/2026-02-18-ai-business-monetization-guide-1.png)
+![Professional illustration for blog section about はじめに related to ai business monetization guide]({{ "/assets/images/2026-02-18-ai-business-monetization-guide-1.png" | relative_url }})
 
 ## はじめに
 
@@ -36,7 +36,7 @@ image: "/assets/images/2026-02-18-ai-business-monetization-guide-hero.png"
 
 
 
-![Professional illustration for blog section about AIビジネスとは？基本概念の整理 related to ai business monetization guide](/assets/images/2026-02-18-ai-business-monetization-guide-2.png)
+![Professional illustration for blog section about AIビジネスとは？基本概念の整理 related to ai business monetization guide]({{ "/assets/images/2026-02-18-ai-business-monetization-guide-2.png" | relative_url }})
 
 ## AIビジネスとは？基本概念の整理
 
@@ -87,7 +87,7 @@ AIビジネスとは、[具体的な定義]を指します。近年の技術進�
 
 
 
-![Step-by-step workflow diagram illustrating how to use ai business monetization guide](/assets/images/2026-02-18-ai-business-monetization-guide-3.png)
+![Step-by-step workflow diagram illustrating how to use ai business monetization guide]({{ "/assets/images/2026-02-18-ai-business-monetization-guide-3.png" | relative_url }})
 
 ## 導入手順：5ステップで始める
 
@@ -143,7 +143,7 @@ AIビジネスとは、[具体的な定義]を指します。近年の技術進�
 
 
 
-![FAQ illustration showing common questions about ai business monetization guide with answer bubbles](/assets/images/2026-02-18-ai-business-monetization-guide-4.png)
+![FAQ illustration showing common questions about ai business monetization guide with answer bubbles]({{ "/assets/images/2026-02-18-ai-business-monetization-guide-4.png" | relative_url }})
 
 ## FAQ：よくある質問
 
@@ -177,7 +177,7 @@ A7: 変革管理（チェンジマネジメント）の観点が重要です。�
 
 
 
-![Step-by-step workflow diagram illustrating how to use ai business monetization guide](/assets/images/2026-02-18-ai-business-monetization-guide-5.png)
+![Step-by-step workflow diagram illustrating how to use ai business monetization guide]({{ "/assets/images/2026-02-18-ai-business-monetization-guide-5.png" | relative_url }})
 
 ## まとめ：今日から始めるAIビジネス
 

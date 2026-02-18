@@ -10,7 +10,7 @@ image: /assets/images/2026-02-18-chatgpt-vs-claude-comparison.png
 ---
 
 
-![Professional illustration for blog section about ChatGPTとClaude、結局どっちを使うべき？ related to chatgpt vs claude comparison](/assets/images/2026-02-18-chatgpt-vs-claude-comparison-1.png)
+![Professional illustration for blog section about ChatGPTとClaude、結局どっちを使うべき？ related to chatgpt vs claude comparison]({{ "/assets/images/2026-02-18-chatgpt-vs-claude-comparison-1.png" | relative_url }})
 
 ## ChatGPTとClaude、結局どっちを使うべき？
 
@@ -38,7 +38,7 @@ image: /assets/images/2026-02-18-chatgpt-vs-claude-comparison.png
 
 
 
-![Comparison chart showing chatgpt vs claude comparison tools side by side with feature matrix](/assets/images/2026-02-18-chatgpt-vs-claude-comparison-2.png)
+![Comparison chart showing chatgpt vs claude comparison tools side by side with feature matrix]({{ "/assets/images/2026-02-18-chatgpt-vs-claude-comparison-2.png" | relative_url }})
 
 ## 用途別比較：どちらが優れている？
 
@@ -118,7 +118,7 @@ ChatGPTはユーザー数が圧倒的に多く、プラグインやGPTs（カス
 
 
 
-![Decision tree or guide diagram for choosing the best chatgpt vs claude comparison solution](/assets/images/2026-02-18-chatgpt-vs-claude-comparison-3.png)
+![Decision tree or guide diagram for choosing the best chatgpt vs claude comparison solution]({{ "/assets/images/2026-02-18-chatgpt-vs-claude-comparison-3.png" | relative_url }})
 
 ## 結論：用途別おすすめ
 
@@ -136,7 +136,7 @@ ChatGPTはユーザー数が圧倒的に多く、プラグインやGPTs（カス
 
 
 
-![FAQ illustration showing common questions about chatgpt vs claude comparison with answer bubbles](/assets/images/2026-02-18-chatgpt-vs-claude-comparison-4.png)
+![FAQ illustration showing common questions about chatgpt vs claude comparison with answer bubbles]({{ "/assets/images/2026-02-18-chatgpt-vs-claude-comparison-4.png" | relative_url }})
 
 ## よくある質問（FAQ）
 
@@ -156,7 +156,7 @@ A. セキュリティとコンプライアンスを重視するならClaudeのEn
 
 
 
-![Summary infographic of key takeaways and next steps for chatgpt vs claude comparison](/assets/images/2026-02-18-chatgpt-vs-claude-comparison-5.png)
+![Summary infographic of key takeaways and next steps for chatgpt vs claude comparison]({{ "/assets/images/2026-02-18-chatgpt-vs-claude-comparison-5.png" | relative_url }})
 
 ## まとめ
 

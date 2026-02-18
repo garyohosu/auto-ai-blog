@@ -15,7 +15,7 @@ image: "/assets/images/2026-02-18-best-ai-translation-tools-hero.png"
 
 
 
-![Professional illustration for blog section about この記事で分かること related to best ai translation tools](/assets/images/2026-02-18-best-ai-translation-tools-1.png)
+![Professional illustration for blog section about この記事で分かること related to best ai translation tools]({{ "/assets/images/2026-02-18-best-ai-translation-tools-1.png" | relative_url }})
 
 ## この記事で分かること
 - **best ai translation tools** の選び方（精度・速度・セキュリティ・用語管理・料金の観点）
@@ -67,7 +67,7 @@ image: "/assets/images/2026-02-18-best-ai-translation-tools-hero.png"
 
 
 
-![Comparison chart showing best ai translation tools tools side by side with feature matrix](/assets/images/2026-02-18-best-ai-translation-tools-2.png)
+![Comparison chart showing best ai translation tools tools side by side with feature matrix]({{ "/assets/images/2026-02-18-best-ai-translation-tools-2.png" | relative_url }})
 
 ## best ai translation tools 比較表②：機能・運用観点（用語管理/文書/セキュリティ）
 業務で差が出るのは、精度より**運用機能**です。
@@ -184,7 +184,7 @@ AI翻訳は、入力の設計で品質が大きく変わります。以下の**5
 
 
 
-![Professional illustration for blog section about best ai translation tools の具体的な使用例（コピペで使 related to best ai translation tools](/assets/images/2026-02-18-best-ai-translation-tools-3.png)
+![Professional illustration for blog section about best ai translation tools の具体的な使用例（コピペで使 related to best ai translation tools]({{ "/assets/images/2026-02-18-best-ai-translation-tools-3.png" | relative_url }})
 
 ## best ai translation tools の具体的な使用例（コピペで使える）
 以下はChatGPTで特に効くテンプレです（DeepL/Google翻訳でも、前処理として同様の指示を書くと品質が上がります）。
@@ -232,7 +232,7 @@ AI翻訳は、入力の設計で品質が大きく変わります。以下の**5
 
 
 
-![FAQ illustration showing common questions about best ai translation tools with answer bubbles](/assets/images/2026-02-18-best-ai-translation-tools-4.png)
+![FAQ illustration showing common questions about best ai translation tools with answer bubbles]({{ "/assets/images/2026-02-18-best-ai-translation-tools-4.png" | relative_url }})
 
 ## FAQ（best ai translation tools：DeepL / Google翻訳 / ChatGPT）
 ### Q1. DeepLとGoogle翻訳はどっちが精度が高い？
@@ -257,7 +257,7 @@ ChatGPTは“翻訳+編集”が得意な一方、原文にない補足を入れ
 
 
 
-![Summary infographic of key takeaways and next steps for best ai translation tools](/assets/images/2026-02-18-best-ai-translation-tools-5.png)
+![Summary infographic of key takeaways and next steps for best ai translation tools]({{ "/assets/images/2026-02-18-best-ai-translation-tools-5.png" | relative_url }})
 
 ## まとめ：best ai translation tools は「1本化」より「役割分担」で成果が出る
 - 文章をそのまま提出物にしやすい：**DeepL**

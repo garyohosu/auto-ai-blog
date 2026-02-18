@@ -223,7 +223,7 @@ async function main() {
 
       content = content.replace(
         new RegExp(fullMatch.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')),
-        `\n![${description}](${relativePath})\n`
+        `\n![${description}]({{ "${relativePath}" | relative_url }})\n`
       );
       totalImages++;
       imgCount++;

@@ -8,13 +8,13 @@ tags: ["AI効率化","生産性","ビジネス"]
 
 「AIを入れれば生産性が上がる」と聞く一方で、実際は**どの業務に・どのツールを・どう組み込むか**が曖昧なまま、試して終わってしまうケースが多いです。本記事は、知識労働（企画・営業・CS・管理・マーケ・開発）を中心に、**AIで仕事効率化を再現性高く進める手順**を、比較表・導入設計・運用のコツまで含めて解説します。目的は「使ってみる」ではなく、**毎週のアウトプットを増やす仕組み化**です。  
 
-![Office worker using AI tools on laptop workflow concept](/assets/images/2026-02-18-ai-productivity-complete-guide-1.png)
+![Office worker using AI tools on laptop workflow concept]({{ "/assets/images/2026-02-18-ai-productivity-complete-guide-1.png" | relative_url }})
 
 ---
 
 
 
-![Professional illustration for blog section about この記事で分かること related to ai productivity complete guide](/assets/images/2026-02-18-ai-productivity-complete-guide-2.png)
+![Professional illustration for blog section about この記事で分かること related to ai productivity complete guide]({{ "/assets/images/2026-02-18-ai-productivity-complete-guide-2.png" | relative_url }})
 
 ## この記事で分かること
 - **ai productivity complete guide** の具体的な内容（業務棚卸し→ツール選定→運用定着の全体像）
@@ -23,7 +23,7 @@ tags: ["AI効率化","生産性","ビジネス"]
 - よくある **課題（情報漏えい、品質ブレ、現場定着）** とその解決策
 
 
-![Summary card listing guide outcomes for AI productivity](/assets/images/2026-02-18-ai-productivity-complete-guide-3.png)
+![Summary card listing guide outcomes for AI productivity]({{ "/assets/images/2026-02-18-ai-productivity-complete-guide-3.png" | relative_url }})
 
 ---
 
@@ -38,7 +38,7 @@ tags: ["AI効率化","生産性","ビジネス"]
 
 「3倍」を狙うなら、まずは**週5時間以上**使っている反復作業をターゲットにすると効果が出やすいです（例：メール、議事録、提案書、FAQ更新、レポート作成）。  
 
-![Workflow diagram splitting tasks into AI-suitable substeps](/assets/images/2026-02-18-ai-productivity-complete-guide-4.png)
+![Workflow diagram splitting tasks into AI-suitable substeps]({{ "/assets/images/2026-02-18-ai-productivity-complete-guide-4.png" | relative_url }})
 
 ---
 
@@ -56,7 +56,7 @@ tags: ["AI効率化","生産性","ビジネス"]
 
 ※料金は頻繁に改定されるため、導入時は公式ページで最新確認してください。  
 
-![Side-by-side comparison table visual for ChatGPT Claude Gemini](/assets/images/2026-02-18-ai-productivity-complete-guide-5.png)
+![Side-by-side comparison table visual for ChatGPT Claude Gemini]({{ "/assets/images/2026-02-18-ai-productivity-complete-guide-5.png" | relative_url }})
 
 関連して、社内の問い合わせ対応をAIで効率化したい場合は、チャットボット導入が最短です。→ [INTERNAL: ai-customer-support-chatbot-guide]
 
@@ -64,7 +64,7 @@ tags: ["AI効率化","生産性","ビジネス"]
 
 
 
-![Professional illustration for blog section about ai productivity complete guide：業務カテゴリ別に見 related to ai productivity complete guide](/assets/images/2026-02-18-ai-productivity-complete-guide-6.png)
+![Professional illustration for blog section about ai productivity complete guide：業務カテゴリ別に見 related to ai productivity complete guide]({{ "/assets/images/2026-02-18-ai-productivity-complete-guide-6.png" | relative_url }})
 
 ## ai productivity complete guide：業務カテゴリ別に見る「AIで効く仕事・効かない仕事」
 AIが効きやすいのは、**入力が一定で、出力の型がある業務**です。逆に、利害調整や最終意思決定のような「責任が伴う判断」は人が担保し、AIは材料作りに徹します。
@@ -81,7 +81,7 @@ AIが効きやすいのは、**入力が一定で、出力の型がある業務*
 | 人事評価/採用判断 | 面接評価、処遇 | 低 | バイアス/説明責任 | 判断・合意形成 |
 
 
-![Heatmap of AI suitability across common business tasks](/assets/images/2026-02-18-ai-productivity-complete-guide-7.png)
+![Heatmap of AI suitability across common business tasks]({{ "/assets/images/2026-02-18-ai-productivity-complete-guide-7.png" | relative_url }})
 
 ---
 
@@ -129,7 +129,7 @@ AIが効きやすいのは、**入力が一定で、出力の型がある業務*
   - 毎週15分、プロンプトとテンプレを更新（PDCA）
 
 
-![Step-by-step implementation checklist for AI productivity program](/assets/images/2026-02-18-ai-productivity-complete-guide-8.png)
+![Step-by-step implementation checklist for AI productivity program]({{ "/assets/images/2026-02-18-ai-productivity-complete-guide-8.png" | relative_url }})
 
 ---
 
@@ -152,7 +152,7 @@ AI生産性を伸ばすには「文章生成」だけでなく、**ワークフ�
 
 
 
-![Professional illustration for blog section about ai productivity complete guide：具体的な使用例（コ related to ai productivity complete guide](/assets/images/2026-02-18-ai-productivity-complete-guide-9.png)
+![Professional illustration for blog section about ai productivity complete guide：具体的な使用例（コ related to ai productivity complete guide]({{ "/assets/images/2026-02-18-ai-productivity-complete-guide-9.png" | relative_url }})
 
 ## ai productivity complete guide：具体的な使用例（コピペで使える）
 ここでは、すぐ使える業務別の例を3つ提示します。**出力形式を固定**すると品質が安定します。
@@ -190,7 +190,7 @@ CS領域を本格的に自動化するなら、チャットボット導入手順
 また、ナレッジ整備の基本設計（タグ、更新ルール、責任者）を別記事で扱う想定です。→ [INTERNAL: knowledge-base-operations]  
 
 
-![Example screens of FAQ workflow with AI summarization and tagging](/assets/images/2026-02-18-ai-productivity-complete-guide-10.png)
+![Example screens of FAQ workflow with AI summarization and tagging]({{ "/assets/images/2026-02-18-ai-productivity-complete-guide-10.png" | relative_url }})
 
 ---
 
@@ -218,7 +218,7 @@ AI導入はメリットが大きい一方、よくある落とし穴も固定化
 
 
 
-![FAQ illustration showing common questions about ai productivity complete guide with answer bubbles](/assets/images/2026-02-18-ai-productivity-complete-guide-11.png)
+![FAQ illustration showing common questions about ai productivity complete guide with answer bubbles]({{ "/assets/images/2026-02-18-ai-productivity-complete-guide-11.png" | relative_url }})
 
 ## FAQ（ai productivity complete guide よくある質問）
 ### Q1. AIで本当に生産性は3倍になりますか？
@@ -255,7 +255,7 @@ AI導入はメリットが大きい一方、よくある落とし穴も固定化
 
 
 
-![Summary infographic of key takeaways and next steps for ai productivity complete guide](/assets/images/2026-02-18-ai-productivity-complete-guide-12.png)
+![Summary infographic of key takeaways and next steps for ai productivity complete guide]({{ "/assets/images/2026-02-18-ai-productivity-complete-guide-12.png" | relative_url }})
 
 ## まとめ：ai productivity complete guide を今日から回す次のアクション（CTA）
 AIで仕事効率化を成功させるポイントは、ツール選びよりも**業務の分解→テンプレ化→運用設計**です。まずは次の順で着手してください。
@@ -267,6 +267,6 @@ AIで仕事効率化を成功させるポイントは、ツール選びよりも
 - 効果が出たら、次の業務へ横展開する
 
 
-![Roadmap graphic for scaling AI productivity across a team](/assets/images/2026-02-18-ai-productivity-complete-guide-13.png)
+![Roadmap graphic for scaling AI productivity across a team]({{ "/assets/images/2026-02-18-ai-productivity-complete-guide-13.png" | relative_url }})
 
 カスタマーサポートや社内問い合わせが多いなら、AIチャットボット導入が最も効果が見えやすい領域です。具体的手順は以下で確認できます。→ [INTERNAL: ai-customer-support-chatbot-guide]

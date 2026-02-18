@@ -10,7 +10,7 @@ image: /assets/images/2026-02-18-how-to-make-money-with-ai.png
 ---
 
 
-![Professional illustration for blog section about AIで稼ぐ時代が本格的に来ている related to how to make money with ai](/assets/images/2026-02-18-how-to-make-money-with-ai-1.png)
+![Professional illustration for blog section about AIで稼ぐ時代が本格的に来ている related to how to make money with ai]({{ "/assets/images/2026-02-18-how-to-make-money-with-ai-1.png" | relative_url }})
 
 ## AIで稼ぐ時代が本格的に来ている
 
@@ -24,7 +24,7 @@ image: /assets/images/2026-02-18-how-to-make-money-with-ai.png
 
 
 
-![Step-by-step workflow diagram illustrating how to use how to make money with ai](/assets/images/2026-02-18-how-to-make-money-with-ai-2.png)
+![Step-by-step workflow diagram illustrating how to use how to make money with ai]({{ "/assets/images/2026-02-18-how-to-make-money-with-ai-2.png" | relative_url }})
 
 ## AIで稼ぐ方法7選
 
@@ -177,7 +177,7 @@ AI動画生成ツールを使ってYouTube動画やSNS動画を制作。
 
 
 
-![Step-by-step workflow diagram illustrating how to use how to make money with ai](/assets/images/2026-02-18-how-to-make-money-with-ai-3.png)
+![Step-by-step workflow diagram illustrating how to use how to make money with ai]({{ "/assets/images/2026-02-18-how-to-make-money-with-ai-3.png" | relative_url }})
 
 ## 始め方ロードマップ
 
@@ -193,7 +193,7 @@ AI動画生成ツールを使ってYouTube動画やSNS動画を制作。
 
 
 
-![FAQ illustration showing common questions about how to make money with ai with answer bubbles](/assets/images/2026-02-18-how-to-make-money-with-ai-4.png)
+![FAQ illustration showing common questions about how to make money with ai with answer bubbles]({{ "/assets/images/2026-02-18-how-to-make-money-with-ai-4.png" | relative_url }})
 
 ## よくある質問（FAQ）
 
@@ -213,7 +213,7 @@ A. ライティングやブログアフィリエイトは匿名で行えます�
 
 
 
-![Step-by-step workflow diagram illustrating how to use how to make money with ai](/assets/images/2026-02-18-how-to-make-money-with-ai-5.png)
+![Step-by-step workflow diagram illustrating how to use how to make money with ai]({{ "/assets/images/2026-02-18-how-to-make-money-with-ai-5.png" | relative_url }})
 
 ## まとめ：今すぐ始める人が勝つ
 

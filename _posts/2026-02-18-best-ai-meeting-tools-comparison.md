@@ -10,7 +10,7 @@ image: /assets/images/2026-02-18-best-ai-meeting-tools-comparison.png
 ---
 
 
-![Infographic showing key benefits and advantages of best ai meeting tools comparison](/assets/images/2026-02-18-best-ai-meeting-tools-comparison-1.png)
+![Infographic showing key benefits and advantages of best ai meeting tools comparison]({{ "/assets/images/2026-02-18-best-ai-meeting-tools-comparison-1.png" | relative_url }})
 
 ## AI議事録ツールとは？なぜ今導入すべきなのか
 
@@ -38,7 +38,7 @@ image: /assets/images/2026-02-18-best-ai-meeting-tools-comparison.png
 
 
 
-![Professional illustration for blog section about 各ツール詳細レビュー related to best ai meeting tools comparison](/assets/images/2026-02-18-best-ai-meeting-tools-comparison-2.png)
+![Professional illustration for blog section about 各ツール詳細レビュー related to best ai meeting tools comparison]({{ "/assets/images/2026-02-18-best-ai-meeting-tools-comparison-2.png" | relative_url }})
 
 ## 各ツール詳細レビュー
 
@@ -191,7 +191,7 @@ LINE（NAVER）が開発した完全無料のAI議事録ツール。
 
 
 
-![FAQ illustration showing common questions about best ai meeting tools comparison with answer bubbles](/assets/images/2026-02-18-best-ai-meeting-tools-comparison-3.png)
+![FAQ illustration showing common questions about best ai meeting tools comparison with answer bubbles]({{ "/assets/images/2026-02-18-best-ai-meeting-tools-comparison-3.png" | relative_url }})
 
 ## よくある質問（FAQ）
 
@@ -211,7 +211,7 @@ A. ほとんどのツールがZoomとのワンクリック連携に対応して�
 
 
 
-![Summary infographic of key takeaways and next steps for best ai meeting tools comparison](/assets/images/2026-02-18-best-ai-meeting-tools-comparison-4.png)
+![Summary infographic of key takeaways and next steps for best ai meeting tools comparison]({{ "/assets/images/2026-02-18-best-ai-meeting-tools-comparison-4.png" | relative_url }})
 
 ## まとめ：まずは無料プランで試そう
 
