@@ -25,7 +25,7 @@ jobs:
       - name: Run virtual employee
         env:
           TZ: Asia/Tokyo
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           node ve/run.js
 

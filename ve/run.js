@@ -11,7 +11,7 @@ const https = require("https");
 const ROOT = path.resolve(__dirname, "..");
 const VE = path.join(ROOT, "ve");
 const POSTS = path.join(ROOT, "_posts");
-const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || "";
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
 
 /** JST today as YYYY-MM-DD */
 function jstToday() {
@@ -51,30 +51,29 @@ const KEYWORD_POOL = [
 ];
 
 // ---------------------------------------------------------------------------
-// LLM article generation (Anthropic Claude API)
+// LLM article generation (OpenAI API)
 // ---------------------------------------------------------------------------
-function callClaude(prompt) {
+function callOpenAI(prompt) {
   return new Promise((resolve, reject) => {
-    if (!ANTHROPIC_API_KEY) {
-      reject(new Error("ANTHROPIC_API_KEY not set"));
+    if (!OPENAI_API_KEY) {
+      reject(new Error("OPENAI_API_KEY not set"));
       return;
     }
 
     const body = JSON.stringify({
-      model: "claude-sonnet-4-5-20250929",
+      model: "gpt-4o",
       max_tokens: 4096,
       messages: [{ role: "user", content: prompt }],
     });
 
     const req = https.request(
       {
-        hostname: "api.anthropic.com",
-        path: "/v1/messages",
+        hostname: "api.openai.com",
+        path: "/v1/chat/completions",
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-api-key": ANTHROPIC_API_KEY,
-          "anthropic-version": "2023-06-01",
+          Authorization: `Bearer ${OPENAI_API_KEY}`,
         },
       },
       (res) => {
@@ -83,8 +82,8 @@ function callClaude(prompt) {
         res.on("end", () => {
           try {
             const json = JSON.parse(data);
-            if (json.content && json.content[0]) {
-              resolve(json.content[0].text);
+            if (json.choices && json.choices[0] && json.choices[0].message) {
+              resolve(json.choices[0].message.content);
             } else {
               reject(new Error(`API error: ${data.slice(0, 200)}`));
             }
@@ -120,7 +119,7 @@ async function generateArticleWithLLM(keyword) {
 
 本文のみを出力してください。`;
 
-  return await callClaude(prompt);
+  return await callOpenAI(prompt);
 }
 
 // ---------------------------------------------------------------------------
@@ -218,9 +217,9 @@ async function createArticlePost(date, keyword) {
   let content;
 
   // Try LLM generation first
-  if (ANTHROPIC_API_KEY) {
+  if (OPENAI_API_KEY) {
     try {
-      console.log(`[llm] Generating article with Claude API...`);
+      console.log(`[llm] Generating article with OpenAI API...`);
       const body = await generateArticleWithLLM(keyword);
       const frontMatter = `---
 layout: post
@@ -238,7 +237,7 @@ lang: ja
       content = createFallbackArticle(date, keyword);
     }
   } else {
-    console.log(`[info] No ANTHROPIC_API_KEY, using template article`);
+    console.log(`[info] No OPENAI_API_KEY, using template article`);
     content = createFallbackArticle(date, keyword);
   }
 
