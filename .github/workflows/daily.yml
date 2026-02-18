@@ -31,7 +31,7 @@ jobs:
           TZ: Asia/Tokyo
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          node ve/run.js
+          node ve/orchestrator.js
 
       - name: Commit & Push changes
         run: |
