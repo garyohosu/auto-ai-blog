@@ -38,5 +38,25 @@
     }
   ],
   "failed_at": "designer",
-  "error": "script not found"
+  "error": "script not found",
+  "editor_decision": "rejected",
+  "editor_issues": [
+    "比較表不足: 1個（基準 3個以上）",
+    "アフィリエイトリンク不足: 0個（基準 2個以上）",
+    "\"無料\" が 8 回出現（上限 5 回）"
+  ],
+  "current_phase": "completed",
+  "completed_agents": [
+    {
+      "agent": "editor",
+      "timestamp": "2026-02-18T12:57:40.969Z",
+      "duration": 0.012,
+      "decision": "rejected"
+    },
+    {
+      "agent": "analyst",
+      "timestamp": "2026-02-18T12:59:18.850Z",
+      "duration": 0.011
+    }
+  ]
 }
