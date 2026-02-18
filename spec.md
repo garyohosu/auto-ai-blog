@@ -1,216 +1,304 @@
 # auto-ai-blog（Claude Code）設計書 / Spec.md
-Version: 1.2
+Version: 2.0
 Repo: https://github.com/garyohosu/auto-ai-blog
 
 ## 1. 目的
-GitHub Pages（Jekyll）で動くブログを、Claude Code による「バーチャル社員（自律ループ）」で運用し、日次（JST 00:00）で次を継続する。
+GitHub Pages（Jekyll）で動くブログを、**マルチエージェントシステム（OpenClaw + multi-agent-shogun 方式）**で運用し、日次で自律的に記事を生成・公開する。
 
-- 状態（state / todo / metrics / logs）を Markdown で保存して“自走”させる
-- 毎回「今日の最重要タスク 1つ」を選定 → 実行（安全範囲）→ 記録
+- 状態（state / context / memory）を Markdown/JSON で保存して"自走"させる
+- **8つの専門エージェント**が協調してタスクを実行
 - 収益導線（AdSense + Affiliate）に寄せた evergreen コンテンツを積み上げる
 - AdSense client: ca-pub-6743751614716161
-- 日本語 + 英語市場を同時に狙える設計にする
-- 将来的に自作 AI ツール販売へ接続できる構造を作る
+- 日本語 + 英語市場を同時に狙える設計
+- 将来的に自作 AI ツール販売へ接続できる構造
 
 ## 2. 前提（入力条件）
-- 現状 PV: 44、記事数: 100（既存記事は原則触らない）
-- 収益: Google AdSense + アフィリエイト導入済み
-- ジャンル変更: OK / 海外: OK / SNS自動連携: OK
+- 現状 PV: 44、記事数: 110（既存記事は原則触らない）
+- 収益: Google AdSense Auto Ads + アフィリエイト導入済み
+- ジャンル変更: OK / 海外: OK / SNS自動連携: 将来対応
 - 新規記事: 追加して伸ばす（既存は据え置き）
 - 運用: 可能な限り自動化（ただし破壊的変更は禁止）
 
-## 3. 自動運転アーキテクチャ
-### 3.1 日次トリガー
+## 3. マルチエージェントアーキテクチャ（新設計）
+
+### 3.1 実行フロー
+```
+GitHub Actions (cron) 
+  ↓
+ve/orchestrator.js (制御)
+  ↓
+┌──────────────────────────────────────┐
+│ 1. CEO Agent (戦略策定)              │
+│    → ve/context.json 更新            │
+├──────────────────────────────────────┤
+│ 2. SEO Agent (キーワード選定)         │
+│    → context.json に選定KW記録       │
+├──────────────────────────────────────┤
+│ 3. Writer Agent (記事生成)           │
+│    → _posts/*.md 作成                │
+├──────────────────────────────────────┤
+│ 4. Designer Agent (画像生成)         │
+│    → assets/images/*.png 作成        │
+├──────────────────────────────────────┤
+│ 5. Linker Agent (内部リンク)         │
+│    → 記事に関連リンク追加             │
+├──────────────────────────────────────┤
+│ 6. Editor Agent (品質チェック)        │
+│    → 承認/却下判定                   │
+├──────────────────────────────────────┤
+│ 7. Analyst Agent (メトリクス記録)     │
+│    → ve/metrics.md 更新              │
+└──────────────────────────────────────┘
+  ↓
+Git Commit & Push
+```
+
+### 3.2 エージェント間通信
+各エージェントは以下のファイルを介して情報をやり取りする：
+
+#### 共有コンテキスト
+- **`ve/context.json`**: 実行コンテキスト（日付、戦略、選定KW、記事パスなど）
+- **`ve/user.md`**: ユーザー情報（共通参照）
+
+#### エージェント固有ファイル（各 `ve/{agent}/` 配下）
+- **`soul.md`**: エージェントの性格・判断基準（固定）
+- **`memory.md`**: 長期記憶（自動更新）
+- **`input.md`**: 前段エージェントからの入力
+- **`output.md`**: 次段エージェントへの出力
+- **`run.js`**: 実行ロジック
+
+### 3.3 日次トリガー
 - GitHub Actions の schedule で毎日実行
-- JST 00:00 を狙う（cron は UTC 基準）
-  - JST 00:00 = UTC 15:00
-  - cron: `0 15 * * *`
+- **平日**: 07:00 JST & 20:00 JST (2回/日)
+- **週末**: 10:00, 15:00, 21:00 JST (3回/日)
+- **合計**: 週16回 ≈ 月65記事
 
-### 3.2 実行の起点（ランナー）
-- `ve/run.js`（Node）を起点とする
-  - 将来、Python へ置換/併用してもよい
-- Actions から `node ve/run.js` を実行し、差分をコミットして push する
+cron設定:
+```yaml
+schedule:
+  # 平日 07:00 JST (22:00 UTC 前日)
+  - cron: '0 22 * * 0-4'
+  # 平日 20:00 JST (11:00 UTC)
+  - cron: '0 11 * * 1-5'
+  # 週末 10:00 JST (01:00 UTC)
+  - cron: '0 1 * * 0,6'
+  # 週末 15:00 JST (06:00 UTC)
+  - cron: '0 6 * * 0,6'
+  # 週末 21:00 JST (12:00 UTC)
+  - cron: '0 12 * * 0,6'
+```
 
-## 4. リポジトリ構成（推奨）
+## 4. リポジトリ構成（v2.0）
 ```
 .
-├── _posts/                     # Jekyll の記事（新規はここに追加）
-├── ve/                         # バーチャル社員の状態管理（長期記憶）
-│   ├── state.md
+├── _posts/                     # Jekyll の記事
+├── assets/images/              # ヒーロー画像
+├── ve/
+│   ├── orchestrator.js         # エージェント実行制御（新）
+│   ├── context.json            # 実行コンテキスト（新）
+│   ├── user.md                 # ユーザー情報（新）
+│   ├── run.js                  # 旧スクリプト（後方互換）
+│   ├── state.md                # 旧状態管理
 │   ├── todo.md
 │   ├── metrics.md
-│   ├── run.js                  # 日次実行の起点
 │   ├── logs/
-│   └── templates/
-├── _config.yml                 # Jekyll設定（最小）
+│   └── agents/                 # エージェントディレクトリ（新）
+│       ├── ceo/
+│       │   ├── soul.md
+│       │   ├── memory.md
+│       │   ├── input.md
+│       │   ├── output.md
+│       │   └── run.js
+│       ├── seo/
+│       ├── writer/
+│       ├── designer/
+│       ├── linker/
+│       ├── editor/
+│       ├── analyst/
+│       └── marketer/
+├── _config.yml
 └── .github/workflows/
-    ├── daily.yml               # 日次実行（JST 0時）
-    └── (optional) agentic/*.md # gh-aw を使う場合
+    └── daily.yml
 ```
 
-## 5. GitHub Pages（Jekyll）
-### 5.1 _config.yml（最小例）
-```yml
-title: auto-ai-blog
-theme: minima
-plugins:
-  - jekyll-feed
-```
+## 5. 各エージェントの役割詳細
 
-### 5.2 Pages 設定（手動）
-- Settings → Pages
-- Source: Deploy from a branch
-- Branch: main / folder: /(root)
+### 5.1 CEO Agent（戦略策定）
+**役割**: ブログ全体の戦略決定
+**入力**: 
+- `ve/metrics.md` (過去のPV・収益データ)
+- `ceo/memory.md` (過去の戦略履歴)
+**処理**:
+1. 各トピッククラスター（ai-tools, ai-productivity, ai-business）のPV分析
+2. 最もパフォーマンスの高いクラスターを選定
+3. 今日注力すべきクラスターを決定
+**出力**:
+- `ceo/output.md`: 戦略指示
+- `context.json`: `ceo_strategy` フィールド更新
 
-## 6. GitHub Actions（daily.yml）
-### 6.1 方針
-- 「毎日回って、成果物がコミットされる」ことを最優先
-- cron は UTC、ログ表示は `TZ: Asia/Tokyo` を使って JST 寄せ
+### 5.2 SEO Agent（キーワード選定）
+**役割**: CEO戦略に基づくキーワード選定
+**入力**:
+- `context.json` (CEO戦略)
+- `ve/run.js` (KEYWORD_POOL)
+- `_posts/` (既存記事リスト)
+**処理**:
+1. CEO指定クラスターに属する未使用キーワードを抽出
+2. 競合分析（文字数・検索意図）
+3. 推奨文字数・構成を決定
+**出力**:
+- `seo/output.md`: 選定キーワード詳細
+- `context.json`: `selected_keyword` フィールド更新
 
-### 6.2 .github/workflows/daily.yml（テンプレ）
-```yml
+### 5.3 Writer Agent（記事生成）
+**役割**: SEO選定キーワードで記事作成
+**入力**:
+- `context.json` (選定キーワード)
+- `writer/soul.md` (執筆ルール)
+**処理**:
+1. OpenAI API (gpt-5.2) で記事本文生成
+2. 4000字以上の Evergreen コンテンツ
+3. 比較表・FAQ・CTAを含める
+**出力**:
+- `_posts/YYYY-MM-DD-{slug}.md`: 記事ファイル
+- `context.json`: `article_path` フィールド更新
+
+### 5.4 Designer Agent（画像生成）
+**役割**: ヒーロー画像生成
+**入力**:
+- `context.json` (記事タイトル)
+**処理**:
+1. OpenAI Images API (gpt-image-1) で画像生成
+2. 6つのスタイルテンプレートからランダム選択
+3. サイズ: 1536x1024 (16:9)
+**出力**:
+- `assets/images/YYYY-MM-DD-{slug}.png`
+- 記事の front matter に `image:` 追加
+- `context.json`: `image_path` フィールド更新
+
+### 5.5 Linker Agent（内部リンク解決）
+**役割**: 内部リンク自動生成
+**入力**:
+- `context.json` (記事パス)
+- `_posts/` (全記事インデックス)
+- `ve/run.js` (TOPIC_CLUSTERS)
+**処理**:
+1. `[INTERNAL: slug]` を実リンクに変換
+2. クラスター内の関連記事セクションを追加
+**出力**:
+- 記事ファイル更新（内部リンク挿入）
+
+### 5.6 Editor Agent（品質チェック）
+**役割**: 記事の最終承認
+**入力**:
+- `context.json` (記事パス)
+- `editor/soul.md` (品質基準)
+**処理**:
+1. 文字数チェック (>3000字)
+2. 比較表・FAQ の有無確認
+3. スパム的なキーワード詰め込みがないか
+**出力**:
+- `editor/output.md`: 承認/却下判定
+- 却下の場合は処理を中断
+
+### 5.7 Analyst Agent（メトリクス記録）
+**役割**: 実行結果の記録
+**入力**:
+- `context.json` (実行結果)
+**処理**:
+1. `ve/metrics.md` に新規行追加
+2. `ve/logs/YYYY-MM-DD.md` に実行サマリー記録
+**出力**:
+- `ve/metrics.md` 更新
+- `ve/logs/YYYY-MM-DD.md` 作成
+
+### 5.8 Marketer Agent（将来実装）
+**役割**: SNS投稿準備
+**入力**:
+- `context.json` (記事情報)
+**処理**:
+1. X (Twitter) / note.com 投稿文案作成
+2. RSS/IFTTTトリガー準備
+**出力**:
+- `marketer/output.md`: 投稿文案
+- ※自動投稿は未実装（手動承認必須）
+
+## 6. GitHub Actions（daily.yml v2.0）
+```yaml
 name: Daily Virtual Employee Run
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "0 15 * * *" # UTC 15:00 = JST 00:00
+    # 平日 07:00 JST (22:00 UTC 前日)
+    - cron: '0 22 * * 0-4'
+    # 平日 20:00 JST (11:00 UTC)
+    - cron: '0 11 * * 1-5'
+    # 週末 10:00 JST (01:00 UTC)
+    - cron: '0 1 * * 0,6'
+    # 週末 15:00 JST (06:00 UTC)
+    - cron: '0 6 * * 0,6'
+    # 週末 21:00 JST (12:00 UTC)
+    - cron: '0 12 * * 0,6'
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  run:
+  daily-run:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Set up Node
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: '20'
 
-      - name: Run virtual employee
+      - name: Run Orchestrator (AI Virtual Employees)
         env:
-          TZ: Asia/Tokyo
-          # 例：外部LLMを呼ぶ場合（使うときだけ）
-          # ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TZ: 'Asia/Tokyo'
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node ve/orchestrator.js
+
+      - name: Commit and push changes
         run: |
-          node ve/run.js
-
-      - name: Commit & Push changes
-        run: |
-          git config user.name "virtual-employee-bot"
-          git config user.email "virtual-employee-bot@users.noreply.github.com"
-          git add -A
-          git diff --cached --quiet || git commit -m "ve: daily run $(date -u +%F)"
-          git push
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "ve: daily run $(date +'%Y-%m-%d %H:%M:%S JST')"
+            git push
+          fi
 ```
 
-## 7. バーチャル社員の「契約ファイル」仕様（必須）
-### 7.1 ve/state.md（状態）
-- phase: 現在のフェーズ
-  - `bootstrap` / `keyword-discovery` / `publishing` / `scaling` / `product`
-- today_objective: 今日の目的（1行）
-- focus_cluster: 注力クラスター（例: ai-meeting-minutes-tools）
-- blockers: ブロッカー（なければ `-`）
-- next_run: 次回やること（1行、明確に）
-
-初期例:
-```md
-# state
-- phase: bootstrap
-- today_objective: initialize system
-- focus_cluster: -
-- blockers: -
-- next_run: generate first keyword list (JP/EN)
+## 7. context.json スキーマ
+```json
+{
+  "date": "YYYY-MM-DD",
+  "timestamp": "ISO8601",
+  "phase": "ceo | seo | writer | designer | linker | editor | analyst | done",
+  "ceo_strategy": "ai-productivity",
+  "selected_keyword": {
+    "slug": "ai-email-writing-tools",
+    "title": "記事タイトル",
+    "tags": ["tag1", "tag2"]
+  },
+  "article_path": "_posts/YYYY-MM-DD-slug.md",
+  "image_path": "/assets/images/YYYY-MM-DD-slug.png",
+  "status": "running | completed | failed",
+  "agents_completed": [
+    { "agent": "ceo", "timestamp": "ISO8601", "duration": 1.23 }
+  ]
+}
 ```
 
-### 7.2 ve/todo.md（タスク）
-- Backlog: 優先度順
-- Today: 主タスク 1つ + 小タスク最大 2つ
-- Done: 追記式（消さない）
-
-初期例:
-```md
-# todo
-
-## Backlog (prioritized)
-- Generate 50 buyer-intent keywords (JP + EN)
-- Create first topic cluster plan
-- Publish 1 monetized evergreen post
-- Prepare X posting queue (optional)
-
-## Today
-- (empty)
-
-## Done (append-only)
-- Repo created
-```
-
-### 7.3 ve/logs/YYYY-MM-DD.md（日次ログ）
-必須項目:
-- 何をしたか（作成/変更したファイル、差分の要約）
-- 何を考えてそうしたか（判断理由）
-- 観測メトリクス（取れないものは `-`）
-- 次にやること
-
-### 7.4 ve/metrics.md（メトリクス）
-- 毎日 1 行追記（取れない値は `-`）
-- 将来は GSC / GA / 収益 を手入力 or API 連携で埋める
-
-例:
-```md
-| date | new_posts | total_posts | gsc_clicks | gsc_impr | avg_pos | ga_users | revenue |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| 2026-02-18 | 1 | 101 | - | - | - | - | - |
-```
-
-## 8. Claude Code 実行ループ（毎回）
-### 8.1 入力として読むもの
-- `ve/state.md`
-- `ve/todo.md`
-- `ve/metrics.md`
-- 直近 7 日分の `ve/logs/`
-- `_posts/` の構造（既存100記事は原則改変しない）
-
-### 8.2 1回の実行で必ずやること
-1) コンテキスト読込（state/todo/logs）
-2) 今日の主タスク 1つを選定（重複回避）
-3) 実行前に計画を `ve/todo.md` と `ve/state.md` に記入
-4) 実行（安全な範囲でファイル生成/更新）
-   - 記事生成時は **アイキャッチ画像も必ず生成**（後述 §8.4）
-5) `ve/logs/YYYY-MM-DD.md` に全記録
-6) `ve/metrics.md` に当日行を追記
-7) `ve/state.md` に next_run を明記して終了
-
-### 8.4 アイキャッチ画像（ヒーロー画像）生成ルール
-- 記事を新規作成するたびに、対応する画像を **必ず** 生成する
-- 保存先: `assets/images/YYYY-MM-DD-{slug}.png`
-- front matter に `image: /assets/images/YYYY-MM-DD-{slug}.png` を追加
-- 生成モデル: `gpt-image-1`（OpenAI Images API）
-- サイズ: `1536x1024`（16:9 近似）
-- プロンプトテンプレート（{TITLE} を記事タイトルで置換）:
-  ```
-  Modern flat illustration, blog hero image, about "{TITLE}",
-  futuristic AI workspace, holographic interface, laptop, glowing elements,
-  clean composition, professional, vibrant colors,
-  no text, no letters,
-  16:9 aspect ratio, high quality, sharp, tech style
-  ```
-- 画像生成に失敗した場合は `image:` なしで記事を作成して続行（ノンブロッキング）
-- `_layouts/post.html` が `page.image` を参照して記事冒頭に自動表示する
-
-### 8.3 タスク優先順位（デフォルト）
-1. buyer-intent 記事（比較/導入/手順/ベスト○○）を 1 本作る
-2. トピッククラスター設計（関連記事候補 + 内部リンク計画）
-3. 配信自動化（X の投稿キュー作成、RSS/テンプレ）
-4. テクニカルSEO（sitemap/robots/canonical 等）※安全が明確なときだけ
-
-## 9. コンテンツ品質ルール
+## 8. コンテンツ品質ルール（継続）
 - ニュース羅列は禁止（短命・競合強すぎ）
 - evergreen（悩み解決 / 比較 / 実装手順）を優先
 - 収益の"置き場所"を必ず作る
@@ -223,69 +311,150 @@ jobs:
   - FAQ（検索意図の拾い）
   - 次アクション（CTA）
 
-## 10. セーフティ（絶対守る）
-- 既存 100 記事は原則「改変しない」
+## 9. セーフティ（絶対守る）
+- 既存 110 記事は原則「改変しない」
 - 削除・大規模リライト・設定変更など破壊的変更は禁止（人間承認が必要）
 - 変更したら必ずログに「差分の要約」を書く
 - 不確実なときは「安全な代替案」を提案し、最も安全な高レバレッジを選ぶ
 
-## 11. GitHub Agentic Workflows（gh-aw）統合（任意）
-参考: https://note.com/hantani/n/nf0e360c6126b
-
-### 11.1 目的
-- “Markdown でワークフロー定義 → lock.yml へコンパイル”の運用を取り入れ、
-  日次の手順をより宣言的に管理できるようにする。
-
-### 11.2 想定運用
-- `.github/workflows/*.md` に agentic workflow を置く
-- `gh aw compile` で `.lock.yml` を生成して実行する（運用に合わせる）
-
-### 11.3 注意点（安全）
-- strict mode では `contents: write` が禁止される場合がある
-  - その場合は、gh-aw の safe-outputs（issue / PR / comment）を使い、
-    “直接 push”ではなく“PR 作成”に切り替える。
-- 本プロジェクトはまず「通常の Actions + run.js で push」を主軸にし、
-  必要になったら gh-aw を段階的に導入する（トラブル回避）。
-
-## 12. 初期化（最初の1回で作るもの）
-- ディレクトリ:
-  - `_posts/`
-  - `assets/images/`
-  - `ve/`
-  - `ve/logs/`
-  - `ve/templates/`
-- ファイル:
-  - `ve/state.md`（bootstrap）
-  - `ve/todo.md`
-  - `ve/metrics.md`
-  - `.github/workflows/daily.yml`
-  - `_config.yml`
-  - `_layouts/post.html`（ヒーロー画像表示用カスタムレイアウト）
-  - `ve/run.js`（最小動作：日次ログと記事雛形を作る）
-
-## 13. ve/run.js（最小仕様）
-### 13.1 最低限の挙動
-- `ve/logs/YYYY-MM-DD.md` を作成（なければ）
-- `_posts/YYYY-MM-DD-daily-note.md` を作成（なければ）
-- 以降、LLM 連携（キーワード選定→記事生成→画像生成）に拡張可能な構造にする
-
-### 13.2 出力の要件
-- "必ず何かが増える"こと（毎日コミットされる）
-- 生成物の内容は最初は薄くてもよい（まずは自動運転の安定化）
-
-### 13.3 画像生成の実装方針
-- `OPENAI_API_KEY` が設定されているときのみ画像生成を試みる
-- 生成失敗はログに記録し、記事作成は続行（画像なしでも公開する）
-- 既に画像ファイルが存在する場合はスキップ（冪等性を保つ）
-- `assets/images/` ディレクトリを `main()` 内で `ensureDir` する
-- GitHub Actions の secrets に `OPENAI_API_KEY` を登録すること
+## 10. 収益予測（v2.0）
+| 期間 | 記事数 | 月間PV | AdSense収益 | API費用 | 純利益 |
+|------|--------|--------|------------|---------|--------|
+| 現在 | 110 | 500 | ¥150 | ¥0 | ¥150 |
+| 1ヶ月後 | 175 | 18,000 | ¥5,400 | ¥1,625 | ¥3,775 |
+| 3ヶ月後 | 305 | 60,000 | ¥18,000 | ¥1,625 | ¥16,375 |
+| 6ヶ月後 | 500 | 150,000 | ¥45,000 | ¥1,625 | ¥43,375 |
 
 ---
 
-## 付録A: Claude Code に渡すベース指示（コピペ用）
-You are the autonomous virtual employee of the repository "auto-ai-blog".
-Run once per day. Read ve/state.md, ve/todo.md, ve/metrics.md, and the latest 7 ve/logs/.
-Pick exactly ONE highest-leverage task. Write the plan into ve/todo.md and ve/state.md before executing.
-Execute only safe changes (prefer adding new posts and logs). Never delete or rewrite the existing 100 posts without explicit approval.
-Record everything into ve/logs/YYYY-MM-DD.md and append a row to ve/metrics.md (use '-' if unknown).
-End by updating ve/state.md with a clear next_run directive. Never repeat the same task unless marked as retry.
+## 付録A: Orchestrator 実行コマンド
+```bash
+# ローカルテスト
+cd /path/to/auto-ai-blog
+node ve/orchestrator.js
+
+# GitHub Actions 手動トリガー
+gh workflow run daily.yml
+```
+
+## 付録B: トラブルシューティング
+### Q: エージェントが失敗した場合
+A: `ve/logs/YYYY-MM-DD.md` と `context.json` の `failed_at` を確認。該当エージェントの `run.js` をデバッグ。
+
+### Q: 画像生成に失敗する
+A: `OPENAI_API_KEY` が設定されているか確認。設定されていない場合は画像なしで記事公開（非ブロッキング）。
+
+### Q: 記事が重複生成される
+A: SEO Agent が `_posts/` をスキャンして既存スラッグを除外。`ve/run.js` の `KEYWORD_POOL` を確認。
+
+---
+
+## 11. 実装状況と動作確認
+
+### 11.1 現在の実装状況(2026-02-18)
+
+| エージェント | soul.md | memory.md | input.md | output.md | run.js | ステータス |
+|------------|---------|-----------|----------|-----------|--------|----------|
+| CEO | ✅ | ✅ | ✅ | ✅ | ✅ | **完成** |
+| SEO | ✅ | ✅ | ✅ | ✅ | ✅ | **完成** |
+| Writer | ✅ | ❌ | ❌ | ❌ | ❌ | 部分実装 |
+| Designer | ❌ | ❌ | ❌ | ❌ | ❌ | 未実装 |
+| Linker | ❌ | ❌ | ❌ | ❌ | ❌ | 未実装 |
+| Editor | ❌ | ❌ | ❌ | ❌ | ❌ | 未実装 |
+| Analyst | ❌ | ❌ | ❌ | ❌ | ❌ | 未実装 |
+| Marketer | ❌ | ❌ | ❌ | ❌ | ❌ | 未実装 |
+
+**コア実装**:
+- ✅ `ve/orchestrator.js`: エージェント実行制御
+- ✅ `ve/context.json`: 実行コンテキスト管理
+- ✅ `ve/user.md`: ユーザー情報
+- ⚠️ `.github/workflows/daily.yml`: 未実装(手動実行のみ)
+
+### 11.2 段階的動作確認プラン
+
+#### フェーズ1: CEO + SEO パイプライン検証(完了予定: 2026-02-18)
+**目標**: CEO → SEO の2エージェントが正常に連携することを確認。
+
+**実行コマンド**:
+```bash
+cd /path/to/auto-ai-blog
+node ve/orchestrator.js
+```
+
+**検証項目**:
+1. Orchestrator が `context.json` を初期化
+2. CEO Agent が戦略を決定し `ceo/output.md` に記録
+3. SEO Agent が CEO 戦略に基づきキーワード選定
+4. `context.json` に `ceo_strategy` と `selected_keyword` が記録される
+5. Writer 未実装のため `phase: "writer"` で停止
+
+**期待出力**:
+```json
+{
+  "date": "2026-02-18",
+  "phase": "writer",
+  "ceo_strategy": "ai-productivity",
+  "selected_keyword": {
+    "slug": "ai-email-writing-tools",
+    "title": "AIメール作成ツール比較 | 2026年最新版"
+  },
+  "status": "partial",
+  "agents_completed": [
+    {"agent": "ceo", "duration": 1.2},
+    {"agent": "seo", "duration": 0.8}
+  ]
+}
+```
+
+#### フェーズ2: Writer Agent 実装(予定: 2026-02-19)
+- `ve/writer/run.js` 作成
+- OpenAI API 統合(gpt-5.2)
+- 4000字以上の Evergreen 記事生成
+- `_posts/YYYY-MM-DD-slug.md` 出力
+
+#### フェーズ3: Designer, Editor, Analyst 実装(予定: 2026-02-21)
+- Designer: hero image 自動生成
+- Editor: 品質チェック(文字数・構成・スパム検知)
+- Analyst: メトリクス記録
+
+#### フェーズ4: GitHub Actions 統合(予定: 2026-02-24)
+- `.github/workflows/daily.yml` 作成
+- 平日2回・週末3回の自動実行
+- OPENAI_API_KEY の Secrets 設定
+
+### 11.3 既知の制約事項
+
+**技術的制約**:
+- OpenAI API コスト: 月間約 ¥1,625(記事生成 + 画像生成)
+- GitHub Actions 実行時間: 無料枠 2,000分/月(現在の設定で週16回 × 5分 = 80分)
+- 既存110記事は原則編集禁止(安全性重視)
+
+**現在の制限**:
+- SNS 自動投稿: 未実装(手動承認必須)
+- Writer 以降のエージェント: 未実装(順次追加予定)
+- API エラー時のリトライ: 未実装
+
+### 11.4 デバッグコマンド
+
+```bash
+# 実行ログ確認
+cat ve/logs/$(date +%Y-%m-%d).md
+
+# context.json 確認
+cat ve/context.json | jq .
+
+# 各エージェントの出力確認
+cat ve/ceo/output.md
+cat ve/seo/output.md
+
+# エラー時のロールバック
+git reset --hard HEAD~1
+```
+
+---
+
+**変更履歴**:
+- v1.0: 初版(単一スクリプト方式)
+- v1.2: アイキャッチ画像生成追加
+- v2.0: マルチエージェントアーキテクチャ導入(OpenClaw + multi-agent-shogun 方式)
+- v2.1: 実装状況と動作確認プラン追記(2026-02-18)

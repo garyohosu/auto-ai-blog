@@ -1,11 +1,32 @@
 {
   "date": "2026-02-18",
-  "timestamp": "2026-02-18T00:00:00.000Z",
-  "phase": "init",
-  "ceo_strategy": null,
-  "selected_keyword": null,
+  "timestamp": "2026-02-18T12:19:23.489Z",
+  "phase": "writer",
+  "ceo_strategy": "ai_productivity",
+  "selected_keyword": {
+    "slug": "ai-productivity-complete-guide",
+    "title": "AIで仕事効率化する方法｜生産性3倍の完全ガイド【2026年】",
+    "tags": [
+      "AI効率化",
+      "生産性",
+      "ビジネス"
+    ]
+  },
   "article_path": null,
   "image_path": null,
-  "status": "pending",
-  "agents_completed": []
+  "status": "failed",
+  "agents_completed": [
+    {
+      "agent": "ceo",
+      "timestamp": "2026-02-18T12:19:23.541Z",
+      "duration": 0.05
+    },
+    {
+      "agent": "seo",
+      "timestamp": "2026-02-18T12:19:23.588Z",
+      "duration": 0.05
+    }
+  ],
+  "failed_at": "writer",
+  "error": "script not found"
 }
