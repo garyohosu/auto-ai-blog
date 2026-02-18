@@ -45,7 +45,7 @@
     "アフィリエイトリンク不足: 0個（基準 2個以上）",
     "\"無料\" が 8 回出現（上限 5 回）"
   ],
-  "current_phase": "linker",
+  "current_phase": "editor",
   "completed_agents": [
     {
       "agent": "editor",
@@ -64,6 +64,13 @@
       "duration": 0.011,
       "success": false,
       "mock": true
+    },
+    {
+      "agent": "linker",
+      "timestamp": "2026-02-18T13:03:54.621Z",
+      "duration": 0.079,
+      "resolvedLinks": 0,
+      "relatedArticlesAdded": true
     }
   ]
 }
