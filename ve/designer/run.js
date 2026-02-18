@@ -197,8 +197,60 @@ async function main() {
       createMockImage(imagePath);
     }
 
-    // front-matter に image: を追加・更新
+    // ---------------------------------------------------------------------------
+    // 記事内 [IMAGE: ...] マーカーを検出して画像生成・置換
+    // ---------------------------------------------------------------------------
     let content = fs.readFileSync(fullArticlePath, 'utf8');
+    const imageMarkerRegex = /^\[IMAGE:\s*([^\]]+)\]\s*$/gm;
+    const markers = [...content.matchAll(imageMarkerRegex)];
+
+    if (markers.length > 0) {
+      log(`🖼 インライン画像マーカー ${markers.length} 件検出`);
+      const slugBase = articlePath.match(/(\d{4}-\d{2}-\d{2}-.+)\.md$/)[1];
+
+      for (let i = 0; i < markers.length; i++) {
+        const [fullMatch, description] = markers[i];
+        const idx = i + 1;
+        const inlineFilename = `${slugBase}-${idx}.png`;
+        const inlineImagePath = path.join(IMAGES_DIR, inlineFilename);
+        const relativeInlinePath = `/assets/images/${inlineFilename}`;
+
+        if (fs.existsSync(inlineImagePath) && fs.statSync(inlineImagePath).size > 100) {
+          log(`⏭ インライン画像${idx} 既存スキップ: ${inlineFilename}`);
+        } else if (OPENAI_API_KEY) {
+          const inlinePrompt =
+            `Professional blog illustration for a tech article: ${description}. ` +
+            `Clean modern design, suitable for Japanese tech blog, informative and visually clear, ` +
+            `no text, no letters, 16:9 aspect ratio, high quality`;
+          log(`📡 インライン画像${idx} 生成中: ${description.slice(0, 60)}...`);
+          try {
+            await callImagesAPI(inlinePrompt, inlineImagePath);
+            log(`✅ インライン画像${idx} 完了: ${inlineFilename} (${fs.statSync(inlineImagePath).size} bytes)`);
+          } catch (err) {
+            log(`⚠️ インライン画像${idx} 生成失敗: ${err.message} → スキップ`);
+            continue;
+          }
+        } else {
+          log(`⚠️ OPENAI_API_KEY 未設定 → インライン画像${idx} スキップ`);
+          continue;
+        }
+
+        // マーカーを Markdown 画像記法に置換
+        content = content.replace(
+          fullMatch.trim(),
+          `\n![${description}](${relativeInlinePath})\n`
+        );
+        log(`✅ マーカー → ![...](${relativeInlinePath}) に置換`);
+      }
+
+      fs.writeFileSync(fullArticlePath, content, 'utf8');
+      log('✅ 記事内画像の置換完了');
+    } else {
+      log('ℹ️ インライン画像マーカーなし');
+    }
+
+    // front-matter に image: を追加・更新
+    content = fs.readFileSync(fullArticlePath, 'utf8');
     const fmRegex = /^---\n([\s\S]*?)\n---\n/;
     const match = content.match(fmRegex);
     if (match) {

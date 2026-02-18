@@ -33,7 +33,9 @@ const QUALITY_CRITERIA = {
   minInternalLinks: 3,
   minAffiliateLinks: 2,
   maxSpamKeywordFreq: 5,
-  spamKeywords: ['無料', '今すぐ', '限定', '特別価格', '緊急', '必見']
+  spamKeywords: ['無料', '今すぐ', '限定', '特別価格', '緊急', '必見'],
+  minInlineImages: 3,       // 記事内画像（ヒーロー除く）
+  maxTextBlockLength: 600,  // 連続テキストブロックの上限（字）
 };
 
 // =============================================================================
@@ -208,6 +210,29 @@ function checkSpamKeywords(markdown) {
 }
 
 /**
+ * 記事内インライン画像の数をカウント（ヒーロー画像除く）
+ */
+function countInlineImages(markdown) {
+  const allImages = markdown.match(/!\[.*?\]\(.*?\)/g) || [];
+  // front-matter の image: フィールドは別途管理なのでここは本文の画像のみ
+  return allImages.length;
+}
+
+/**
+ * 画像・見出しで区切られたテキストブロックの最大長をチェック
+ */
+function checkTextBlockLength(markdown) {
+  // 画像・見出し・テーブル・コードブロックで分割
+  const blocks = markdown.split(/!\[.*?\]\(.*?\)|^#{1,4}\s.+$|^\|.+\|.+\|$/m);
+  let maxLen = 0;
+  for (const block of blocks) {
+    const len = block.replace(/\s+/g, '').length;
+    if (len > maxLen) maxLen = len;
+  }
+  return maxLen;
+}
+
+/**
  * 同一文の繰り返しチェック
  */
 function checkDuplicateSentences(markdown) {
@@ -302,12 +327,26 @@ function performQualityCheck(articlePath) {
     issues.push('AI要約最適化セクションが見つかりません');
   }
   
-  // 8. スパムキーワードチェック
+  // 8. 記事内画像チェック
+  const inlineImageCount = countInlineImages(body);
+  details.inlineImages = inlineImageCount;
+  if (inlineImageCount < QUALITY_CRITERIA.minInlineImages) {
+    issues.push(`記事内画像不足: ${inlineImageCount}枚（基準 ${QUALITY_CRITERIA.minInlineImages}枚以上）`);
+  }
+
+  // 9. テキストブロック長チェック
+  const maxBlock = checkTextBlockLength(body);
+  details.maxTextBlock = maxBlock;
+  if (maxBlock > QUALITY_CRITERIA.maxTextBlockLength) {
+    issues.push(`連続テキストが長すぎます: ${maxBlock}字（上限 ${QUALITY_CRITERIA.maxTextBlockLength}字）`);
+  }
+
+  // 10. スパムキーワードチェック
   const spamIssues = checkSpamKeywords(body);
   details.spamIssues = spamIssues;
   issues.push(...spamIssues);
   
-  // 9. 重複文チェック
+  // 11. 重複文チェック
   const duplicates = checkDuplicateSentences(body);
   details.duplicateSentences = duplicates;
   if (duplicates.length > 0) {
@@ -347,7 +386,9 @@ function generateOutput(checkResult, articlePath, timestamp) {
   output += `| 内部リンク | ${details.internalLinks}個 | ${QUALITY_CRITERIA.minInternalLinks}個以上 | ${details.internalLinks >= QUALITY_CRITERIA.minInternalLinks ? '✅' : '❌'} |\n`;
   output += `| アフィリエイトリンク | ${details.affiliateLinks}個 | ${QUALITY_CRITERIA.minAffiliateLinks}個以上 | ${details.affiliateLinks >= QUALITY_CRITERIA.minAffiliateLinks ? '✅' : '❌'} |\n`;
   output += `| CTA | ${details.hasCTA ? 'あり' : 'なし'} | 必須 | ${details.hasCTA ? '✅' : '❌'} |\n`;
-  output += `| AI要約セクション | ${details.hasAISummary ? 'あり' : 'なし'} | 必須 | ${details.hasAISummary ? '✅' : '❌'} |\n\n`;
+  output += `| AI要約セクション | ${details.hasAISummary ? 'あり' : 'なし'} | 必須 | ${details.hasAISummary ? '✅' : '❌'} |\n`;
+  output += `| 記事内画像 | ${details.inlineImages ?? '-'}枚 | ${QUALITY_CRITERIA.minInlineImages}枚以上 | ${(details.inlineImages ?? 0) >= QUALITY_CRITERIA.minInlineImages ? '✅' : '❌'} |\n`;
+  output += `| 最長テキストブロック | ${details.maxTextBlock ?? '-'}字 | ${QUALITY_CRITERIA.maxTextBlockLength}字以下 | ${(details.maxTextBlock ?? 0) <= QUALITY_CRITERIA.maxTextBlockLength ? '✅' : '❌'} |\n\n`;
   
   if (issues.length > 0) {
     output += `## ⚠️ 検出された問題点\n\n`;

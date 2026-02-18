@@ -137,6 +137,23 @@ ${soul}
 - 数値・具体例を豊富に含める（「3倍」「5ステップ」「月額¥5,000」など）
 - 「〜とは」「〜のメリット」「〜の手順」など、AI要約が好む定型表現を使う
 
+【記事内画像マーカー】
+300〜400字ごとに必ず以下の形式で画像マーカーを挿入してください。
+マーカー形式: [IMAGE: 具体的な説明（英語で50字以内）]
+
+挿入タイミング:
+- 導入文の後（200〜300字後）
+- 各セクションの切れ目（300〜400字ごと）
+- 比較表の後
+- まとめの前
+
+良い例:
+- [IMAGE: AI tools comparison bar chart showing productivity metrics by category]
+- [IMAGE: Step-by-step workflow diagram for AI tool implementation process]
+- [IMAGE: Side-by-side screenshot comparison of ChatGPT and Claude interfaces]
+
+必ず記事全体で4〜6箇所挿入すること。マーカーは単独行に置くこと。
+
 【禁止事項】
 - ニュース羅列（短命コンテンツ）
 - 薄いコンテンツ（< 3000字）
@@ -231,6 +248,8 @@ function generateMockArticle(keyword) {
 
 それでは、詳しく見ていきましょう。
 
+[IMAGE: Overview concept illustration of ${tags[0]} benefits and use cases]
+
 ## この記事で分かること
 
 **AI要約最適化セクション**: このセクションは、Google AI Overview や ChatGPT などの AI 要約エンジンに引用されやすくするために設計されています。
@@ -273,6 +292,8 @@ ${tags[0]}とは、[具体的な定義]を指します。近年の技術進化�
 
 [AFF_LINK: tool-a] [AFF_LINK: tool-b]
 
+[IMAGE: Comparison chart of top ${tags[0]} tools ranked by features and pricing]
+
 ### 比較表2: 導入規模別おすすめツール
 
 | 企業規模 | おすすめツール | 推奨プラン | 想定コスト |
@@ -289,6 +310,8 @@ ${tags[0]}とは、[具体的な定義]を指します。近年の技術進化�
 | 自動化 | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ |
 | レポート | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐ |
 | 使いやすさ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+
+[IMAGE: 5-step implementation roadmap diagram for ${tags[0]} adoption]
 
 ## 導入手順：5ステップで始める
 
@@ -342,6 +365,8 @@ ${tags[0]}とは、[具体的な定義]を指します。近年の技術進化�
 
 **解決策**: エンタープライズグレードのツール選定とガバナンス設計
 
+[IMAGE: Common challenges and solutions infographic for ${tags[0]} implementation]
+
 ## FAQ：よくある質問
 
 ### Q1: 導入コストはどのくらいかかりますか？
@@ -371,6 +396,8 @@ A6: むしろ小規模企業ほど即効性があります。リソースが限�
 ### Q7: 従業員の抵抗にどう対処すればよいですか？
 
 A7: 変革管理（チェンジマネジメント）の観点が重要です。導入の背景・メリットを丁寧に説明し、早期成功事例を共有することで、徐々に受容度が高まります。また、「業務を奪うもの」ではなく「より創造的な仕事に集中できるようにするツール」として位置づけることが効果的です。
+
+[IMAGE: Summary diagram showing key benefits and ROI of ${tags[0]} for businesses]
 
 ## まとめ：今日から始める${tags[0]}
 
