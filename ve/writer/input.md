@@ -1,17 +1,17 @@
 # Writer Input: 2026-02-18
 
 ## Selected Keyword
-- Slug: best-ai-translation-tools
-- Title: 【2026年】AI翻訳ツール おすすめ7選｜DeepL vs Google翻訳 vs ChatGPT
-- Tags: AI翻訳, DeepL, 多言語
+- Slug: ai-productivity-complete-guide
+- Title: AIで仕事効率化する方法｜生産性3倍の完全ガイド【2026年】
+- Tags: AI効率化, 生産性, ビジネス
 
 ## SEO Instructions
 # SEO Keyword Selection: 2026-02-18
 
 ## 選定キーワード
-- slug: best-ai-translation-tools
-- title: 【2026年】AI翻訳ツール おすすめ7選｜DeepL vs Google翻訳 vs ChatGPT
-- tags: [AI翻訳, DeepL, 多言語]
+- slug: ai-productivity-complete-guide
+- title: AIで仕事効率化する方法｜生産性3倍の完全ガイド【2026年】
+- tags: [AI効率化, 生産性, ビジネス]
 
 ## 競合分析
 - 既存上位記事: 3000字前後

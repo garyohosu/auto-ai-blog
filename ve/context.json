@@ -1,42 +1,76 @@
 {
   "date": "2026-02-18",
-  "timestamp": "2026-02-18T12:43:07.539Z",
+  "timestamp": "2026-02-18T12:29:52.137Z",
   "phase": "designer",
   "ceo_strategy": "ai_productivity",
   "selected_keyword": {
-    "slug": "best-ai-translation-tools",
-    "title": "【2026年】AI翻訳ツール おすすめ7選｜DeepL vs Google翻訳 vs ChatGPT",
+    "slug": "ai-productivity-complete-guide",
+    "title": "AIで仕事効率化する方法｜生産性3倍の完全ガイド【2026年】",
     "tags": [
-      "AI翻訳",
-      "DeepL",
-      "多言語"
+      "AI効率化",
+      "生産性",
+      "ビジネス"
     ]
   },
-  "article_path": "_posts/2026-02-18-best-ai-translation-tools.md",
-  "image_path": null,
+  "article_path": "_posts/2026-02-18-ai-productivity-complete-guide.md",
+  "image_path": "/assets/images/2026-02-18-ai-productivity-complete-guide-hero.png",
   "status": "failed",
   "agents_completed": [
     {
       "agent": "ceo",
-      "timestamp": "2026-02-18T12:43:07.654Z",
-      "duration": 0.11
+      "timestamp": "2026-02-18T12:29:52.188Z",
+      "duration": 0.05
     },
     {
       "agent": "seo",
-      "timestamp": "2026-02-18T12:43:07.746Z",
-      "duration": 0.09
+      "timestamp": "2026-02-18T12:29:52.236Z",
+      "duration": 0.05
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-18T12:44:23.580Z",
-      "duration": 75.76
+      "timestamp": "2026-02-18T12:29:52.781Z",
+      "duration": 0.51
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-18T12:44:23.595Z",
-      "duration": 75.85
+      "timestamp": "2026-02-18T12:29:52.786Z",
+      "duration": 0.55
     }
   ],
   "failed_at": "designer",
-  "error": "script not found"
+  "error": "script not found",
+  "editor_decision": "rejected",
+  "editor_issues": [
+    "比較表不足: 1個（基準 3個以上）",
+    "アフィリエイトリンク不足: 0個（基準 2個以上）",
+    "\"無料\" が 8 回出現（上限 5 回）"
+  ],
+  "current_phase": "editor",
+  "completed_agents": [
+    {
+      "agent": "editor",
+      "timestamp": "2026-02-18T12:57:40.969Z",
+      "duration": 0.012,
+      "decision": "rejected"
+    },
+    {
+      "agent": "analyst",
+      "timestamp": "2026-02-18T12:59:18.850Z",
+      "duration": 0.011
+    },
+    {
+      "agent": "designer",
+      "timestamp": "2026-02-18T13:02:02.328Z",
+      "duration": 0.011,
+      "success": false,
+      "mock": true
+    },
+    {
+      "agent": "linker",
+      "timestamp": "2026-02-18T13:03:54.621Z",
+      "duration": 0.079,
+      "resolvedLinks": 0,
+      "relatedArticlesAdded": true
+    }
+  ]
 }

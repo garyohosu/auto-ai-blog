@@ -147,7 +147,7 @@ ${soul}
 
   try {
     log('Calling OpenAI API (gpt-5.2)...');
-    const response = await callOpenAI(prompt);
+    const response = await mockOpenAICall(prompt);
     return response;
   } catch (error) {
     log(`⚠️  OpenAI API error: ${error.message}`);
@@ -158,6 +158,8 @@ ${soul}
 
 /**
  * Real OpenAI API call via https module
+ * max_completion_tokens=16000 必須: gpt-5.2 はリーズニングモデルのため
+ * 内部推論トークンが多く、4096 では content が空になる
  */
 function callOpenAI(prompt) {
   return new Promise((resolve, reject) => {
@@ -188,10 +190,10 @@ function callOpenAI(prompt) {
               if (content) {
                 resolve(content);
               } else {
-                reject(new Error(`Empty content from API. Response: ${data.slice(0, 400)}`));
+                reject(new Error(`Empty content from API (finish_reason: ${json.choices[0].finish_reason}). Response: ${data.slice(0, 300)}`));
               }
             } else {
-              reject(new Error(`API error: ${data.slice(0, 400)}`));
+              reject(new Error(`API error: ${data.slice(0, 300)}`));
             }
           } catch (e) {
             reject(e);
@@ -203,6 +205,10 @@ function callOpenAI(prompt) {
     req.write(body);
     req.end();
   });
+}
+
+async function mockOpenAICall(prompt) {
+  return await callOpenAI(prompt);
 }
 
 /**
