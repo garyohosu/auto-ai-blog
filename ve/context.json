@@ -1,7 +1,7 @@
 {
   "date": "2026-02-18",
-  "timestamp": "2026-02-18T12:19:23.489Z",
-  "phase": "writer",
+  "timestamp": "2026-02-18T12:25:29.522Z",
+  "phase": "designer",
   "ceo_strategy": "ai_productivity",
   "selected_keyword": {
     "slug": "ai-productivity-complete-guide",
@@ -12,21 +12,31 @@
       "ビジネス"
     ]
   },
-  "article_path": null,
+  "article_path": "_posts/2026-02-18-ai-productivity-complete-guide.md",
   "image_path": null,
   "status": "failed",
   "agents_completed": [
     {
       "agent": "ceo",
-      "timestamp": "2026-02-18T12:19:23.541Z",
-      "duration": 0.05
+      "timestamp": "2026-02-18T12:25:29.566Z",
+      "duration": 0.04
     },
     {
       "agent": "seo",
-      "timestamp": "2026-02-18T12:19:23.588Z",
-      "duration": 0.05
+      "timestamp": "2026-02-18T12:25:29.607Z",
+      "duration": 0.04
+    },
+    {
+      "agent": "writer",
+      "timestamp": "2026-02-18T12:25:30.148Z",
+      "duration": 0.51
+    },
+    {
+      "agent": "writer",
+      "timestamp": "2026-02-18T12:25:30.153Z",
+      "duration": 0.55
     }
   ],
-  "failed_at": "writer",
+  "failed_at": "designer",
   "error": "script not found"
 }
