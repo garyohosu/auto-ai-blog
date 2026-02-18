@@ -1,9 +1,9 @@
 # SEO Keyword Selection: 2026-02-18
 
 ## 選定キーワード
-- slug: best-ai-video-generators
-- title: 【2026年】AI動画生成ツール おすすめ6選｜Runway・Pika・Soraを徹底比較
-- tags: [AI動画生成, Runway, Sora]
+- slug: ai-seo-tools-comparison
+- title: 【2026年】AI搭載SEOツール おすすめ5選｜Surfer SEO・Frase・Jasperを比較
+- tags: [AI SEO, Surfer SEO, コンテンツSEO]
 
 ## 競合分析
 - 既存上位記事: 3000字前後

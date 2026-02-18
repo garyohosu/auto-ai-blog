@@ -1,9 +1,9 @@
 # Writer Output: 2026-02-19
 
 ## Generated Article
-- File: `2026-02-19-best-ai-video-generators.md`
-- Title: 【2026年】AI動画生成ツール おすすめ6選｜Runway・Pika・Soraを徹底比較
-- Character count: 6877
+- File: `2026-02-19-ai-seo-tools-comparison.md`
+- Title: 【2026年】AI搭載SEOツール おすすめ5選｜Surfer SEO・Frase・Jasperを比較
+- Character count: 7032
 - Status: ✅ Complete
 - AI Summary Optimization: ✅ Included
 

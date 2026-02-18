@@ -53,3 +53,13 @@ Writer Agent の記事生成履歴を記録します。
 - Tags: AI動画生成, Runway, Sora
 - Quality: ✅  Pass (AI-optimized)
 - AI Summary: ✅ Optimized for Google AI Overview, ChatGPT, Perplexity
+
+
+
+## 2026-02-19
+- Keyword: ai-seo-tools-comparison
+- Title: 【2026年】AI搭載SEOツール おすすめ5選｜Surfer SEO・Frase・Jasperを比較
+- Characters: 7032
+- Tags: AI SEO, Surfer SEO, コンテンツSEO
+- Quality: ✅  Pass (AI-optimized)
+- AI Summary: ✅ Optimized for Google AI Overview, ChatGPT, Perplexity
