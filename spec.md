@@ -8,6 +8,7 @@ GitHub Pages（Jekyll）で動くブログを、Claude Code による「バー�
 - 状態（state / todo / metrics / logs）を Markdown で保存して“自走”させる
 - 毎回「今日の最重要タスク 1つ」を選定 → 実行（安全範囲）→ 記録
 - 収益導線（AdSense + Affiliate）に寄せた evergreen コンテンツを積み上げる
+- AdSense client: ca-pub-6743751614716161
 - 日本語 + 英語市場を同時に狙える設計にする
 - 将来的に自作 AI ツール販売へ接続できる構造を作る
 
