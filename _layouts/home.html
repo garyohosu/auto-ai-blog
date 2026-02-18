@@ -3,6 +3,7 @@ layout: default
 ---
 
 <style>
+/* ── Post card grid ── */
 .post-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -18,9 +19,7 @@ layout: default
   transition: box-shadow 0.2s ease;
   background: #fff;
 }
-.post-card:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-}
+.post-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
 .post-card-image {
   display: block;
   width: 100%;
@@ -30,28 +29,69 @@ layout: default
 .post-card-image-placeholder {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: #f0f0f0;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%);
 }
-.post-card-body {
-  padding: 0.9rem 1rem 1.1rem;
-}
-.post-card-meta {
-  font-size: 0.78rem;
-  color: #828282;
-  margin-bottom: 0.4rem;
-}
+.post-card-body { padding: 0.9rem 1rem 1.1rem; }
+.post-card-meta { font-size: 0.78rem; color: #828282; margin-bottom: 0.4rem; }
 .post-card-title {
   font-size: 0.95rem;
   font-weight: 600;
   line-height: 1.4;
-  margin: 0;
+  margin: 0 0 0.5rem;
 }
-.post-card-title a {
-  color: #333;
+.post-card-title a { color: #333; text-decoration: none; }
+.post-card-title a:hover { color: #2a7ae2; }
+
+/* ── Tag badges（カード内） ── */
+.post-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+}
+.post-card-tags .tag-badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.72rem;
+  background: #eef2ff;
+  color: #4361ee;
+  border-radius: 999px;
   text-decoration: none;
+  white-space: nowrap;
 }
-.post-card-title a:hover {
-  color: #2a7ae2;
+.post-card-tags .tag-badge:hover { background: #4361ee; color: #fff; }
+
+/* ── タグクラウド（全タグ一覧） ── */
+.tag-cloud-section {
+  margin: 2rem 0 1rem;
+  padding: 1.2rem 1.4rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+.tag-cloud-section h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+  margin: 0 0 0.8rem;
+}
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.tag-cloud span {
+  display: inline-block;
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  color: #444;
+  background: #fff;
+  border: 1px solid #dde;
+  font-size: 0.82rem;
+}
+.tag-cloud span .tag-count {
+  font-size: 0.7rem;
+  color: #999;
+  margin-left: 0.2rem;
 }
 </style>
 
@@ -61,6 +101,18 @@ layout: default
   {%- endif -%}
 
   {{ content }}
+
+  {%- if site.tags.size > 0 -%}
+  <div class="tag-cloud-section">
+    <h2>🏷 タグ一覧</h2>
+    <div class="tag-cloud">
+      {%- assign sorted_tags = site.tags | sort -%}
+      {%- for tag in sorted_tags -%}
+      <span>{{ tag[0] }}<span class="tag-count">({{ tag[1].size }})</span></span>
+      {%- endfor -%}
+    </div>
+  </div>
+  {%- endif -%}
 
   {%- if site.posts.size > 0 -%}
   <ul class="post-grid">
@@ -82,6 +134,13 @@ layout: default
         <h3 class="post-card-title">
           <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h3>
+        {%- if post.tags.size > 0 -%}
+        <div class="post-card-tags">
+          {%- for tag in post.tags limit:3 -%}
+          <span class="tag-badge">{{ tag }}</span>
+          {%- endfor -%}
+        </div>
+        {%- endif -%}
       </div>
     </li>
     {%- endfor -%}

@@ -4,16 +4,16 @@
   "phase": "linker",
   "ceo_strategy": "ai_productivity",
   "selected_keyword": {
-    "slug": "ai-customer-support-chatbot-guide",
-    "title": "AIチャットボットでカスタマーサポートを自動化する方法【導入手順つき】",
+    "slug": "ai-productivity-complete-guide",
+    "title": "AIで仕事効率化する方法｜生産性3倍の完全ガイド【2026年】",
     "tags": [
-      "AIチャットボット",
-      "カスタマーサポート",
-      "自動化"
+      "AI効率化",
+      "生産性",
+      "ビジネス"
     ]
   },
-  "article_path": "_posts/2026-02-18-ai-customer-support-chatbot-guide.md",
-  "image_path": "/assets/images/2026-02-18-ai-customer-support-chatbot-guide-hero.png",
+  "article_path": "_posts/2026-02-18-ai-productivity-complete-guide.md",
+  "image_path": "/assets/images/2026-02-18-ai-productivity-complete-guide-hero.png",
   "status": "completed",
   "agents_completed": [
     {
@@ -60,6 +60,12 @@
       "agent": "designer",
       "timestamp": "2026-02-18T13:40:17.846Z",
       "duration": 39.57,
+      "real_image": true
+    },
+    {
+      "agent": "designer",
+      "timestamp": "2026-02-18T13:53:32.259Z",
+      "duration": 47.57,
       "real_image": true
     }
   ],
