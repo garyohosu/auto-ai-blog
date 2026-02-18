@@ -16,3 +16,13 @@ _このファイルは SEO Agent が自動的に更新します_
 - 選定: ai-productivity-complete-guide
 - 理由: CEO戦略に基づく選定
 - 結果: （記事公開後に記録）
+
+### 2026-02-18
+- 選定: ai-productivity-complete-guide
+- 理由: CEO戦略に基づく選定
+- 結果: （記事公開後に記録）
+
+### 2026-02-18
+- 選定: ai-business-monetization-guide
+- 理由: CEO戦略に基づく選定
+- 結果: （記事公開後に記録）

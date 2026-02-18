@@ -1,32 +1,42 @@
 {
   "date": "2026-02-18",
-  "timestamp": "2026-02-18T12:19:23.489Z",
-  "phase": "writer",
+  "timestamp": "2026-02-18T12:32:57.790Z",
+  "phase": "designer",
   "ceo_strategy": "ai_productivity",
   "selected_keyword": {
-    "slug": "ai-productivity-complete-guide",
-    "title": "AIで仕事効率化する方法｜生産性3倍の完全ガイド【2026年】",
+    "slug": "ai-business-monetization-guide",
+    "title": "AIビジネス完全ガイド｜2026年版収益化・副業から起業まで",
     "tags": [
-      "AI効率化",
-      "生産性",
-      "ビジネス"
+      "AIビジネス",
+      "収益化",
+      "副業"
     ]
   },
-  "article_path": null,
+  "article_path": "_posts/2026-02-18-ai-business-monetization-guide.md",
   "image_path": null,
   "status": "failed",
   "agents_completed": [
     {
       "agent": "ceo",
-      "timestamp": "2026-02-18T12:19:23.541Z",
-      "duration": 0.05
+      "timestamp": "2026-02-18T12:32:57.893Z",
+      "duration": 0.1
     },
     {
       "agent": "seo",
-      "timestamp": "2026-02-18T12:19:23.588Z",
-      "duration": 0.05
+      "timestamp": "2026-02-18T12:32:57.991Z",
+      "duration": 0.1
+    },
+    {
+      "agent": "writer",
+      "timestamp": "2026-02-18T12:32:58.577Z",
+      "duration": 0.51
+    },
+    {
+      "agent": "writer",
+      "timestamp": "2026-02-18T12:32:58.591Z",
+      "duration": 0.6
     }
   ],
-  "failed_at": "writer",
+  "failed_at": "designer",
   "error": "script not found"
 }
