@@ -9,6 +9,9 @@ lang: ja
 image: /assets/images/2026-02-18-chatgpt-vs-claude-comparison.png
 ---
 
+
+![Professional illustration for blog section about ChatGPTとClaude、結局どっちを使うべき？ related to chatgpt vs claude comparison](/assets/images/2026-02-18-chatgpt-vs-claude-comparison-1.png)
+
 ## ChatGPTとClaude、結局どっちを使うべき？
 
 「ChatGPTとClaude、どっちが良いの？」
@@ -32,6 +35,10 @@ image: /assets/images/2026-02-18-chatgpt-vs-claude-comparison.png
 | 日本語力 | ◎ | ◎ |
 
 ---
+
+
+
+![Comparison chart showing chatgpt vs claude comparison tools side by side with feature matrix](/assets/images/2026-02-18-chatgpt-vs-claude-comparison-2.png)
 
 ## 用途別比較：どちらが優れている？
 
@@ -109,6 +116,10 @@ ChatGPTはユーザー数が圧倒的に多く、プラグインやGPTs（カス
 
 ---
 
+
+
+![Decision tree or guide diagram for choosing the best chatgpt vs claude comparison solution](/assets/images/2026-02-18-chatgpt-vs-claude-comparison-3.png)
+
 ## 結論：用途別おすすめ
 
 | こんな人に | おすすめ |
@@ -122,6 +133,10 @@ ChatGPTはユーザー数が圧倒的に多く、プラグインやGPTs（カス
 | 両方試したい | **まず無料プランで比較** |
 
 ---
+
+
+
+![FAQ illustration showing common questions about chatgpt vs claude comparison with answer bubbles](/assets/images/2026-02-18-chatgpt-vs-claude-comparison-4.png)
 
 ## よくある質問（FAQ）
 
@@ -138,6 +153,10 @@ A. 用途やトークン量によって異なりますが、軽量なタスク�
 A. セキュリティとコンプライアンスを重視するならClaudeのEnterprise版、エコシステムの広さを重視するならChatGPT Teamがおすすめです。
 
 ---
+
+
+
+![Summary infographic of key takeaways and next steps for chatgpt vs claude comparison](/assets/images/2026-02-18-chatgpt-vs-claude-comparison-5.png)
 
 ## まとめ
 

@@ -9,6 +9,9 @@ lang: ja
 image: /assets/images/2026-02-18-how-to-make-money-with-ai.png
 ---
 
+
+![Professional illustration for blog section about AIで稼ぐ時代が本格的に来ている related to how to make money with ai](/assets/images/2026-02-18-how-to-make-money-with-ai-1.png)
+
 ## AIで稼ぐ時代が本格的に来ている
 
 「AIを使って副業で稼ぎたいけど、何から始めればいいか分からない…」
@@ -18,6 +21,10 @@ image: /assets/images/2026-02-18-how-to-make-money-with-ai.png
 本記事では、初心者からでも始められる**AIで稼ぐ方法7選**を、具体的な手順とともに紹介します。
 
 ---
+
+
+
+![Step-by-step workflow diagram illustrating how to use how to make money with ai](/assets/images/2026-02-18-how-to-make-money-with-ai-2.png)
 
 ## AIで稼ぐ方法7選
 
@@ -168,6 +175,10 @@ AI動画生成ツールを使ってYouTube動画やSNS動画を制作。
 
 ---
 
+
+
+![Step-by-step workflow diagram illustrating how to use how to make money with ai](/assets/images/2026-02-18-how-to-make-money-with-ai-3.png)
+
 ## 始め方ロードマップ
 
 | ステップ | やること | 期間 |
@@ -179,6 +190,10 @@ AI動画生成ツールを使ってYouTube動画やSNS動画を制作。
 | 5 | 実績を積んで単価を上げていく | 3ヶ月〜 |
 
 ---
+
+
+
+![FAQ illustration showing common questions about how to make money with ai with answer bubbles](/assets/images/2026-02-18-how-to-make-money-with-ai-4.png)
 
 ## よくある質問（FAQ）
 
@@ -195,6 +210,10 @@ A. AIツールは進化し続けますが、「AIを使いこなす能力」自�
 A. ライティングやブログアフィリエイトは匿名で行えます。確定申告時に住民税を「普通徴収」にすれば、会社に知られるリスクは最小限に抑えられます。
 
 ---
+
+
+
+![Step-by-step workflow diagram illustrating how to use how to make money with ai](/assets/images/2026-02-18-how-to-make-money-with-ai-5.png)
 
 ## まとめ：今すぐ始める人が勝つ
 
