@@ -6,6 +6,7 @@ categories: [ai-tools, comparison]
 tags: [AI議事録, 会議ツール, 生産性, 比較]
 description: "AI議事録ツールを導入したいけど、どれを選べばいいか分からない方へ。主要7ツールの機能・料金・精度を徹底比較し、用途別のおすすめを紹介します。"
 lang: ja
+image: /assets/images/2026-02-18-best-ai-meeting-tools-comparison.png
 ---
 
 ## AI議事録ツールとは？なぜ今導入すべきなのか

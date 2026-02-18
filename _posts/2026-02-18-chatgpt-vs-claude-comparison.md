@@ -6,6 +6,7 @@ categories: [ai-tools, comparison]
 tags: [ChatGPT, Claude, AI比較, LLM]
 description: "ChatGPTとClaudeの違いが分からない方へ。料金・性能・得意分野を用途別に徹底比較。あなたに合ったAIアシスタントが見つかります。"
 lang: ja
+image: /assets/images/2026-02-18-chatgpt-vs-claude-comparison.png
 ---
 
 ## ChatGPTとClaude、結局どっちを使うべき？

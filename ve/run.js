@@ -51,6 +51,74 @@ const KEYWORD_POOL = [
 ];
 
 // ---------------------------------------------------------------------------
+// Hero image generation (OpenAI Images API)
+// ---------------------------------------------------------------------------
+const ASSETS_IMAGES = path.join(ROOT, "assets", "images");
+
+const IMAGE_PROMPT_TEMPLATE = (title) =>
+  `Modern flat illustration, blog hero image, about "${title}", ` +
+  `futuristic AI workspace, holographic interface, laptop, glowing elements, ` +
+  `clean composition, professional, vibrant colors, ` +
+  `no text, no letters, ` +
+  `16:9 aspect ratio, high quality, sharp, tech style`;
+
+async function generateHeroImage(date, keyword) {
+  if (!OPENAI_API_KEY) return null;
+
+  ensureDir(ASSETS_IMAGES);
+  const filename = `${date}-${keyword.slug}.png`;
+  const filepath = path.join(ASSETS_IMAGES, filename);
+
+  if (fs.existsSync(filepath)) {
+    console.log(`[skip] image already exists: ${filename}`);
+    return `/assets/images/${filename}`;
+  }
+
+  return new Promise((resolve, reject) => {
+    const body = JSON.stringify({
+      model: "gpt-image-1",
+      prompt: IMAGE_PROMPT_TEMPLATE(keyword.title),
+      n: 1,
+      size: "1536x1024",
+    });
+
+    const req = https.request(
+      {
+        hostname: "api.openai.com",
+        path: "/v1/images/generations",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${OPENAI_API_KEY}`,
+        },
+      },
+      (res) => {
+        let data = "";
+        res.on("data", (chunk) => (data += chunk));
+        res.on("end", () => {
+          try {
+            const json = JSON.parse(data);
+            if (json.data && json.data[0] && json.data[0].b64_json) {
+              const buffer = Buffer.from(json.data[0].b64_json, "base64");
+              fs.writeFileSync(filepath, buffer);
+              console.log(`[created] image: ${filename}`);
+              resolve(`/assets/images/${filename}`);
+            } else {
+              reject(new Error(`Image API error: ${data.slice(0, 300)}`));
+            }
+          } catch (e) {
+            reject(e);
+          }
+        });
+      }
+    );
+    req.on("error", reject);
+    req.write(body);
+    req.end();
+  });
+}
+
+// ---------------------------------------------------------------------------
 // LLM article generation (OpenAI API)
 // ---------------------------------------------------------------------------
 function callOpenAI(prompt) {
@@ -178,7 +246,8 @@ function createDailyLog(date, articleTitle) {
 // ---------------------------------------------------------------------------
 // 2. Create article post
 // ---------------------------------------------------------------------------
-function createFallbackArticle(date, keyword) {
+function createFallbackArticle(date, keyword, imagePath) {
+  const imageField = imagePath ? `\nimage: ${imagePath}` : "";
   const frontMatter = `---
 layout: post
 title: "${keyword.title}"
@@ -186,7 +255,7 @@ date: ${date}
 categories: [ai-tools, comparison]
 tags: [${keyword.tags.join(", ")}]
 description: "${keyword.title}について詳しく解説します。"
-lang: ja
+lang: ja${imageField}
 ---`;
 
   const body = `## はじめに
@@ -214,6 +283,17 @@ async function createArticlePost(date, keyword) {
     return { created: false, title: keyword.title };
   }
 
+  // Generate hero image first (non-blocking on failure)
+  let imagePath = null;
+  if (OPENAI_API_KEY) {
+    try {
+      console.log(`[image] Generating hero image for: ${keyword.slug}`);
+      imagePath = await generateHeroImage(date, keyword);
+    } catch (err) {
+      console.log(`[image] Failed: ${err.message}, continuing without image`);
+    }
+  }
+
   let content;
 
   // Try LLM generation first
@@ -221,6 +301,7 @@ async function createArticlePost(date, keyword) {
     try {
       console.log(`[llm] Generating article with OpenAI API...`);
       const body = await generateArticleWithLLM(keyword);
+      const imageField = imagePath ? `\nimage: ${imagePath}` : "";
       const frontMatter = `---
 layout: post
 title: "${keyword.title}"
@@ -228,17 +309,17 @@ date: ${date}
 categories: [ai-tools, comparison]
 tags: [${keyword.tags.join(", ")}]
 description: "${keyword.title}について詳しく解説します。"
-lang: ja
+lang: ja${imageField}
 ---`;
       content = `${frontMatter}\n\n${body}`;
       console.log(`[llm] Article generated successfully`);
     } catch (err) {
       console.log(`[llm] Failed: ${err.message}, falling back to template`);
-      content = createFallbackArticle(date, keyword);
+      content = createFallbackArticle(date, keyword, imagePath);
     }
   } else {
     console.log(`[info] No OPENAI_API_KEY, using template article`);
-    content = createFallbackArticle(date, keyword);
+    content = createFallbackArticle(date, keyword, imagePath);
   }
 
   fs.writeFileSync(postFile, content, "utf8");
@@ -341,6 +422,7 @@ async function main() {
   ensureDir(path.join(VE, "logs"));
   ensureDir(path.join(VE, "templates"));
   ensureDir(POSTS);
+  ensureDir(ASSETS_IMAGES);
 
   // Pick keyword for today
   const keyword = pickKeyword(date);

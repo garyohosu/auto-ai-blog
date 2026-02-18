@@ -6,6 +6,7 @@ categories: [ai-tools, comparison]
 tags: [AIコーディング, GitHub Copilot, プログラミング]
 description: "【2026年】AIコーディングアシスタント おすすめ6選｜GitHub Copilot vs Cursor vs Claude Codeについて詳しく解説します。"
 lang: ja
+image: /assets/images/2026-02-18-best-ai-coding-assistants.png
 ---
 
 ## はじめに

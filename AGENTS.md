@@ -8,13 +8,19 @@ auto-ai-blog は複数のAIエージェントが協調して自律運営する�
 
 ## Writer Agent（記事生成）
 
-**責任:** buyer-intent 記事の作成・公開
+**責任:** buyer-intent 記事の作成・公開（アイキャッチ画像を含む）
 
 - キーワードプールからトピックを選定
 - 3000〜5000字の evergreen 記事を生成
 - 比較表・手順・FAQ・CTA を必ず含める
 - `[AFF_LINK: product_name]` でアフィリエイト導線を設置
 - `[INTERNAL: slug]` で内部リンクを設計
+- **アイキャッチ画像を生成して `assets/images/YYYY-MM-DD-{slug}.png` に保存**
+  - モデル: `gpt-image-1`（OpenAI Images API）
+  - サイズ: `1536x1024`
+  - プロンプト: `Modern flat illustration, blog hero image, about "{記事タイトル}", futuristic AI workspace, holographic interface, laptop, glowing elements, clean composition, professional, vibrant colors, no text, no letters, 16:9 aspect ratio, high quality, sharp, tech style`
+  - 失敗時は画像なしで記事を作成して続行
+- front matter に `image: /assets/images/YYYY-MM-DD-{slug}.png` を追加
 - `_posts/YYYY-MM-DD-slug.md` に出力
 
 **禁止事項:**

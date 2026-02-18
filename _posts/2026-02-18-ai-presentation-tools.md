@@ -6,6 +6,7 @@ categories: [ai-tools, comparison]
 tags: [AIプレゼン, Gamma, スライド作成]
 description: "【2026年】AIプレゼン作成ツール おすすめ5選｜Gamma・Beautiful.ai・Canvaを比較について詳しく解説します。"
 lang: ja
+image: /assets/images/2026-02-18-ai-presentation-tools.png
 ---
 
 # 【2026年】AIプレゼン作成ツール おすすめ5選｜Gamma・Beautiful.ai・Canvaを比較

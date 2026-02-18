@@ -182,9 +182,27 @@ jobs:
 2) 今日の主タスク 1つを選定（重複回避）
 3) 実行前に計画を `ve/todo.md` と `ve/state.md` に記入
 4) 実行（安全な範囲でファイル生成/更新）
+   - 記事生成時は **アイキャッチ画像も必ず生成**（後述 §8.4）
 5) `ve/logs/YYYY-MM-DD.md` に全記録
 6) `ve/metrics.md` に当日行を追記
 7) `ve/state.md` に next_run を明記して終了
+
+### 8.4 アイキャッチ画像（ヒーロー画像）生成ルール
+- 記事を新規作成するたびに、対応する画像を **必ず** 生成する
+- 保存先: `assets/images/YYYY-MM-DD-{slug}.png`
+- front matter に `image: /assets/images/YYYY-MM-DD-{slug}.png` を追加
+- 生成モデル: `gpt-image-1`（OpenAI Images API）
+- サイズ: `1536x1024`（16:9 近似）
+- プロンプトテンプレート（{TITLE} を記事タイトルで置換）:
+  ```
+  Modern flat illustration, blog hero image, about "{TITLE}",
+  futuristic AI workspace, holographic interface, laptop, glowing elements,
+  clean composition, professional, vibrant colors,
+  no text, no letters,
+  16:9 aspect ratio, high quality, sharp, tech style
+  ```
+- 画像生成に失敗した場合は `image:` なしで記事を作成して続行（ノンブロッキング）
+- `_layouts/post.html` が `page.image` を参照して記事冒頭に自動表示する
 
 ### 8.3 タスク優先順位（デフォルト）
 1. buyer-intent 記事（比較/導入/手順/ベスト○○）を 1 本作る
@@ -195,10 +213,11 @@ jobs:
 ## 9. コンテンツ品質ルール
 - ニュース羅列は禁止（短命・競合強すぎ）
 - evergreen（悩み解決 / 比較 / 実装手順）を優先
-- 収益の“置き場所”を必ず作る
+- 収益の"置き場所"を必ず作る
   - アフィリエイト: `[AFF_LINK: product_name]`
   - 内部リンク: `[INTERNAL: related_post_slug]`
 - 記事には最低限これを含める
+  - **アイキャッチ画像**（front matter `image:` + `assets/images/` への PNG）
   - 導入（誰の何の悩みか）
   - 手順/比較（具体）
   - FAQ（検索意図の拾い）
@@ -231,6 +250,7 @@ jobs:
 ## 12. 初期化（最初の1回で作るもの）
 - ディレクトリ:
   - `_posts/`
+  - `assets/images/`
   - `ve/`
   - `ve/logs/`
   - `ve/templates/`
@@ -240,17 +260,25 @@ jobs:
   - `ve/metrics.md`
   - `.github/workflows/daily.yml`
   - `_config.yml`
+  - `_layouts/post.html`（ヒーロー画像表示用カスタムレイアウト）
   - `ve/run.js`（最小動作：日次ログと記事雛形を作る）
 
 ## 13. ve/run.js（最小仕様）
 ### 13.1 最低限の挙動
 - `ve/logs/YYYY-MM-DD.md` を作成（なければ）
 - `_posts/YYYY-MM-DD-daily-note.md` を作成（なければ）
-- 以降、LLM 連携（キーワード選定→記事生成）に拡張可能な構造にする
+- 以降、LLM 連携（キーワード選定→記事生成→画像生成）に拡張可能な構造にする
 
 ### 13.2 出力の要件
-- “必ず何かが増える”こと（毎日コミットされる）
+- "必ず何かが増える"こと（毎日コミットされる）
 - 生成物の内容は最初は薄くてもよい（まずは自動運転の安定化）
+
+### 13.3 画像生成の実装方針
+- `OPENAI_API_KEY` が設定されているときのみ画像生成を試みる
+- 生成失敗はログに記録し、記事作成は続行（画像なしでも公開する）
+- 既に画像ファイルが存在する場合はスキップ（冪等性を保つ）
+- `assets/images/` ディレクトリを `main()` 内で `ensureDir` する
+- GitHub Actions の secrets に `OPENAI_API_KEY` を登録すること
 
 ---
 

@@ -6,6 +6,7 @@ categories: [ai-tools, comparison]
 tags: [AI画像生成, 画像ツール, デザイン, 無料]
 description: "無料で使えるAI画像生成ツールを探している方へ。商用利用可能なサービスを含む主要8ツールの特徴・料金・使い方を徹底比較します。"
 lang: ja
+image: /assets/images/2026-02-18-best-free-ai-image-generators.png
 ---
 
 ## AI画像生成ツールとは？2026年の最新事情

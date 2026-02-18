@@ -6,6 +6,7 @@ categories: [ai-business, guide]
 tags: [AI副業, 稼ぎ方, 副業, ビジネス]
 description: "AIを使って稼ぎたいけど何から始めればいい？初心者でも今すぐ始められるAI副業・ビジネス7選を、具体的な手順とともに解説します。"
 lang: ja
+image: /assets/images/2026-02-18-how-to-make-money-with-ai.png
 ---
 
 ## AIで稼ぐ時代が本格的に来ている
