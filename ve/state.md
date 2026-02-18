@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "【2026年】AIプレゼン作成ツール おすすめ5選｜Gamma・Beautiful.ai・Canvaを比較"
+- today_objective: publish "【2026年版】AIツール完全ガイド｜用途別おすすめ30選まとめ"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: best-ai-translation-tools
+- next_run: publish article: ai-productivity-complete-guide

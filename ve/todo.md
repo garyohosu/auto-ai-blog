@@ -6,7 +6,7 @@
 - Prepare X posting queue (optional)
 
 ## Today
-- Publish: ai-presentation-tools
+- Publish: ultimate-ai-tools-guide-2026
 
 
 ## Done (append-only)
