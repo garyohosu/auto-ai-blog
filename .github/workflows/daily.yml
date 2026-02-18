@@ -3,7 +3,7 @@ name: Daily Virtual Employee Run
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 15 * * *" # UTC 15:00 = JST 00:00
+    - cron: "0 11 * * *" # UTC 11:00 = JST 20:00
 
 permissions:
   contents: write
