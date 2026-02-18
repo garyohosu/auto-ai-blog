@@ -1,76 +1,90 @@
 {
   "date": "2026-02-18",
-  "timestamp": "2026-02-18T12:29:52.137Z",
-  "phase": "designer",
+  "timestamp": "2026-02-18T13:16:18.024Z",
+  "phase": "done",
   "ceo_strategy": "ai_productivity",
   "selected_keyword": {
-    "slug": "ai-productivity-complete-guide",
-    "title": "AIで仕事効率化する方法｜生産性3倍の完全ガイド【2026年】",
+    "slug": "ai-customer-support-chatbot-guide",
+    "title": "AIチャットボットでカスタマーサポートを自動化する方法【導入手順つき】",
     "tags": [
-      "AI効率化",
-      "生産性",
-      "ビジネス"
+      "AIチャットボット",
+      "カスタマーサポート",
+      "自動化"
     ]
   },
-  "article_path": "_posts/2026-02-18-ai-productivity-complete-guide.md",
-  "image_path": "/assets/images/2026-02-18-ai-productivity-complete-guide-hero.png",
-  "status": "failed",
+  "article_path": "_posts/2026-02-18-ai-customer-support-chatbot-guide.md",
+  "image_path": "/assets/images/2026-02-18-ai-customer-support-chatbot-guide-hero.png",
+  "status": "completed",
   "agents_completed": [
     {
       "agent": "ceo",
-      "timestamp": "2026-02-18T12:29:52.188Z",
-      "duration": 0.05
+      "timestamp": "2026-02-18T13:16:18.113Z",
+      "duration": 0.09
     },
     {
       "agent": "seo",
-      "timestamp": "2026-02-18T12:29:52.236Z",
-      "duration": 0.05
+      "timestamp": "2026-02-18T13:16:18.204Z",
+      "duration": 0.09
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-18T12:29:52.781Z",
-      "duration": 0.51
+      "timestamp": "2026-02-18T13:17:38.001Z",
+      "duration": 79.72
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-18T12:29:52.786Z",
-      "duration": 0.55
-    }
-  ],
-  "failed_at": "designer",
-  "error": "script not found",
-  "editor_decision": "rejected",
-  "editor_issues": [
-    "比較表不足: 1個（基準 3個以上）",
-    "アフィリエイトリンク不足: 0個（基準 2個以上）",
-    "\"無料\" が 8 回出現（上限 5 回）"
-  ],
-  "current_phase": "editor",
-  "completed_agents": [
-    {
-      "agent": "editor",
-      "timestamp": "2026-02-18T12:57:40.969Z",
-      "duration": 0.012,
-      "decision": "rejected"
-    },
-    {
-      "agent": "analyst",
-      "timestamp": "2026-02-18T12:59:18.850Z",
-      "duration": 0.011
+      "timestamp": "2026-02-18T13:17:38.017Z",
+      "duration": 79.81
     },
     {
       "agent": "designer",
-      "timestamp": "2026-02-18T13:02:02.328Z",
-      "duration": 0.011,
+      "timestamp": "2026-02-18T13:17:38.102Z",
+      "duration": 0.08
+    },
+    {
+      "agent": "linker",
+      "timestamp": "2026-02-18T13:17:38.196Z",
+      "duration": 0.09
+    },
+    {
+      "agent": "editor",
+      "timestamp": "2026-02-18T13:17:38.286Z",
+      "duration": 0.09
+    },
+    {
+      "agent": "analyst",
+      "timestamp": "2026-02-18T13:17:38.380Z",
+      "duration": 0.09
+    }
+  ],
+  "current_phase": "completed",
+  "completed_agents": [
+    {
+      "agent": "designer",
+      "timestamp": "2026-02-18T13:17:38.090Z",
+      "duration": 0.006,
       "success": false,
       "mock": true
     },
     {
       "agent": "linker",
-      "timestamp": "2026-02-18T13:03:54.621Z",
-      "duration": 0.079,
+      "timestamp": "2026-02-18T13:17:38.181Z",
+      "duration": 0.014,
       "resolvedLinks": 0,
-      "relatedArticlesAdded": true
+      "relatedArticlesAdded": false
+    },
+    {
+      "agent": "editor",
+      "timestamp": "2026-02-18T13:17:38.271Z",
+      "duration": 0.008,
+      "decision": "approved"
+    },
+    {
+      "agent": "analyst",
+      "timestamp": "2026-02-18T13:17:38.365Z",
+      "duration": 0.014
     }
-  ]
+  ],
+  "editor_decision": "approved",
+  "editor_issues": []
 }

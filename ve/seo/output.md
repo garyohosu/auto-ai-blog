@@ -1,9 +1,9 @@
 # SEO Keyword Selection: 2026-02-18
 
 ## 選定キーワード
-- slug: ai-productivity-complete-guide
-- title: AIで仕事効率化する方法｜生産性3倍の完全ガイド【2026年】
-- tags: [AI効率化, 生産性, ビジネス]
+- slug: ai-customer-support-chatbot-guide
+- title: AIチャットボットでカスタマーサポートを自動化する方法【導入手順つき】
+- tags: [AIチャットボット, カスタマーサポート, 自動化]
 
 ## 競合分析
 - 既存上位記事: 3000字前後

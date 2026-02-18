@@ -95,15 +95,17 @@ function countCharacters(text) {
  * マークダウンテーブルの数をカウント
  */
 function countTables(markdown) {
-  const tableRegex = /\|[^\n]+\|/g;
-  const matches = markdown.match(tableRegex) || [];
-  // 連続した行を1つのテーブルとしてカウント
+  // 行単位で走査し、テーブル行（| で始まる）の連続ブロックを1テーブルとしてカウント
+  const lines = markdown.split('\n');
   let tableCount = 0;
   let inTable = false;
-  for (const match of matches) {
-    if (!inTable) {
+  for (const line of lines) {
+    const isTableRow = /^\s*\|/.test(line);
+    if (isTableRow && !inTable) {
       tableCount++;
       inTable = true;
+    } else if (!isTableRow) {
+      inTable = false;
     }
   }
   return tableCount;
@@ -113,15 +115,20 @@ function countTables(markdown) {
  * FAQの数をカウント
  */
 function countFAQs(markdown) {
+  // 重複カウントを避けるため OR パターンを1つの正規表現で処理
   const faqPatterns = [
-    /###\s*Q[:\s]/gi,
-    /\*\*Q[:\s]/gi,
-    /Q\d+[:\s]/gi
+    /^#{2,4}\s*Q\d*[:\s．.]/gim,  // ### Q1: / ## Q: / #### Q1.
+    /^\*\*Q\d*[:\s．.]/gim,        // **Q1:** / **Q:**
   ];
+  const seen = new Set();
   let faqCount = 0;
   for (const pattern of faqPatterns) {
     const matches = markdown.match(pattern);
-    if (matches) faqCount += matches.length;
+    if (matches) {
+      for (const m of matches) {
+        if (!seen.has(m)) { seen.add(m); faqCount++; }
+      }
+    }
   }
   return faqCount;
 }
@@ -148,7 +155,8 @@ function countInternalLinks(markdown) {
  */
 function countAffiliateLinks(markdown) {
   const affiliatePatterns = [
-    /\[AFFILIATE:[^\]]+\]/g,
+    /\[AFF_LINK:[^\]]+\]/g,      // Writer が生成するプレースホルダー
+    /\[AFFILIATE:[^\]]+\]/g,      // 別名プレースホルダー
     /https?:\/\/(amzn\.to|bit\.ly|affiliate\.|a8\.net)/g
   ];
   let linkCount = 0;
@@ -203,10 +211,16 @@ function checkSpamKeywords(markdown) {
  * 同一文の繰り返しチェック
  */
 function checkDuplicateSentences(markdown) {
-  const sentences = markdown.split(/[。\n]/).filter(s => s.trim().length > 10);
+  const sentences = markdown.split(/[。\n]/).filter(s => {
+    const t = s.trim();
+    if (t.length <= 10) return false;
+    // Markdown テーブルセパレーター行（|---|---| など）は除外
+    if (/^\|[\s\-:|]+\|/.test(t)) return false;
+    return true;
+  });
   const seen = new Set();
   const duplicates = [];
-  
+
   for (const sentence of sentences) {
     const normalized = sentence.trim();
     if (seen.has(normalized)) {
@@ -215,7 +229,7 @@ function checkDuplicateSentences(markdown) {
       seen.add(normalized);
     }
   }
-  
+
   return duplicates.slice(0, 3); // 最大3件まで表示
 }
 
