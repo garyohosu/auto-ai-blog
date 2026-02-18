@@ -1,27 +1,6 @@
 ---
 layout: default
 ---
-<style>
-.post-wrapper {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-}
-.post-main { flex: 1; min-width: 0; }
-.post-sidebar {
-  width: 300px;
-  flex-shrink: 0;
-  position: sticky;
-  top: 2rem;
-}
-@media (max-width: 900px) {
-  .post-wrapper { flex-direction: column; }
-  .post-sidebar { width: 100%; position: static; }
-}
-</style>
-
-<div class="post-wrapper">
-<div class="post-main">
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -56,9 +35,3 @@ layout: default
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 
 </article>
-</div><!-- /.post-main -->
-
-<aside class="post-sidebar">
-  <!-- サイドバー：Auto Ads が自動配置 -->
-</aside>
-</div><!-- /.post-wrapper -->
