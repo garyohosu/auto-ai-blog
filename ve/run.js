@@ -37,7 +37,11 @@ function ensureDir(dir) {
 // ---------------------------------------------------------------------------
 // Keyword pool (used when LLM is unavailable)
 // ---------------------------------------------------------------------------
+// ピラー記事（各クラスターの中心となる包括ガイド）を先頭に追加
 const KEYWORD_POOL = [
+  { slug: "ultimate-ai-tools-guide-2026",      title: "【2026年版】AIツール完全ガイド｜用途別おすすめ30選まとめ",          tags: ["AIツール", "まとめ", "完全ガイド"] },
+  { slug: "ai-productivity-complete-guide",    title: "AIで仕事効率化する方法｜生産性3倍の完全ガイド【2026年】",            tags: ["AI効率化", "生産性", "ビジネス"] },
+  { slug: "ai-business-monetization-guide",    title: "AIビジネス完全ガイド｜2026年版収益化・副業から起業まで",             tags: ["AIビジネス", "収益化", "副業"] },
   { slug: "best-ai-coding-assistants", title: "【2026年】AIコーディングアシスタント おすすめ6選｜GitHub Copilot vs Cursor vs Claude Code", tags: ["AIコーディング", "GitHub Copilot", "プログラミング"] },
   { slug: "ai-presentation-tools", title: "【2026年】AIプレゼン作成ツール おすすめ5選｜Gamma・Beautiful.ai・Canvaを比較", tags: ["AIプレゼン", "Gamma", "スライド作成"] },
   { slug: "best-ai-translation-tools", title: "【2026年】AI翻訳ツール おすすめ7選｜DeepL vs Google翻訳 vs ChatGPT", tags: ["AI翻訳", "DeepL", "多言語"] },
@@ -188,6 +192,83 @@ async function generateHeroImage(date, keyword) {
     req.write(body);
     req.end();
   });
+}
+
+// ---------------------------------------------------------------------------
+// Topic clusters (#5) — ピラー記事とサテライト記事の関係を定義
+// ---------------------------------------------------------------------------
+const TOPIC_CLUSTERS = {
+  "ai-tools": {
+    pillar: "ultimate-ai-tools-guide-2026",
+    satellites: [
+      "chatgpt-vs-claude-comparison", "best-ai-coding-assistants",
+      "best-ai-writing-tools", "best-free-ai-image-generators",
+      "ai-presentation-tools", "best-ai-translation-tools",
+      "best-ai-video-generators",
+    ],
+  },
+  "ai-productivity": {
+    pillar: "ai-productivity-complete-guide",
+    satellites: [
+      "best-ai-meeting-tools-comparison", "ai-email-writing-tools",
+      "how-to-automate-sns-with-ai", "best-ai-data-analysis-tools",
+    ],
+  },
+  "ai-business": {
+    pillar: "ai-business-monetization-guide",
+    satellites: [
+      "how-to-make-money-with-ai", "ai-seo-tools-comparison",
+      "best-ai-music-generators",
+    ],
+  },
+};
+
+// ---------------------------------------------------------------------------
+// Internal link resolution (#6) — [INTERNAL: slug] を実リンクに変換
+// ---------------------------------------------------------------------------
+
+/** _posts/ をスキャンして slug → {title, url} のインデックスを構築 */
+function buildPostIndex() {
+  if (!fs.existsSync(POSTS)) return {};
+  const index = {};
+  const files = fs.readdirSync(POSTS).filter((f) => f.endsWith(".md"));
+  for (const file of files) {
+    const m = file.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)\.md$/);
+    if (!m) continue;
+    const [, year, month, day, slug] = m;
+    const raw = readFile(path.join(POSTS, file)) || "";
+    const titleMatch = raw.match(/^title:\s*["']?(.+?)["']?\s*$/m);
+    const title = titleMatch ? titleMatch[1] : slug;
+    index[slug] = { title, url: `/${year}/${month}/${day}/${slug}/` };
+  }
+  return index;
+}
+
+/** [INTERNAL: slug] を [title](url) に置換 */
+function resolveInternalLinks(content, postIndex) {
+  return content.replace(/\[INTERNAL:\s*([^\]]+)\]/g, (match, slug) => {
+    const post = postIndex[slug.trim()];
+    return post ? `[${post.title}](${post.url})` : match;
+  });
+}
+
+/** クラスター内の関連記事セクションを末尾に追加 */
+function buildRelatedSection(keyword, postIndex) {
+  const relatedSlugs = [];
+  for (const cluster of Object.values(TOPIC_CLUSTERS)) {
+    const all = [cluster.pillar, ...cluster.satellites];
+    if (all.includes(keyword.slug)) {
+      all.filter((s) => s !== keyword.slug && postIndex[s])
+        .slice(0, 4)
+        .forEach((s) => relatedSlugs.push(s));
+      break;
+    }
+  }
+  if (relatedSlugs.length === 0) return "";
+  const links = relatedSlugs
+    .map((s) => `- [${postIndex[s].title}](${postIndex[s].url})`)
+    .join("\n");
+  return `\n\n## 関連記事\n\n${links}\n`;
 }
 
 // ---------------------------------------------------------------------------
@@ -393,6 +474,11 @@ lang: ja${imageField}
     console.log(`[info] No OPENAI_API_KEY, using template article`);
     content = createFallbackArticle(date, keyword, imagePath);
   }
+
+  // Resolve [INTERNAL: slug] → actual links, append related posts section
+  const postIndex = buildPostIndex();
+  content = resolveInternalLinks(content, postIndex);
+  content += buildRelatedSection(keyword, postIndex);
 
   fs.writeFileSync(postFile, content, "utf8");
   console.log(`[created] ${postFile}`);

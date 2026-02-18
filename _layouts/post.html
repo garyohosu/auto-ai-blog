@@ -1,6 +1,27 @@
 ---
 layout: default
 ---
+<style>
+.post-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.post-main { flex: 1; min-width: 0; }
+.post-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 2rem;
+}
+@media (max-width: 900px) {
+  .post-wrapper { flex-direction: column; }
+  .post-sidebar { width: 100%; position: static; }
+}
+</style>
+
+<div class="post-wrapper">
+<div class="post-main">
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -17,16 +38,26 @@ layout: default
   </header>
 
   {%- if page.image -%}
-  <div class="post-hero-image" style="margin-bottom:2rem;">
+  <div class="post-hero-image" style="margin-bottom:1.5rem;">
     <img src="{{ page.image | relative_url }}"
          alt="{{ page.title | escape }}"
          style="width:100%;height:auto;border-radius:8px;display:block;" />
   </div>
   {%- endif -%}
 
-  <div class="post-content e-content" itemprop="articleBody">
+  <!-- 広告①：記事上部 -->
+  {%- if site.adsense.slot_top -%}
+    {%- include adsense-unit.html slot=site.adsense.slot_top -%}
+  {%- endif -%}
+
+  <div id="post-body" class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
+
+  <!-- 広告③：記事下部 -->
+  {%- if site.adsense.slot_bottom -%}
+    {%- include adsense-unit.html slot=site.adsense.slot_bottom -%}
+  {%- endif -%}
 
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
@@ -35,3 +66,32 @@ layout: default
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 
 </article>
+</div><!-- /.post-main -->
+
+<!-- サイドバー広告 -->
+<aside class="post-sidebar">
+  {%- if site.adsense.slot_sidebar -%}
+    {%- include adsense-unit.html slot=site.adsense.slot_sidebar -%}
+  {%- endif -%}
+</aside>
+</div><!-- /.post-wrapper -->
+
+<!-- 広告②：記事中部（第2見出し直前にJS挿入） -->
+{%- if site.adsense.slot_mid -%}
+<script>
+(function() {
+  var body = document.getElementById('post-body');
+  if (!body) return;
+  var headings = body.querySelectorAll('h2, h3');
+  if (headings.length < 2) return;
+  var target = headings[1]; // 第2見出しの前
+  var wrap = document.createElement('div');
+  wrap.innerHTML = '<div class="adsense-wrap" style="text-align:center;margin:1.5rem auto;overflow:hidden;max-width:100%;">'
+    + '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6743751614716161"'
+    + ' data-ad-slot="{{ site.adsense.slot_mid }}"'
+    + ' data-ad-format="auto" data-full-width-responsive="true"></ins></div>';
+  target.parentNode.insertBefore(wrap, target);
+  (window.adsbygoogle = window.adsbygoogle || []).push({});
+})();
+</script>
+{%- endif -%}
