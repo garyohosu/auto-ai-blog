@@ -1,4 +1,6 @@
 title: auto-ai-blog
+url: "https://garyohosu.github.io"
+baseurl: "/auto-ai-blog"
 theme: minima
 plugins:
   - jekyll-feed
@@ -6,3 +8,13 @@ plugins:
 # Google AdSense（自動広告）
 # _includes/custom-head.html に Auto Ads スクリプト済み。
 # AdSense管理画面 → 広告 → サイトごと → 「自動広告」を ON にすること。
+
+exclude:
+  - ve/
+  - spec.md
+  - AGENTS.md
+  - Gemfile
+  - Gemfile.lock
+  - "*.sh"
+  - .gitignore
+  - nul
