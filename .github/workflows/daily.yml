@@ -1,0 +1,37 @@
+name: Daily Virtual Employee Run
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 15 * * *" # UTC 15:00 = JST 00:00
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run virtual employee
+        env:
+          TZ: Asia/Tokyo
+        run: |
+          node ve/run.js
+
+      - name: Commit & Push changes
+        run: |
+          git config user.name "virtual-employee-bot"
+          git config user.email "virtual-employee-bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "ve: daily run $(date -u +%F)"
+          git push
