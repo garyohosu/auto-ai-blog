@@ -6,7 +6,7 @@
 - Prepare X posting queue (optional)
 
 ## Today
-- Publish: best-ai-coding-assistants
+- Publish: ai-presentation-tools
 
 
 ## Done (append-only)

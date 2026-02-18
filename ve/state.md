@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "【2026年】AIコーディングアシスタント おすすめ6選｜GitHub Copilot vs Cursor vs Claude Code"
+- today_objective: publish "【2026年】AIプレゼン作成ツール おすすめ5選｜Gamma・Beautiful.ai・Canvaを比較"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-presentation-tools
+- next_run: publish article: best-ai-translation-tools
