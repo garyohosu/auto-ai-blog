@@ -13,7 +13,7 @@
     ]
   },
   "article_path": "_posts/2026-02-18-ai-productivity-complete-guide.md",
-  "image_path": null,
+  "image_path": "/assets/images/2026-02-18-ai-productivity-complete-guide-hero.png",
   "status": "failed",
   "agents_completed": [
     {
@@ -45,7 +45,7 @@
     "アフィリエイトリンク不足: 0個（基準 2個以上）",
     "\"無料\" が 8 回出現（上限 5 回）"
   ],
-  "current_phase": "completed",
+  "current_phase": "linker",
   "completed_agents": [
     {
       "agent": "editor",
@@ -57,6 +57,13 @@
       "agent": "analyst",
       "timestamp": "2026-02-18T12:59:18.850Z",
       "duration": 0.011
+    },
+    {
+      "agent": "designer",
+      "timestamp": "2026-02-18T13:02:02.328Z",
+      "duration": 0.011,
+      "success": false,
+      "mock": true
     }
   ]
 }

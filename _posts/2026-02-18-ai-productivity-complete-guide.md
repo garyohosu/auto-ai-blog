@@ -3,6 +3,7 @@ layout: post
 title: "AIで仕事効率化する方法｜生産性3倍の完全ガイド【2026年】"
 date: 2026-02-18 00:00:00 +0900
 tags: ["AI効率化","生産性","ビジネス"]
+image: "/assets/images/2026-02-18-ai-productivity-complete-guide-hero.png"
 ---
 
 ## はじめに
