@@ -33,3 +33,43 @@ Writer Agent の記事生成履歴を記録します。
 - Tags: AIビジネス, 収益化, 副業
 - Quality: ✅  Pass (AI-optimized)
 - AI Summary: ✅ Optimized for Google AI Overview, ChatGPT, Perplexity
+
+
+
+## 2026-02-18
+- Keyword: best-ai-translation-tools
+- Title: 【2026年】AI翻訳ツール おすすめ7選｜DeepL vs Google翻訳 vs ChatGPT
+- Characters: 3982
+- Tags: AI翻訳, DeepL, 多言語
+- Quality: ⚠️  Below target
+- AI Summary: ✅ Optimized for Google AI Overview, ChatGPT, Perplexity
+
+
+
+## 2026-02-18
+- Keyword: ai-customer-support-chatbot-guide
+- Title: AIチャットボットでカスタマーサポートを自動化する方法【導入手順つき】
+- Characters: 0
+- Tags: AIチャットボット, カスタマーサポート, 自動化
+- Quality: ⚠️  Below target
+- AI Summary: ✅ Optimized for Google AI Overview, ChatGPT, Perplexity
+
+
+
+## 2026-02-18
+- Keyword: best-ai-translation-tools
+- Title: 【2026年】AI翻訳ツール おすすめ7選｜DeepL vs Google翻訳 vs ChatGPT
+- Characters: 3982
+- Tags: AI翻訳, DeepL, 多言語
+- Quality: ⚠️  Below target
+- AI Summary: ✅ Optimized for Google AI Overview, ChatGPT, Perplexity
+
+
+
+## 2026-02-18
+- Keyword: best-ai-translation-tools
+- Title: 【2026年】AI翻訳ツール おすすめ7選｜DeepL vs Google翻訳 vs ChatGPT
+- Characters: 7030
+- Tags: AI翻訳, DeepL, 多言語
+- Quality: ✅  Pass (AI-optimized)
+- AI Summary: ✅ Optimized for Google AI Overview, ChatGPT, Perplexity

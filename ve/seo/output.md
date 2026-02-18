@@ -1,9 +1,9 @@
 # SEO Keyword Selection: 2026-02-18
 
 ## 選定キーワード
-- slug: ai-productivity-complete-guide
-- title: AIで仕事効率化する方法｜生産性3倍の完全ガイド【2026年】
-- tags: [AI効率化, 生産性, ビジネス]
+- slug: best-ai-translation-tools
+- title: 【2026年】AI翻訳ツール おすすめ7選｜DeepL vs Google翻訳 vs ChatGPT
+- tags: [AI翻訳, DeepL, 多言語]
 
 ## 競合分析
 - 既存上位記事: 3000字前後

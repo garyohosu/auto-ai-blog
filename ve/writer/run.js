@@ -20,6 +20,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
 
 // ============================================================
 // Configuration
@@ -146,7 +147,7 @@ ${soul}
 
   try {
     log('Calling OpenAI API (gpt-5.2)...');
-    const response = await mockOpenAICall(prompt);
+    const response = await callOpenAI(prompt);
     return response;
   } catch (error) {
     log(`⚠️  OpenAI API error: ${error.message}`);
@@ -156,24 +157,52 @@ ${soul}
 }
 
 /**
- * Mock OpenAI API call (for testing without API key)
+ * Real OpenAI API call via https module
  */
-async function mockOpenAICall(prompt) {
-  // Simulate API delay
-  await new Promise(resolve => setTimeout(resolve, 500));
-  
-  // In production, replace this with:
-  // const OpenAI = require('openai');
-  // const openai = new OpenAI({ apiKey: OPENAI_API_KEY });
-  // const completion = await openai.chat.completions.create({
-  //   model: "gpt-5.2",  // GPT-5.2 (latest stable, 5.3 is newest but 5.2 is recommended)
-  //   messages: [{ role: "user", content: prompt }],
-  //   temperature: 0.7,
-  //   max_tokens: 4000  // Increased for 4000+ character articles
-  // });
-  // return completion.choices[0].message.content;
-  
-  throw new Error('Mock API - no real implementation');
+function callOpenAI(prompt) {
+  return new Promise((resolve, reject) => {
+    const body = JSON.stringify({
+      model: 'gpt-5.2',
+      max_completion_tokens: 16000,
+      messages: [{ role: 'user', content: prompt }],
+    });
+
+    const req = https.request(
+      {
+        hostname: 'api.openai.com',
+        path: '/v1/chat/completions',
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${OPENAI_API_KEY}`,
+        },
+      },
+      (res) => {
+        let data = '';
+        res.on('data', (chunk) => (data += chunk));
+        res.on('end', () => {
+          try {
+            const json = JSON.parse(data);
+            if (json.choices && json.choices[0] && json.choices[0].message) {
+              const content = json.choices[0].message.content;
+              if (content) {
+                resolve(content);
+              } else {
+                reject(new Error(`Empty content from API. Response: ${data.slice(0, 400)}`));
+              }
+            } else {
+              reject(new Error(`API error: ${data.slice(0, 400)}`));
+            }
+          } catch (e) {
+            reject(e);
+          }
+        });
+      }
+    );
+    req.on('error', reject);
+    req.write(body);
+    req.end();
+  });
 }
 
 /**

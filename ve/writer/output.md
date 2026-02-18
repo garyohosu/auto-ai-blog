@@ -1,9 +1,9 @@
 # Writer Output: 2026-02-18
 
 ## Generated Article
-- File: `2026-02-18-ai-business-monetization-guide.md`
-- Title: AIビジネス完全ガイド｜2026年版収益化・副業から起業まで
-- Character count: 4001
+- File: `2026-02-18-best-ai-translation-tools.md`
+- Title: 【2026年】AI翻訳ツール おすすめ7選｜DeepL vs Google翻訳 vs ChatGPT
+- Character count: 7030
 - Status: ✅ Complete
 - AI Summary Optimization: ✅ Included
 
