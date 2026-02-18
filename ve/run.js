@@ -55,12 +55,81 @@ const KEYWORD_POOL = [
 // ---------------------------------------------------------------------------
 const ASSETS_IMAGES = path.join(ROOT, "assets", "images");
 
-const IMAGE_PROMPT_TEMPLATE = (title) =>
-  `Modern flat illustration, blog hero image, about "${title}", ` +
-  `futuristic AI workspace, holographic interface, laptop, glowing elements, ` +
-  `clean composition, professional, vibrant colors, ` +
-  `no text, no letters, ` +
-  `16:9 aspect ratio, high quality, sharp, tech style`;
+// ---------------------------------------------------------------------------
+// Image prompt diversity: 6 visual styles × title-based visual hints
+// ---------------------------------------------------------------------------
+const IMAGE_STYLE_TEMPLATES = [
+  (topic, el) =>
+    `Modern flat illustration, blog hero image, ${el ? "featuring " + el + ", about " + topic : "about " + topic}, ` +
+    `clean geometric shapes, blue and purple color palette, professional tech blog, ` +
+    `no text, no letters, 16:9 aspect ratio, high quality`,
+
+  (topic, el) =>
+    `Isometric 3D illustration, blog thumbnail, ${el ? topic + " with " + el : topic}, ` +
+    `vibrant emerald and teal colors, soft shadows, detailed icons, modern tech style, ` +
+    `no text, no letters, 16:9 aspect ratio, high quality`,
+
+  (topic, el) =>
+    `Abstract gradient mesh background in warm orange and red tones, blog hero image, ` +
+    `${el ? "floating " + el + " icons, " : ""}representing ${topic}, ` +
+    `dynamic composition, modern design, professional, ` +
+    `no text, no letters, 16:9 aspect ratio, high quality`,
+
+  (topic, el) =>
+    `Futuristic neon tech illustration, blog header, ${el ? topic + " featuring " + el : topic}, ` +
+    `cyan and indigo neon accents, dark background, circuit board patterns, glowing details, ` +
+    `no text, no letters, 16:9 aspect ratio, high quality`,
+
+  (topic, el) =>
+    `Clean vector illustration on white background, blog header image, ` +
+    `${el ? topic + " concept with " + el : topic}, ` +
+    `sky blue and amber accent colors, minimal friendly icons, editorial style, ` +
+    `no text, no letters, 16:9 aspect ratio, high quality`,
+
+  (topic, el) =>
+    `Bold colorful editorial illustration, blog thumbnail, ${el ? topic + " theme with " + el : topic}, ` +
+    `vibrant pink and yellow color blocking, modern graphic design, eye-catching composition, ` +
+    `no text, no letters, 16:9 aspect ratio, high quality`,
+];
+
+// Map title keywords to specific visual element hints
+const TITLE_VISUAL_HINTS = [
+  [/ChatGPT/i,                    "chat interface and conversation bubbles"],
+  [/Claude/i,                     "AI assistant interface with clean UI"],
+  [/Copilot|Cursor/i,             "code editor with AI autocomplete suggestions"],
+  [/プレゼン/,                      "presentation slides and bar charts"],
+  [/翻訳/,                         "translation arrows between language speech bubbles"],
+  [/コーディング|プログラミング/,        "code blocks and terminal window"],
+  [/議事録|会議/,                    "meeting room setup and speech bubbles"],
+  [/画像生成/,                      "colorful art canvases and digital paintbrush"],
+  [/文章|ライティング/,               "document pages and writing pen"],
+  [/動画/,                         "video player timeline and film frames"],
+  [/音楽/,                         "music notes and sound waveforms"],
+  [/メール/,                        "email envelope and inbox UI"],
+  [/データ分析/,                     "charts, graphs, and data visualizations"],
+  [/SEO/,                         "search bar, magnifier, and ranking arrows"],
+  [/SNS/,                         "social media feed icons and share buttons"],
+  [/稼ぐ|副業|収益/,                  "rising profit chart and coin stack"],
+];
+
+/** Pick array item deterministically by slug (reproducible per article) */
+function pickBySlug(slug, arr) {
+  const hash = slug.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0);
+  return arr[hash % arr.length];
+}
+
+/** Build a diverse image prompt for the given keyword */
+function buildImagePrompt(keyword) {
+  const template = pickBySlug(keyword.slug, IMAGE_STYLE_TEMPLATES);
+  let visualElement = null;
+  for (const [pattern, hint] of TITLE_VISUAL_HINTS) {
+    if (pattern.test(keyword.title)) {
+      visualElement = hint;
+      break;
+    }
+  }
+  return template(keyword.title, visualElement);
+}
 
 async function generateHeroImage(date, keyword) {
   if (!OPENAI_API_KEY) return null;
@@ -74,10 +143,13 @@ async function generateHeroImage(date, keyword) {
     return `/assets/images/${filename}`;
   }
 
+  const prompt = buildImagePrompt(keyword);
+  console.log(`[image] style: template-${pickBySlug(keyword.slug, IMAGE_STYLE_TEMPLATES).name || "?"}`);
+
   return new Promise((resolve, reject) => {
     const body = JSON.stringify({
       model: "gpt-image-1",
-      prompt: IMAGE_PROMPT_TEMPLATE(keyword.title),
+      prompt,
       n: 1,
       size: "1536x1024",
     });
