@@ -1,14 +1,12 @@
 {% comment %}
-  Google AdSense 広告ユニット（レスポンシブ）
-  使用方法: {% include adsense-unit.html slot=site.adsense.slot_top %}
-  ※ _config.yml の adsense.slot_* にAdSense管理画面で取得したIDを設定してください
-{% endcomment %}
-<div class="adsense-wrap" style="text-align:center;margin:1.5rem auto;overflow:hidden;max-width:100%;">
-  <ins class="adsbygoogle"
-       style="display:block"
+  Google AdSense Auto Ads（自動広告）
+  広告の配置は _includes/custom-head.html に読み込まれたスクリプトで自動処理されます。
+  AdSense 管理画面 → 広告 → サイトごと → 「自動広告」を ON にしてください。
+
+  個別スロットIDを取得した場合の手動配置例:
+  <ins class="adsbygoogle" style="display:block"
        data-ad-client="ca-pub-6743751614716161"
-       data-ad-slot="{{ include.slot | default: '0000000000' }}"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
+       data-ad-slot="YOUR_SLOT_ID"
+       data-ad-format="auto" data-full-width-responsive="true"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+{% endcomment %}

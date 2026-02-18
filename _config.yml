@@ -3,10 +3,6 @@ theme: minima
 plugins:
   - jekyll-feed
 
-# Google AdSense
-# AdSense管理画面で広告ユニットを作成し、取得したスロットIDを設定してください
-adsense:
-  slot_top:     "0000000000"   # 記事上部（タイトル直下）
-  slot_mid:     "0000000000"   # 記事中部（第2見出し付近）
-  slot_bottom:  "0000000000"   # 記事下部（本文末尾）
-  slot_sidebar: "0000000000"   # サイドバー
+# Google AdSense（自動広告）
+# _includes/custom-head.html に Auto Ads スクリプト済み。
+# AdSense管理画面 → 広告 → サイトごと → 「自動広告」を ON にすること。
