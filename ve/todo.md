@@ -6,7 +6,7 @@
 - Prepare X posting queue (optional)
 
 ## Today
-- Generate 50 buyer-intent keywords (JP + EN)
+- Publish: best-ai-coding-assistants
 
 
 ## Done (append-only)
