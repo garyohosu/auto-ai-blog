@@ -118,7 +118,6 @@ ROI = (収益 - コスト) / コスト × 100%
 ```javascript
 // ve/social-media/run.js
 // 機能:
-// 1. 記事公開時に自動でTwitter/X投稿
 // 2. OGP画像 + 魅力的な見出し
 // 3. ハッシュタグ自動生成（#AI #生成AI #ChatGPT）
 // 4. 過去の人気記事も定期的に再投稿
@@ -260,7 +259,6 @@ ROI = (収益 - コスト) / コスト × 100%
 - [x] ページビュートラッキング実装（完了）
 - [x] ファビコン・OGP設置（完了）
 - [ ] Google Analytics 4 設定（測定ID取得）
-- [ ] SNS自動投稿システム（Twitter/X API連携）
 
 ### Phase 2: 短期（1ヶ月以内）🔧
 - [ ] Revenue Optimizer Agent 開発
@@ -328,7 +326,6 @@ ROI: +1,400%
 ## 🎬 次のアクション（優先順位順）
 
 1. **Google Analytics 4 測定IDの取得** ← 最優先（トラフィック分析の基盤）
-2. **Twitter/X API連携** ← 即効性あり（集客施策）
 3. **Revenue Optimizer Agent 開発** ← 収益直結
 4. **アフィリエイト成果追跡** ← 収益最適化
 5. **Rewriter Agent 開発** ← 既存記事の資産化
