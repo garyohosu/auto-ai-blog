@@ -1,13 +1,13 @@
 # CEO Decision: 2026-02-19
 
 ## 戦略
-今日は「ai_tools」クラスターに注力。
+今日は「ai_productivity」クラスターに注力。
 
 ## 理由
-ai_tools has the highest PV in the past 7 days
+ai_productivity has the highest PV in the past 7 days
 
 ## 指示
-- **SEO担当**: Prioritize keywords from ai_tools cluster
+- **SEO担当**: Prioritize keywords from ai_productivity cluster
 - **Writer担当**: Target 4000+ words with comparison tables and FAQ
 - **Designer担当**: Create professional business-themed hero image
 

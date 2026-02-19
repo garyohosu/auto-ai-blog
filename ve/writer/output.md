@@ -1,9 +1,9 @@
-# Writer Output: 2026-02-19
+# Writer Output: 2026-02-20
 
 ## Generated Article
-- File: `2026-02-19-best-ai-music-generators.md`
-- Title: 【無料あり】AI音楽生成ツール おすすめ5選｜Suno・Udio・AIVA比較
-- Character count: 6559
+- File: `2026-02-20-ai-email-writing-tools.md`
+- Title: AIでビジネスメールを自動作成｜おすすめツール5選と活用テクニック
+- Character count: 7002
 - Status: ✅ Complete
 - AI Summary Optimization: ✅ Included
 

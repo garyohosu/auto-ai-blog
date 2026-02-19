@@ -1,92 +1,92 @@
 {
-  "date": "2026-02-19",
-  "timestamp": "2026-02-19T11:41:21.825Z",
+  "date": "2026-02-20",
+  "timestamp": "2026-02-19T22:00:23.581Z",
   "phase": "done",
-  "ceo_strategy": "ai_tools",
+  "ceo_strategy": "ai_productivity",
   "selected_keyword": {
-    "slug": "best-ai-music-generators",
-    "title": "【無料あり】AI音楽生成ツール おすすめ5選｜Suno・Udio・AIVA比較",
+    "slug": "ai-email-writing-tools",
+    "title": "AIでビジネスメールを自動作成｜おすすめツール5選と活用テクニック",
     "tags": [
-      "AI音楽",
-      "Suno",
-      "作曲"
+      "AIメール",
+      "ビジネス効率化",
+      "文章作成"
     ]
   },
-  "article_path": "_posts/2026-02-19-best-ai-music-generators.md",
-  "image_path": "/assets/images/2026-02-19-best-ai-music-generators-hero.png",
+  "article_path": "_posts/2026-02-20-ai-email-writing-tools.md",
+  "image_path": "/assets/images/2026-02-20-ai-email-writing-tools-hero.png",
   "status": "completed",
   "agents_completed": [
     {
       "agent": "ceo",
-      "timestamp": "2026-02-19T11:41:21.857Z",
+      "timestamp": "2026-02-19T22:00:23.610Z",
       "duration": 0.03
     },
     {
       "agent": "seo",
-      "timestamp": "2026-02-19T11:41:21.887Z",
+      "timestamp": "2026-02-19T22:00:23.639Z",
       "duration": 0.03
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-19T11:42:34.968Z",
-      "duration": 73.05
+      "timestamp": "2026-02-19T22:01:37.608Z",
+      "duration": 73.93
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-19T11:42:34.973Z",
-      "duration": 73.08
+      "timestamp": "2026-02-19T22:01:37.613Z",
+      "duration": 73.97
     },
     {
       "agent": "designer",
-      "timestamp": "2026-02-19T11:49:28.319Z",
-      "duration": 413.32,
+      "timestamp": "2026-02-19T22:08:29.247Z",
+      "duration": 411.61,
       "real_image": true
     },
     {
       "agent": "designer",
-      "timestamp": "2026-02-19T11:49:28.325Z",
-      "duration": 413.35
+      "timestamp": "2026-02-19T22:08:29.252Z",
+      "duration": 411.64
     },
     {
       "agent": "linker",
-      "timestamp": "2026-02-19T11:49:28.357Z",
+      "timestamp": "2026-02-19T22:08:29.284Z",
       "duration": 0.03
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-19T11:50:40.794Z",
-      "duration": 72.38
+      "timestamp": "2026-02-19T22:09:45.155Z",
+      "duration": 75.81
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-19T11:50:40.798Z",
-      "duration": 72.41
+      "timestamp": "2026-02-19T22:09:45.160Z",
+      "duration": 75.84
     },
     {
       "agent": "designer",
-      "timestamp": "2026-02-19T11:51:22.775Z",
-      "duration": 41.95,
+      "timestamp": "2026-02-19T22:09:45.191Z",
+      "duration": 0.01,
       "real_image": true
     },
     {
       "agent": "designer",
-      "timestamp": "2026-02-19T11:51:22.779Z",
-      "duration": 41.98
+      "timestamp": "2026-02-19T22:09:45.194Z",
+      "duration": 0.03
     },
     {
       "agent": "linker",
-      "timestamp": "2026-02-19T11:51:22.813Z",
+      "timestamp": "2026-02-19T22:09:45.226Z",
       "duration": 0.03
     },
     {
       "agent": "editor",
-      "timestamp": "2026-02-19T11:51:22.844Z",
+      "timestamp": "2026-02-19T22:09:45.256Z",
       "duration": 0.03
     },
     {
       "agent": "analyst",
-      "timestamp": "2026-02-19T11:51:23.565Z",
-      "duration": 0.72
+      "timestamp": "2026-02-19T22:09:45.890Z",
+      "duration": 0.63
     }
   ],
   "retry_count": 1,
@@ -95,41 +95,41 @@
       "attempt": 1,
       "failed_at": "editor",
       "reason": "Unknown rejection reason",
-      "timestamp": "2026-02-19T11:49:28.390Z"
+      "timestamp": "2026-02-19T22:08:29.316Z"
     }
   ],
   "current_phase": "completed",
   "completed_agents": [
     {
       "agent": "linker",
-      "timestamp": "2026-02-19T11:49:28.353Z",
+      "timestamp": "2026-02-19T22:08:29.280Z",
       "duration": 0.009,
       "resolvedLinks": 0,
       "relatedArticlesAdded": false
     },
     {
       "agent": "editor",
-      "timestamp": "2026-02-19T11:49:28.384Z",
-      "duration": 0.007,
+      "timestamp": "2026-02-19T22:08:29.311Z",
+      "duration": 0.008,
       "decision": "rejected"
     },
     {
       "agent": "linker",
-      "timestamp": "2026-02-19T11:51:22.808Z",
+      "timestamp": "2026-02-19T22:09:45.222Z",
       "duration": 0.009,
       "resolvedLinks": 0,
       "relatedArticlesAdded": false
     },
     {
       "agent": "editor",
-      "timestamp": "2026-02-19T11:51:22.840Z",
-      "duration": 0.008,
+      "timestamp": "2026-02-19T22:09:45.252Z",
+      "duration": 0.007,
       "decision": "approved"
     },
     {
       "agent": "analyst",
-      "timestamp": "2026-02-19T11:51:23.561Z",
-      "duration": 0.69
+      "timestamp": "2026-02-19T22:09:45.885Z",
+      "duration": 0.603
     }
   ],
   "editor_decision": "approved",

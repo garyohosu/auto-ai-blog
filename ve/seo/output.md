@@ -1,9 +1,9 @@
 # SEO Keyword Selection: 2026-02-19
 
 ## 選定キーワード
-- slug: best-ai-music-generators
-- title: 【無料あり】AI音楽生成ツール おすすめ5選｜Suno・Udio・AIVA比較
-- tags: [AI音楽, Suno, 作曲]
+- slug: ai-email-writing-tools
+- title: AIでビジネスメールを自動作成｜おすすめツール5選と活用テクニック
+- tags: [AIメール, ビジネス効率化, 文章作成]
 
 ## 競合分析
 - 既存上位記事: 3000字前後
