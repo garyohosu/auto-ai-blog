@@ -177,9 +177,10 @@ function performRetry(failedAgent, context, agentResults) {
   const rejectionReason = getEditorRejectionReason();
   console.log(`📋 Rejection reason:\n${rejectionReason}\n`);
   
-  // context を更新
+  // context を更新（却下理由を保存）
   updateContext({
     retry_count: retryCount,
+    rejection_reason: rejectionReason,  // Writer が読み込む
     retry_history: [
       ...(context.retry_history || []),
       {

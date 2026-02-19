@@ -89,14 +89,32 @@ function formatDate(date) {
  * Generate article content using OpenAI API (gpt-5.2)
  * @param {Object} keyword - Selected keyword object
  * @param {string} seoInstructions - Instructions from SEO agent
+ * @param {string} rejectionReason - Rejection reason from Editor (if retry)
  * @returns {Promise<string>} Generated markdown content
  */
-async function generateArticleWithAPI(keyword, seoInstructions) {
+async function generateArticleWithAPI(keyword, seoInstructions, rejectionReason = '') {
   const { title, tags, slug } = keyword;
   const mainKeyword = slug.replace(/-/g, ' ');
   
   // Read soul.md for writing style guidelines
   const soul = readMD(SOUL_MD);
+  
+  // 却下理由があればプロンプトに追加
+  let retryInstructions = '';
+  if (rejectionReason) {
+    retryInstructions = `
+
+⚠️ 【前回の却下理由】
+${rejectionReason}
+
+※ 以上の問題を必ず解決してください。特に：
+- 比較表が不足なら 3+ 追加
+- FAQが不足なら 5+ 追加
+- アフィリエイトリンクが不足なら 2+ 追加
+- スパムキーワード（「無料」「今すぐ」等）が上限超過なら削除
+- 文字数不足なら 4000+ 文字に増やす
+`;
+  }
   
   const prompt = `あなたは経験豊富なSEO特化ライターで、AI要約（Google AI Overview、ChatGPT要約、Perplexity要約）への最適化も熟知しています。以下の指示に従って、高品質なブログ記事を日本語で作成してください。
 
@@ -113,7 +131,7 @@ ${tags.join(', ')}
 ${seoInstructions}
 
 【執筆ガイドライン】
-${soul}
+${soul}${retryInstructions}
 
 【必須要件】
 1. **AI要約最適化**: 記事冒頭（導入の直後）に以下のセクションを必ず含める
@@ -455,6 +473,12 @@ async function runWriter() {
   // 2. Read SEO instructions
   const seoOutput = readMD(path.join(ROOT_DIR, 've/seo/output.md'));
   
+  // 2.5 Read rejection reason (if retry)
+  const rejectionReason = context.rejection_reason || '';
+  if (rejectionReason) {
+    log(`⚠️  Retry mode: ${rejectionReason.substring(0, 100)}...`);
+  }
+  
   // 3. Create input.md for record
   const inputContent = `# Writer Input: ${context.date}
 
@@ -481,7 +505,7 @@ From context.json phase: ${context.phase}
     articleBody = generateMockArticle(keyword);
   } else {
     try {
-      articleBody = await generateArticleWithAPI(keyword, seoOutput);
+      articleBody = await generateArticleWithAPI(keyword, seoOutput, rejectionReason);
     } catch (error) {
       log(`⚠️  API call failed: ${error.message}`);
       log('Falling back to mock content');
