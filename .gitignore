@@ -23,6 +23,10 @@ temp/
 *.swo
 *~
 
+# Generated posts (for review only, not for public)
+moltbook_posts/
+week*_posts*
+
 # OS files
 .DS_Store
 Thumbs.db
@@ -45,6 +49,13 @@ spec.md
 # Virtual Employee internal files
 ve/*/soul.md
 ve/*/SOUL.md
+ve/*/memory.md
+ve/*/strategy.md
+ve/*/roadmap.md
+ve/logs/
+
+# Instructions and internal docs
+instructions/
 
 # Cache and build
 .cache/
