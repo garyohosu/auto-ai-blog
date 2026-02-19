@@ -1,17 +1,17 @@
 # Writer Input: 2026-02-19
 
 ## Selected Keyword
-- Slug: how-to-automate-sns-with-ai
-- Title: AIでSNS運用を自動化する方法｜投稿作成からスケジュールまで完全ガイド
-- Tags: SNS自動化, AI運用, マーケティング
+- Slug: best-ai-music-generators
+- Title: 【無料あり】AI音楽生成ツール おすすめ5選｜Suno・Udio・AIVA比較
+- Tags: AI音楽, Suno, 作曲
 
 ## SEO Instructions
 # SEO Keyword Selection: 2026-02-19
 
 ## 選定キーワード
-- slug: how-to-automate-sns-with-ai
-- title: AIでSNS運用を自動化する方法｜投稿作成からスケジュールまで完全ガイド
-- tags: [SNS自動化, AI運用, マーケティング]
+- slug: best-ai-music-generators
+- title: 【無料あり】AI音楽生成ツール おすすめ5選｜Suno・Udio・AIVA比較
+- tags: [AI音楽, Suno, 作曲]
 
 ## 競合分析
 - 既存上位記事: 3000字前後
