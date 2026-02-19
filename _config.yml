@@ -13,6 +13,7 @@ exclude:
   - ve/
   - spec.md
   - AGENTS.md
+  - VERIFICATION_PLAN.md
   - Gemfile
   - Gemfile.lock
   - "*.sh"
