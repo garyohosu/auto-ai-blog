@@ -13,7 +13,7 @@ plugins:
 
 # Google Analytics 4 (GA4)
 # 測定ID: G-XXXXXXXXXX（実際のIDに置き換える）
-google_analytics: G-XXXXXXXXXX
+google_analytics: G-BQSGHXV4T5
 
 # Google AdSense（自動広告）
 # _includes/custom-head.html に Auto Ads + GA4 スクリプト済み。
