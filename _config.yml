@@ -27,7 +27,7 @@ exclude:
   - PAGEVIEW_SYSTEM.md
   - LAYOUT_OVERRIDE_GUIDE.md
   - README.md
-  - "*.md"
+  # 注意: "*.md" は index.md も除外してしまうため使用しない
   
   # 開発・ビルドファイル
   - Gemfile
