@@ -1,17 +1,17 @@
 # Writer Input: 2026-02-20
 
 ## Selected Keyword
-- Slug: ai-email-writing-tools
-- Title: AIでビジネスメールを自動作成｜おすすめツール5選と活用テクニック
-- Tags: AIメール, ビジネス効率化, 文章作成
+- Slug: best-ai-data-analysis-tools
+- Title: 【2026年】AIデータ分析ツール おすすめ6選｜非エンジニアでも使える
+- Tags: AIデータ分析, BI, ノーコード
 
 ## SEO Instructions
 # SEO Keyword Selection: 2026-02-19
 
 ## 選定キーワード
-- slug: ai-email-writing-tools
-- title: AIでビジネスメールを自動作成｜おすすめツール5選と活用テクニック
-- tags: [AIメール, ビジネス効率化, 文章作成]
+- slug: best-ai-data-analysis-tools
+- title: 【2026年】AIデータ分析ツール おすすめ6選｜非エンジニアでも使える
+- tags: [AIデータ分析, BI, ノーコード]
 
 ## 競合分析
 - 既存上位記事: 3000字前後
@@ -28,4 +28,4 @@
 
 
 ## Source
-From context.json phase: retry-writer
+From context.json phase: writer
