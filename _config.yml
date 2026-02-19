@@ -13,13 +13,32 @@ google_analytics: G-XXXXXXXXXX
 # _includes/custom-head.html に Auto Ads + GA4 スクリプト済み。
 # AdSense管理画面 → 広告 → サイトごと → 「自動広告」を ON にすること。
 
+# Jekyll ビルドから除外するファイル・ディレクトリ
 exclude:
+  # エージェントシステム
   - ve/
+  - instructions/
+  
+  # ドキュメント
   - spec.md
   - AGENTS.md
   - VERIFICATION_PLAN.md
+  - SAKURA_CRON_SETUP.md
+  - PAGEVIEW_SYSTEM.md
+  - LAYOUT_OVERRIDE_GUIDE.md
+  - README.md
+  - "*.md"
+  
+  # 開発・ビルドファイル
   - Gemfile
   - Gemfile.lock
   - "*.sh"
   - .gitignore
+  - .git/
+  - .github/
+  - node_modules/
+  - package.json
+  - package-lock.json
+  
+  # その他
   - nul
