@@ -63,3 +63,23 @@ Writer Agent の記事生成履歴を記録します。
 - Tags: AI SEO, Surfer SEO, コンテンツSEO
 - Quality: ✅  Pass (AI-optimized)
 - AI Summary: ✅ Optimized for Google AI Overview, ChatGPT, Perplexity
+
+
+
+## 2026-02-19
+- Keyword: how-to-automate-sns-with-ai
+- Title: AIでSNS運用を自動化する方法｜投稿作成からスケジュールまで完全ガイド
+- Characters: 5885
+- Tags: SNS自動化, AI運用, マーケティング
+- Quality: ✅  Pass (AI-optimized)
+- AI Summary: ✅ Optimized for Google AI Overview, ChatGPT, Perplexity
+
+
+
+## 2026-02-19
+- Keyword: how-to-automate-sns-with-ai
+- Title: AIでSNS運用を自動化する方法｜投稿作成からスケジュールまで完全ガイド
+- Characters: 6587
+- Tags: SNS自動化, AI運用, マーケティング
+- Quality: ✅  Pass (AI-optimized)
+- AI Summary: ✅ Optimized for Google AI Overview, ChatGPT, Perplexity

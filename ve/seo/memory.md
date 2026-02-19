@@ -46,3 +46,8 @@ _このファイルは SEO Agent が自動的に更新します_
 - 選定: ai-seo-tools-comparison
 - 理由: CEO戦略に基づく選定
 - 結果: （記事公開後に記録）
+
+### 2026-02-19
+- 選定: how-to-automate-sns-with-ai
+- 理由: CEO戦略に基づく選定
+- 結果: （記事公開後に記録）

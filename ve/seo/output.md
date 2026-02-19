@@ -1,9 +1,9 @@
-# SEO Keyword Selection: 2026-02-18
+# SEO Keyword Selection: 2026-02-19
 
 ## 選定キーワード
-- slug: ai-seo-tools-comparison
-- title: 【2026年】AI搭載SEOツール おすすめ5選｜Surfer SEO・Frase・Jasperを比較
-- tags: [AI SEO, Surfer SEO, コンテンツSEO]
+- slug: how-to-automate-sns-with-ai
+- title: AIでSNS運用を自動化する方法｜投稿作成からスケジュールまで完全ガイド
+- tags: [SNS自動化, AI運用, マーケティング]
 
 ## 競合分析
 - 既存上位記事: 3000字前後
