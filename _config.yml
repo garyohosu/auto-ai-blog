@@ -1,4 +1,10 @@
 title: auto-ai-blog
+author:
+  name: auto-ai-blog Team
+  email: garyohosu@gmail.com
+description: >-
+  AI-Powered Content Generation Platform.
+  Autonomous multi-agent system creating high-quality blog content.
 url: "https://garyohosu.github.io"
 baseurl: "/auto-ai-blog"
 theme: minima

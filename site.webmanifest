@@ -1,0 +1,21 @@
+{
+  "name": "auto-ai-blog",
+  "short_name": "AI Blog",
+  "description": "AI-Powered Content Generation Platform",
+  "start_url": "/auto-ai-blog/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/auto-ai-blog/assets/images/branding/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/auto-ai-blog/assets/images/branding/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
