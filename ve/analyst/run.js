@@ -13,6 +13,9 @@
 const fs = require('fs');
 const path = require('path');
 
+// Pageview statistics module
+const { getPageviewStats } = require('./pageview.js');
+
 // =============================================================================
 // 設定
 // =============================================================================
@@ -112,7 +115,7 @@ function getArticleStats() {
 // metrics.md 更新
 // =============================================================================
 
-function updateMetrics(context, stats) {
+function updateMetrics(context, stats, pageviewStats = null) {
   const today = context.date;
   const timestamp = new Date().toISOString();
   
@@ -123,6 +126,64 @@ function updateMetrics(context, stats) {
     metrics = `# メトリクスダッシュボード\n\n`;
     metrics += `**最終更新**: ${timestamp}\n\n`;
     metrics += `---\n\n`;
+  }
+  
+  // ページビュー統計セクション（新規追加）
+  if (pageviewStats) {
+    const pvSection = `## 👁️  ページビュー統計（過去7日間）\n\n`;
+    const pvSummary = `**総 PV**: ${pageviewStats.totalPageviews} | **ユニーク訪問者**: ${pageviewStats.uniqueVisitors}\n\n`;
+    
+    // トップページ表
+    let pvTable = `### トップページ\n\n`;
+    pvTable += `| 記事 | PV | タイトル |\n`;
+    pvTable += `|------|----|----|\n`;
+    
+    for (const page of pageviewStats.topPages) {
+      const shortPath = page.path.split('/').pop().replace('.html', '');
+      const shortTitle = (page.title || shortPath).substring(0, 40);
+      pvTable += `| ${shortPath} | ${page.count} | ${shortTitle} |\n`;
+    }
+    pvTable += `\n`;
+    
+    // 日別PVチャート（簡易版）
+    let dailyChart = `### 日別 PV\n\n`;
+    dailyChart += `| 日付 | PV |\n`;
+    dailyChart += `|------|-----|\n`;
+    
+    for (const day of pageviewStats.pageviewsByDay) {
+      dailyChart += `| ${day.date} | ${day.count} |\n`;
+    }
+    dailyChart += `\n`;
+    
+    // リファラートップ
+    let refTable = '';
+    if (pageviewStats.topReferrers.length > 0) {
+      refTable = `### トップリファラー\n\n`;
+      refTable += `| 参照元 | 件数 |\n`;
+      refTable += `|------|------|\n`;
+      
+      for (const ref of pageviewStats.topReferrers) {
+        const shortRef = ref.referrer.substring(0, 60);
+        refTable += `| ${shortRef} | ${ref.count} |\n`;
+      }
+      refTable += `\n`;
+    }
+    
+    const fullPvSection = pvSection + pvSummary + pvTable + dailyChart + refTable;
+    
+    // 既存の PV セクションを置換、または追加
+    const pvRegex = /## 👁️  ページビュー統計[\s\S]*?(?=##|$)/;
+    if (pvRegex.test(metrics)) {
+      metrics = metrics.replace(pvRegex, fullPvSection);
+    } else {
+      // 累計記事数セクションの前に挿入
+      const articleRegex = /(## 📊 累計記事数)/;
+      if (articleRegex.test(metrics)) {
+        metrics = metrics.replace(articleRegex, fullPvSection + '$1');
+      } else {
+        metrics += fullPvSection;
+      }
+    }
   }
   
   // 累計記事数セクション更新
@@ -339,9 +400,18 @@ async function main() {
     log('📈 記事統計取得中...');
     const stats = getArticleStats();
     
-    // 3. metrics.md 更新
+    // 2.5 ページビュー統計取得（sakura DB）
+    log('👁️  ページビュー統計取得中...');
+    const pageviewStats = await getPageviewStats();
+    if (pageviewStats) {
+      log(`✅ PV: ${pageviewStats.totalPageviews}, UU: ${pageviewStats.uniqueVisitors}`);
+    } else {
+      log('⚠️  ページビュー統計の取得に失敗しました');
+    }
+    
+    // 3. metrics.md 更新（ページビュー統計を含む）
     log('📝 メトリクス更新中...');
-    updateMetrics(context, stats);
+    updateMetrics(context, stats, pageviewStats);
     
     // 4. 日次ログ更新
     log('📅 日次ログ更新中...');
