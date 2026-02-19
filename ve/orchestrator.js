@@ -7,6 +7,7 @@ const { execSync } = require("child_process");
 
 // ---------------------------------------------------------------------------
 // Orchestrator — エージェント実行を制御（OpenClaw + multi-agent-shogun 方式）
+// + Editor 却下時の Writer リトライ機構
 // ---------------------------------------------------------------------------
 
 const VE = path.resolve(__dirname);
@@ -25,6 +26,14 @@ const AGENT_PIPELINE = [
   "analyst",  // 7. メトリクス記録
   // "marketer" は将来実装
 ];
+
+/** リトライ設定 */
+const RETRY_CONFIG = {
+  maxRetries: 3,           // 最大リトライ回数
+  retryableAgents: {
+    editor: ["writer", "designer", "linker"]  // Editor失敗時に再実行するエージェント
+  }
+};
 
 /** JST today as YYYY-MM-DD */
 function jstToday() {
@@ -54,6 +63,8 @@ function initContext() {
     image_path: null,
     status: "running",
     agents_completed: [],
+    retry_count: 0,           // リトライ回数を追加
+    retry_history: [],        // リトライ履歴を追加
   };
 
   fs.writeFileSync(CONTEXT_FILE, JSON.stringify(context, null, 2), "utf8");
@@ -118,19 +129,117 @@ function runAgent(agentName) {
   }
 }
 
+/** Editor却下の理由を取得 */
+function getEditorRejectionReason() {
+  const editorOutputPath = path.join(VE, "editor", "output.md");
+  if (!fs.existsSync(editorOutputPath)) {
+    return "Unknown (output.md not found)";
+  }
+  
+  const output = fs.readFileSync(editorOutputPath, "utf8");
+  
+  // "## ❌ 不合格理由" セクションを抽出
+  const reasonMatch = output.match(/## ❌ 不合格理由\n\n([\s\S]*?)(?:\n\n##|$)/);
+  if (reasonMatch && reasonMatch[1]) {
+    return reasonMatch[1].trim().split('\n').slice(0, 3).join('\n'); // 最初の3行のみ
+  }
+  
+  return "Unknown rejection reason";
+}
+
+/** リトライが必要かどうか判定 */
+function shouldRetry(failedAgent, context) {
+  // リトライ対象のエージェントか確認
+  if (!RETRY_CONFIG.retryableAgents[failedAgent]) {
+    return false;
+  }
+  
+  // 最大リトライ回数を超えていないか確認
+  if (context.retry_count >= RETRY_CONFIG.maxRetries) {
+    console.log(`[orchestrator] ⚠️  Max retries (${RETRY_CONFIG.maxRetries}) reached`);
+    return false;
+  }
+  
+  return true;
+}
+
+/** リトライ処理を実行 */
+function performRetry(failedAgent, context, agentResults) {
+  const retryAgents = RETRY_CONFIG.retryableAgents[failedAgent];
+  const retryCount = context.retry_count + 1;
+  
+  console.log(`\n${"=".repeat(60)}`);
+  console.log(`🔄 RETRY #${retryCount}: ${failedAgent} rejected the article`);
+  console.log(`   Re-running: ${retryAgents.join(" → ")}`);
+  console.log(`${"=".repeat(60)}\n`);
+  
+  // 却下理由を取得
+  const rejectionReason = getEditorRejectionReason();
+  console.log(`📋 Rejection reason:\n${rejectionReason}\n`);
+  
+  // context を更新
+  updateContext({
+    retry_count: retryCount,
+    retry_history: [
+      ...(context.retry_history || []),
+      {
+        attempt: retryCount,
+        failed_at: failedAgent,
+        reason: rejectionReason,
+        timestamp: new Date().toISOString(),
+      }
+    ]
+  });
+  
+  // 再実行するエージェントを実行
+  const retryResults = [];
+  for (const agentName of retryAgents) {
+    updateContext({ phase: `retry-${agentName}` });
+    const result = runAgent(agentName);
+    retryResults.push({ agent: `${agentName} (retry #${retryCount})`, ...result });
+    agentResults.push(retryResults[retryResults.length - 1]);
+    
+    if (!result.success) {
+      console.error(`[orchestrator] ❌ Retry failed at: ${agentName}`);
+      return { success: false, results: retryResults };
+    }
+  }
+  
+  // Editor を再実行
+  updateContext({ phase: `retry-${failedAgent}` });
+  const editorRetryResult = runAgent(failedAgent);
+  retryResults.push({ agent: `${failedAgent} (retry #${retryCount})`, ...editorRetryResult });
+  agentResults.push(retryResults[retryResults.length - 1]);
+  
+  return { success: editorRetryResult.success, results: retryResults };
+}
+
 /** 日次ログを作成 */
 function createDailyLog(date, summary) {
   ensureDir(LOGS_DIR);
   const logFile = path.join(LOGS_DIR, `${date}.md`);
 
+  let retrySection = "";
+  if (summary.final_context.retry_count > 0) {
+    retrySection = `
+## Retry History
+${summary.final_context.retry_history.map(r => 
+  `### Attempt #${r.attempt} (${r.failed_at})
+**Reason:** ${r.reason}
+**Timestamp:** ${r.timestamp}
+`).join('\n')}
+`;
+  }
+
   const content = `# Orchestrator Log: ${date}
 
 ## Summary
 ${summary.status === 'completed' ? '✅ All agents completed successfully' : `❌ Failed at ${summary.failed_at}`}
+${summary.final_context.retry_count > 0 ? `\n**Retries:** ${summary.final_context.retry_count}` : ''}
 
 ## Agents Execution
 ${summary.agents.map(a => `- **${a.agent}**: ${a.success ? '✅ Success' : '❌ Failed'} (${a.duration}s)`).join('\n')}
-
+${retrySection}
 ## Context
 \`\`\`json
 ${JSON.stringify(summary.final_context, null, 2)}
@@ -166,14 +275,26 @@ async function main() {
       console.error(`\n[orchestrator] ❌ Pipeline failed at: ${agentName}`);
       console.error(`Reason: ${result.reason}`);
 
-      // context.json にエラーを記録
+      // リトライが必要か判定
+      const currentContext = loadContext();
+      if (shouldRetry(agentName, currentContext)) {
+        const retryResult = performRetry(agentName, currentContext, agentResults);
+        
+        if (retryResult.success) {
+          console.log(`\n[orchestrator] ✅ Retry succeeded! Continuing pipeline...`);
+          continue;  // パイプラインを続行
+        } else {
+          console.error(`\n[orchestrator] ❌ Retry failed. Stopping pipeline.`);
+        }
+      }
+
+      // リトライ不可または失敗 → エラー終了
       updateContext({
         status: "failed",
         failed_at: agentName,
         error: result.reason,
       });
 
-      // エラーログを記録
       const summary = {
         status: "failed",
         failed_at: agentName,
@@ -193,6 +314,10 @@ async function main() {
   const totalDuration = ((Date.now() - startTime) / 1000).toFixed(2);
   console.log("\n" + "=".repeat(60));
   console.log(`✅ All agents completed in ${totalDuration}s`);
+  const finalContext = loadContext();
+  if (finalContext.retry_count > 0) {
+    console.log(`   (with ${finalContext.retry_count} retry attempt(s))`);
+  }
   console.log("=".repeat(60) + "\n");
 
   // サマリーログを記録
@@ -200,7 +325,7 @@ async function main() {
     status: "completed",
     total_duration: parseFloat(totalDuration),
     agents: agentResults,
-    final_context: loadContext(),
+    final_context: finalContext,
     next_action: "Continue daily article publishing",
   };
   createDailyLog(context.date, summary);
