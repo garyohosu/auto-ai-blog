@@ -155,8 +155,13 @@ function main() {
   const keyword = selectKeyword();
 
   if (!keyword) {
-    console.error("[seo] ❌ No available keywords in pool");
-    process.exit(1);
+    console.log("[seo] ⚠️  No available keywords in pool — switching to daily-note mode");
+    updateContext({ selected_keyword: null, seo_mode: "daily-note" });
+    // daily-note モード: 後続のエージェントはスキップ扱いにする
+    const output = `# SEO: ${new Date().toISOString().slice(0, 10)}\n\n## Status\nKEYWORD_POOL exhausted. Pipeline will generate a daily-note instead.\n`;
+    fs.writeFileSync(OUTPUT_FILE, output, "utf8");
+    console.log("[seo] ✅ SEO Agent Completed (daily-note mode)\n");
+    process.exit(0);
   }
 
   // 2. output.md に書き出し
