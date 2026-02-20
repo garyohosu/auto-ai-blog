@@ -268,6 +268,14 @@ async function main() {
 
   // 2. エージェントを順次実行
   for (const agentName of AGENT_PIPELINE) {
+    // SEO がキーワード枯渇で daily-note モードに入った場合、後続をスキップ
+    const currentCtx = loadContext();
+    if (currentCtx.seo_mode === "daily-note" && agentName !== "ceo" && agentName !== "seo" && agentName !== "analyst") {
+      console.log(`[orchestrator] ⏩ Skipping ${agentName} (daily-note mode)`);
+      agentResults.push({ agent: agentName, success: true, duration: "0.00", skipped: true });
+      continue;
+    }
+
     updateContext({ phase: agentName });
     const result = runAgent(agentName);
     agentResults.push({ agent: agentName, ...result });

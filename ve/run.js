@@ -52,6 +52,19 @@ const KEYWORD_POOL = [
   { slug: "best-ai-music-generators", title: "【無料あり】AI音楽生成ツール おすすめ5選｜Suno・Udio・AIVA比較", tags: ["AI音楽", "Suno", "作曲"] },
   { slug: "ai-email-writing-tools", title: "AIでビジネスメールを自動作成｜おすすめツール5選と活用テクニック", tags: ["AIメール", "ビジネス効率化", "文章作成"] },
   { slug: "best-ai-data-analysis-tools", title: "【2026年】AIデータ分析ツール おすすめ6選｜非エンジニアでも使える", tags: ["AIデータ分析", "BI", "ノーコード"] },
+  // 第2弾キーワード
+  { slug: "chatgpt-api-getting-started",    title: "ChatGPT APIの使い方完全ガイド｜初心者向け入門から実践まで",            tags: ["ChatGPT API", "OpenAI", "プログラミング"] },
+  { slug: "claude-api-usage-guide",         title: "Claude APIの使い方と料金｜Anthropic APIで何ができるか解説",              tags: ["Claude API", "Anthropic", "LLM"] },
+  { slug: "ai-image-generator-comparison",  title: "【2026年】AI画像生成ツール比較｜Midjourney・DALL-E・Stable Diffusion", tags: ["AI画像生成", "Midjourney", "DALL-E"] },
+  { slug: "best-ai-writing-assistants-2026",title: "【2026年】AI文章作成ツール おすすめ7選｜ブログ・SNS・広告コピーに",    tags: ["AI文章作成", "ライティング", "コピーライティング"] },
+  { slug: "ai-chatbot-comparison-2026",     title: "【2026年版】AIチャットボット比較｜ChatGPT・Gemini・Claude・Copilot",   tags: ["AIチャットボット", "ChatGPT", "Gemini"] },
+  { slug: "ai-document-summarizer-tools",   title: "AI要約ツール おすすめ5選｜PDFや長文をワンクリックで要約する方法",         tags: ["AI要約", "PDF要約", "文書処理"] },
+  { slug: "how-to-use-ai-for-job-hunting",  title: "就活・転職活動にAIを活用する方法｜履歴書・面接対策まで完全ガイド",        tags: ["AI転職", "就活", "履歴書"] },
+  { slug: "ai-voice-generation-tools",      title: "【2026年】AI音声合成ツール おすすめ6選｜テキスト読み上げ・ナレーション", tags: ["AI音声", "テキスト読み上げ", "ナレーション"] },
+  { slug: "ai-no-code-app-builder",         title: "AIノーコードアプリ作成ツール おすすめ5選｜プログラミング不要で開発",      tags: ["ノーコード", "AIアプリ開発", "ローコード"] },
+  { slug: "ai-marketing-automation-guide",  title: "AIマーケティング自動化ガイド｜メール・広告・SNSを一元管理する方法",        tags: ["AIマーケティング", "マーケティング自動化", "デジタルマーケティング"] },
+  { slug: "best-ai-meeting-transcription",  title: "AI議事録作成ツール おすすめ5選｜会議の自動文字起こしと要約",              tags: ["AI議事録", "文字起こし", "会議効率化"] },
+  { slug: "ai-logo-design-tools",           title: "AIロゴ作成ツール おすすめ5選｜無料で本格的なロゴをデザインする方法",       tags: ["AIロゴ", "ロゴ作成", "デザイン"] },
 ];
 
 // ---------------------------------------------------------------------------
