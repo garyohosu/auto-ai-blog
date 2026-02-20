@@ -28,6 +28,15 @@ layout: default
     {{ content }}
   </div>
 
+  {%- if page.tags.size > 0 -%}
+  <div class="post-tags" style="margin-top:2rem;padding-top:1rem;border-top:1px solid #e8e8e8;">
+    <span style="font-size:0.85rem;color:#828282;margin-right:0.5rem;">タグ:</span>
+    {%- for tag in page.tags -%}
+    <span style="display:inline-block;padding:0.2rem 0.7rem;margin:0.2rem 0.15rem;font-size:0.8rem;background:#eef2ff;color:#4361ee;border-radius:999px;">{{ tag }}</span>
+    {%- endfor -%}
+  </div>
+  {%- endif -%}
+
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}
