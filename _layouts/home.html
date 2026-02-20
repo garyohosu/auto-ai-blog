@@ -141,7 +141,7 @@ layout: default
   <div class="tag-cloud-section">
     <h2>🏷 人気タグ</h2>
     <div class="tag-cloud">
-      {%- assign sorted_tags = site.tags | sort: 1 | reverse -%}
+      {%- assign sorted_tags = site.tags | sort -%}
       {%- for tag in sorted_tags limit:25 -%}
       <span>{{ tag[0] }}<span class="tag-count">({{ tag[1].size }})</span></span>
       {%- endfor -%}
