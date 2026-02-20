@@ -1,7 +1,7 @@
 title: auto-ai-blog
 author:
   name: auto-ai-blog Team
-  email: garyohosu@gmail.com
+  # email: garyohosu@gmail.com  # 内部処理用のみ、フッターには表示されない
 description: >-
   AI-Powered Content Generation Platform.
   Autonomous multi-agent system creating high-quality blog content.
