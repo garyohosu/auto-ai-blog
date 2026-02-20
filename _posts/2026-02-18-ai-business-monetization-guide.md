@@ -125,7 +125,7 @@ AIビジネスとは、[具体的な定義]を指します。近年の技術進�
 
 テスト結果を踏まえ、本格展開を実施します。
 
-[INTERNAL: ai-tools-comparison] [INTERNAL: productivity-tips] [INTERNAL: automation-guide]
+<!-- TODO: 内部リンク ai-tools-comparison --> <!-- TODO: 内部リンク productivity-tips --> <!-- TODO: 内部リンク automation-guide -->
 
 ## よくある課題と解決策
 
@@ -205,8 +205,8 @@ AIビジネスの導入は、もはや「やるかやらないか」ではなく
 ---
 
 **関連記事**:
-- [INTERNAL: ai-automation-guide]
-- [INTERNAL: productivity-tools-2026]
-- [INTERNAL: business-efficiency-tips]
+- <!-- TODO: 内部リンク ai-automation-guide -->
+- <!-- TODO: 内部リンク productivity-tools-2026 -->
+- <!-- TODO: 内部リンク business-efficiency-tips -->
 
 この記事が、あなたのAIビジネス導入の第一歩に役立てば幸いです。質問やフィードバックがあれば、ぜひコメント欄でお知らせください！

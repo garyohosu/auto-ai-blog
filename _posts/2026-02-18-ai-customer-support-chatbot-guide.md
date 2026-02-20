@@ -42,7 +42,7 @@ AIチャットボットが得意なのは「定型・反復・一次切り分け
 - ルールが未整備の社内業務（ナレッジが散在している場合）
 
 > 先に「一次対応の自動化（受付・切り分け）」を固め、次に「解決までの自動化（手続き完結）」へ広げるのが王道です。  
-> 関連記事：[INTERNAL: customer-support-kpi-playbook]
+> 関連記事：<!-- TODO: 内部リンク customer-support-kpi-playbook -->
 
 ---
 
@@ -90,7 +90,7 @@ AIチャットボットには大きく2系統あります。導入時点で混�
 - “削減”だけでなく“体験”も追う（CSAT、一次解決率）
 - 重要カテゴリ（解約、返金、障害）だけ別KPIにする
 
-関連：ナレッジ整備の進め方は [INTERNAL: knowledge-base-structure-guide]
+関連：ナレッジ整備の進め方は <!-- TODO: 内部リンク knowledge-base-structure-guide -->
 
 ---
 
@@ -215,7 +215,7 @@ AIチャットボットには大きく2系統あります。導入時点で混�
 - ルールベース部分を増やす（重要FAQは固定回答に）
 - 連携強化（注文DB照会で自己解決率を上げる）
 
-関連：運用体制・権限設計の雛形 [INTERNAL: chatbot-operations-governance]
+関連：運用体制・権限設計の雛形 <!-- TODO: 内部リンク chatbot-operations-governance -->
 
 ---
 

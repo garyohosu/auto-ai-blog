@@ -244,5 +244,5 @@ AI画像生成は**コスト削減と品質向上を同時に実現**できる�
 [AFF_LINK: chatgpt-plus]
 [AFF_LINK: adobe-firefly]
 
-[INTERNAL: chatgpt-vs-claude-comparison]
-[INTERNAL: best-ai-writing-tools]
+<!-- TODO: 内部リンク chatgpt-vs-claude-comparison -->
+<!-- TODO: 内部リンク best-ai-writing-tools -->

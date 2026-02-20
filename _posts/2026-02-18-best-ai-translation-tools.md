@@ -60,8 +60,8 @@ image: "/assets/images/2026-02-18-best-ai-translation-tools-hero.png"
 - **Google翻訳**：速度と対応範囲で最強クラス。多言語の一次翻訳に強い  
 - **ChatGPT**：翻訳そのものより「意図に合わせて整える」工程（口調/ターゲット/要約）で真価
 
-[INTERNAL: ai-writing-checklist]（文章品質チェックの社内手順）  
-[INTERNAL: localization-guide]（ローカライズ運用の基本）  
+<!-- TODO: 内部リンク ai-writing-checklist -->（文章品質チェックの社内手順）  
+<!-- TODO: 内部リンク localization-guide -->（ローカライズ運用の基本）  
 
 ---
 
@@ -148,7 +148,7 @@ image: "/assets/images/2026-02-18-best-ai-translation-tools-hero.png"
 - **デメリット**
   - 初期設計・調整が必要で、ライトユーザーには過剰になりうる
 
-[INTERNAL: translation-qa-process]（翻訳レビュー手順・二重チェックの型）
+<!-- TODO: 内部リンク translation-qa-process -->（翻訳レビュー手順・二重チェックの型）
 
 ---
 

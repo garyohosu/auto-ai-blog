@@ -224,6 +224,6 @@ AIで稼ぐための最大のコツは、**今すぐ始めること**です。
 [AFF_LINK: chatgpt-plus]
 [AFF_LINK: claude-pro]
 
-[INTERNAL: best-ai-writing-tools]
-[INTERNAL: chatgpt-vs-claude-comparison]
-[INTERNAL: best-free-ai-image-generators]
+<!-- TODO: 内部リンク best-ai-writing-tools -->
+<!-- TODO: 内部リンク chatgpt-vs-claude-comparison -->
+<!-- TODO: 内部リンク best-free-ai-image-generators -->

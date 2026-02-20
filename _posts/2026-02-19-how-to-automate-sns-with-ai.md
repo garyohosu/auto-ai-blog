@@ -30,7 +30,7 @@ SNS運用は「毎日投稿したいのに時間がない」「ネタ切れす�
 - **投稿（予約・最適時間・再投稿）**：スケジューラーで自動化  
 - **分析（伸びた要因の要約・改善案）**：AIで要約→次月の企画に反映  
 
-この4領域をつなげると、最小の工数で投稿頻度と改善サイクルを維持できます。関連する考え方はコンテンツ設計でも重要です（例：[INTERNAL: content-marketing-strategy]）。
+この4領域をつなげると、最小の工数で投稿頻度と改善サイクルを維持できます。関連する考え方はコンテンツ設計でも重要です（例：<!-- TODO: 内部リンク content-marketing-strategy -->）。
 
 
 ![AI tool ecosystem map for content creation scheduling analytics]({{ "/assets/images/2026-02-19-how-to-automate-sns-with-ai-2.png" | relative_url }})
@@ -64,7 +64,7 @@ SNS運用は「毎日投稿したいのに時間がない」「ネタ切れす�
 - **自動連携（ワークフロー）**：Zapier、Make など  
 - **分析（集計/可視化）**：各SNS公式分析＋Looker Studio等  
 
-運用の土台として、投稿フォーマット設計も合わせて見直すと効きます（例：[INTERNAL: sns-post-template]）。
+運用の土台として、投稿フォーマット設計も合わせて見直すと効きます（例：<!-- TODO: 内部リンク sns-post-template -->）。
 
 
 ![Comparison table screenshot mockup for AI and scheduler tools]({{ "/assets/images/2026-02-19-how-to-automate-sns-with-ai-3.png" | relative_url }})
@@ -81,7 +81,7 @@ SNS運用は「毎日投稿したいのに時間がない」「ネタ切れす�
 | Claude | 長文整理、トーン調整、編集 | 文章の整え・校正が得意 | 情報ソースの確認が必要 | 品質重視の編集フロー |
 | Perplexity | 調査、一次情報の当たり | 出典付きで調べやすい | 日本語SNS文体の生成は要調整 | リサーチ多めの運用 |
 
-生成AIを導入する場合、最初に「人格」と「禁止事項」を言語化すると迷走しません（例：[INTERNAL: brand-voice-guide]）。
+生成AIを導入する場合、最初に「人格」と「禁止事項」を言語化すると迷走しません（例：<!-- TODO: 内部リンク brand-voice-guide -->）。
 
 
 ![Side-by-side UI comparison of AI writing assistants]({{ "/assets/images/2026-02-19-how-to-automate-sns-with-ai-4.png" | relative_url }})
@@ -143,7 +143,7 @@ AIに任せるほど、軸がないと投稿が散らかります。例：
 - 入力：テーマ、ターゲット、商品特徴、参考URL（自社）  
 - 出力：3案、CTA違い、ハッシュタグ案（最大5）  
 
-制作効率化の周辺は、運用体制の設計とも直結します（例：[INTERNAL: social-media-operations]）。
+制作効率化の周辺は、運用体制の設計とも直結します（例：<!-- TODO: 内部リンク social-media-operations -->）。
 
 
 ![Step-by-step checklist for AI SNS automation process]({{ "/assets/images/2026-02-19-how-to-automate-sns-with-ai-5.png" | relative_url }})

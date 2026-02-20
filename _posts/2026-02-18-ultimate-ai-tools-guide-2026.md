@@ -27,8 +27,8 @@ image: /assets/images/2026-02-18-ultimate-ai-tools-guide-2026.png
 
 AIツールは増えすぎて、比較の軸がないと「有名どころを触って終わり」になりがちです。この記事では、**用途別に厳選したおすすめ30選**を、選び方・使い方の手順つきでまとめました。まずは「あなたの作業のボトルネック」を1つ決め、そこから最小構成で導入していきましょう。
 
-内部リンク（あわせて読みたい）：[INTERNAL: ai-workflow-beginner]  
-内部リンク（収益化の導線設計）：[INTERNAL: blog-monetization-funnel]
+内部リンク（あわせて読みたい）：<!-- TODO: 内部リンク ai-workflow-beginner -->  
+内部リンク（収益化の導線設計）：<!-- TODO: 内部リンク blog-monetization-funnel -->
 
 ---
 
@@ -82,7 +82,7 @@ AIツールは増えすぎて、比較の軸がないと「有名どころを触
 - [AFF_LINK: ChatGPT]  
 - [AFF_LINK: Claude]
 
-内部リンク（SEO設計の型）：[INTERNAL: seo-keyword-intent]
+内部リンク（SEO設計の型）：<!-- TODO: 内部リンク seo-keyword-intent -->
 
 ### 手順2：構成案→下書き→一次情報で肉付け（60〜120分）
 - 使うツール：ChatGPT / Jasper / Notion AI  
@@ -99,7 +99,7 @@ AIツールは増えすぎて、比較の軸がないと「有名どころを触
 - [AFF_LINK: Jasper]  
 - [AFF_LINK: Notion]
 
-内部リンク（AIライティングの注意点）：[INTERNAL: ai-writing-checklist]
+内部リンク（AIライティングの注意点）：<!-- TODO: 内部リンク ai-writing-checklist -->
 
 ### 手順3：サムネ/図解を作ってCTRを上げる（30分）
 - 使うツール：Canva / Midjourney / Adobe Firefly  
@@ -158,7 +158,7 @@ AIツールは増えすぎて、比較の軸がないと「有名どころを触
 10. **Grammarly**：英語メールや文章品質の底上げ  
    - [AFF_LINK: Grammarly]
 
-内部リンク（SEO記事テンプレ）：[INTERNAL: seo-article-template]
+内部リンク（SEO記事テンプレ）：<!-- TODO: 内部リンク seo-article-template -->
 
 ### 3）リサーチ/ナレッジ整理【4選】
 11. **Perplexity**：調査の入口に強い（要点把握が速い）  
@@ -212,7 +212,7 @@ AIツールは増えすぎて、比較の軸がないと「有名どころを触
 30. **Make**：シナリオ型で細かい自動化が組みやすい  
    - [AFF_LINK: Make]
 
-内部リンク（自動化レシピ集）：[INTERNAL: zapier-make-recipes]
+内部リンク（自動化レシピ集）：<!-- TODO: 内部リンク zapier-make-recipes -->
 
 ---
 
@@ -226,8 +226,8 @@ AIツール記事は、単なる紹介で終わると収益化が伸びません
 4. **おすすめツールのCTA**（無料トライアル/入門プラン）  
 5. **次に読む内部リンク**（使い方、プロンプト集、運用事例）
 
-内部リンク（プロンプト集）：[INTERNAL: prompt-library]  
-内部リンク（比較記事の書き方）：[INTERNAL: affiliate-comparison-article]
+内部リンク（プロンプト集）：<!-- TODO: 内部リンク prompt-library -->  
+内部リンク（比較記事の書き方）：<!-- TODO: 内部リンク affiliate-comparison-article -->
 
 ---
 
@@ -248,7 +248,7 @@ AIツール記事は、単なる紹介で終わると収益化が伸びません
 
 ### Q3. AI生成コンテンツはSEO的に不利になりますか？
 AI使用そのものが問題になるより、**内容の薄さ・独自性の不足・誤情報**が評価を落とします。一次情報（体験、比較、手順、スクショ）を足す、事実確認をする、読者の意思決定を助ける構成にすることで、長期的に資産化できます。  
-内部リンク：[INTERNAL: eeat-for-ai-content]
+内部リンク：<!-- TODO: 内部リンク eeat-for-ai-content -->
 
 ### Q4. 画像生成ツールは商用利用して大丈夫？
 ツールごとに規約が違います。**商用利用可否、素材学習の扱い、生成物の権利**を必ず確認してください。企業案件や広告クリエイティブに使う場合は、より慎重な運用がおすすめです。  
@@ -278,9 +278,9 @@ AIツールは、全部を揃える必要はありません。**あなたの目�
 3. 継続の壁は **Zapier / Make** で自動化して突破する  
    - [AFF_LINK: Zapier] / [AFF_LINK: Make]
 4. 次に読む：用途別の実践記事で“使える状態”にする  
-   - [INTERNAL: ai-writing-checklist]  
-   - [INTERNAL: zapier-make-recipes]  
-   - [INTERNAL: prompt-library]
+   - <!-- TODO: 内部リンク ai-writing-checklist -->  
+   - <!-- TODO: 内部リンク zapier-make-recipes -->  
+   - <!-- TODO: 内部リンク prompt-library -->
 
 あなたの作業を「速く・安く・高品質」に変えるのがAIの本質です。まずは今日、**一番しんどい作業を1つだけ**AIに任せてみてください。そこから収益化までのスピードが一気に上がります。
 

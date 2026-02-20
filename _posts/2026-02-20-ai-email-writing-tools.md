@@ -47,7 +47,7 @@ image: "/assets/images/2026-02-20-ai-email-writing-tools-hero.png"
 5. **運用しやすさ**：テンプレ共有、監査ログ、チーム展開のしやすさ
 
 併せて、社内の文書ルール（署名、件名規則、CC/BCC運用）をテンプレ化すると、導入直後から成果が出やすくなります。  
-[INTERNAL: business-email-template]  
+<!-- TODO: 内部リンク business-email-template -->  
 
 ---
 
@@ -114,7 +114,7 @@ image: "/assets/images/2026-02-20-ai-email-writing-tools-hero.png"
 | コスト最適化 | 「テンプレ資産化」で効果が出る | 「メール以外」も使うと回収しやすい | 英語対応部門に限定すると効率的 |
 
 コストは「メール作成にかかる時間×人件費」で回収計算すると判断が早くなります。たとえば、1通10分→3分になり、1日10通なら **70分/日** の削減余地があります（最終確認は必須）。  
-[INTERNAL: ai-productivity-roi]  
+<!-- TODO: 内部リンク ai-productivity-roi -->  
 
 ---
 
@@ -163,7 +163,7 @@ image: "/assets/images/2026-02-20-ai-email-writing-tools-hero.png"
 - 社内ルール（件名、署名、CC）
 
 この5ステップを定着させるだけで、AIメールの事故率は大きく下がります。  
-[INTERNAL: email-proofreading-checklist]  
+<!-- TODO: 内部リンク email-proofreading-checklist -->  
 
 ---
 

@@ -221,5 +221,5 @@ AI議事録ツールは、**会議後の作業時間を劇的に削減**でき�
 
 [AFF_LINK: notta]
 
-[INTERNAL: best-ai-writing-tools]
-[INTERNAL: chatgpt-vs-claude-comparison]
+<!-- TODO: 内部リンク best-ai-writing-tools -->
+<!-- TODO: 内部リンク chatgpt-vs-claude-comparison -->

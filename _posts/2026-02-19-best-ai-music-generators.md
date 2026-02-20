@@ -41,7 +41,7 @@ best ai music generators を選ぶ前に、まず「AI音楽生成ツールが�
 - **編集機能**：イントロ延長、歌詞差し替え、部分再生成の可否  
 - **生成の安定性**：意図したジャンルに寄るか、破綻率は低いか
 
-[INTERNAL: ai-music-copyright-guide]  
+<!-- TODO: 内部リンク ai-music-copyright-guide -->  
 （社内記事例：AI音楽の権利・クレジット表記の考え方）
 
 
@@ -89,7 +89,7 @@ best ai music generators を選ぶ前に、まず「AI音楽生成ツールが�
 | Soundraw | 体験〜書き出しで課金が多い | 動画BGMの継続制作 | 利用媒体（広告/配信/店舗）別の許諾 |
 | Boomy | 試しやすい | 公開/配信の拡張 | 配信時の取り扱い、収益化条件 |
 
-[INTERNAL: music-production-workflow]  
+<!-- TODO: 内部リンク music-production-workflow -->  
 （社内記事例：動画制作でのBGMワークフロー最適化）
 
 
@@ -149,7 +149,7 @@ best ai music generators を選ぶ前に、まず「AI音楽生成ツールが�
 - **コツ**
   - “生成物を納品”ではなく、**MIDI的に整える前提**にすると強い
 
-[INTERNAL: daw-beginner-guide]  
+<!-- TODO: 内部リンク daw-beginner-guide -->  
 （社内記事例：DAW初心者向けの書き出し・ミックス基礎）
 
 ## best ai music generatorsの手順：失敗しない5ステップ（共通）

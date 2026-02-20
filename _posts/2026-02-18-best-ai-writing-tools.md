@@ -194,5 +194,5 @@ AI文章作成ツールは、2026年のコンテンツ制作に**欠かせない
 [AFF_LINK: chatgpt-plus]
 [AFF_LINK: jasper]
 
-[INTERNAL: chatgpt-vs-claude-comparison]
-[INTERNAL: best-ai-meeting-tools-comparison]
+<!-- TODO: 内部リンク chatgpt-vs-claude-comparison -->
+<!-- TODO: 内部リンク best-ai-meeting-tools-comparison -->
