@@ -58,7 +58,7 @@ AI画像生成ツールを使えば、**テキストを入力するだけで高�
 
 **おすすめ用途:** ブログのアイキャッチ、SNS投稿、デジタルアート
 
-<!-- TODO: アフィリエイトリンク midjourney -->
+[AFF_LINK: midjourney]
 
 ---
 
@@ -78,7 +78,7 @@ ChatGPTの中で自然に画像を作れるのが最大の強み。
 
 **おすすめ用途:** ブログ記事の挿絵、プレゼン資料、SNS画像
 
-<!-- TODO: アフィリエイトリンク chatgpt-plus -->
+[AFF_LINK: chatgpt-plus]
 
 ---
 
@@ -99,7 +99,7 @@ ChatGPTの中で自然に画像を作れるのが最大の強み。
 
 **おすすめ用途:** 大量の画像生成、カスタムモデル学習、技術者向け
 
-<!-- TODO: アフィリエイトリンク stable-diffusion -->
+[AFF_LINK: stable-diffusion]
 
 ---
 
@@ -119,7 +119,7 @@ Adobeのストック画像で学習しているため、**著作権の問題が�
 
 **おすすめ用途:** 企業のマーケティング素材、商品画像、広告
 
-<!-- TODO: アフィリエイトリンク adobe-firefly -->
+[AFF_LINK: adobe-firefly]
 
 ---
 
@@ -138,7 +138,7 @@ Canvaのデザインツール内でAI画像生成が使える。
 
 **おすすめ用途:** SNS投稿画像、プレゼン、チラシ
 
-<!-- TODO: アフィリエイトリンク canva-pro -->
+[AFF_LINK: canva-pro]
 
 ---
 
@@ -157,7 +157,7 @@ Canvaのデザインツール内でAI画像生成が使える。
 
 **おすすめ用途:** ゲーム開発、キャラクターデザイン、コンセプトアート
 
-<!-- TODO: アフィリエイトリンク leonardo-ai -->
+[AFF_LINK: leonardo-ai]
 
 ---
 
@@ -176,7 +176,7 @@ Canvaのデザインツール内でAI画像生成が使える。
 
 **おすすめ用途:** ロゴ、ポスター、バナー、テキスト入り画像
 
-<!-- TODO: アフィリエイトリンク ideogram -->
+[AFF_LINK: ideogram]
 
 ---
 
@@ -195,7 +195,7 @@ Microsoft 365に統合されたAI画像生成。Bing Image Creatorベース。
 
 **おすすめ用途:** 日常的なビジネス資料、PowerPoint挿絵
 
-<!-- TODO: アフィリエイトリンク microsoft-365 -->
+[AFF_LINK: microsoft-365]
 
 ---
 
@@ -241,8 +241,8 @@ AI画像生成は**コスト削減と品質向上を同時に実現**できる�
 
 まずは **DALL-E 3**（ChatGPT内蔵）か **Microsoft Designer**（無料）で試して、品質を求めるなら **Midjourney**、商用利用なら **Adobe Firefly** を検討しましょう。
 
-<!-- TODO: アフィリエイトリンク chatgpt-plus -->
-<!-- TODO: アフィリエイトリンク adobe-firefly -->
+[AFF_LINK: chatgpt-plus]
+[AFF_LINK: adobe-firefly]
 
-<!-- TODO: 内部リンク chatgpt-vs-claude-comparison -->
-<!-- TODO: 内部リンク best-ai-writing-tools -->
+[INTERNAL: chatgpt-vs-claude-comparison]
+[INTERNAL: best-ai-writing-tools]

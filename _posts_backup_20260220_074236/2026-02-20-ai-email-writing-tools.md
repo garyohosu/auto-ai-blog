@@ -47,7 +47,7 @@ image: "/assets/images/2026-02-20-ai-email-writing-tools-hero.png"
 5. **運用しやすさ**：テンプレ共有、監査ログ、チーム展開のしやすさ
 
 併せて、社内の文書ルール（署名、件名規則、CC/BCC運用）をテンプレ化すると、導入直後から成果が出やすくなります。  
-<!-- TODO: 内部リンク business-email-template -->  
+[INTERNAL: business-email-template]  
 
 ---
 
@@ -60,7 +60,7 @@ image: "/assets/images/2026-02-20-ai-email-writing-tools-hero.png"
 - **注意点**：メールクライアントへの標準統合は環境依存（運用設計が必要）
 
 アフィリエイト導線例：  
-<!-- TODO: アフィリエイトリンク ChatGPT -->
+[AFF_LINK: ChatGPT]
 
 ### 2) Gemini for Google Workspace
 - **強み**：Gmail/Googleドキュメント連携、文面作成〜要約が同じ導線で完結  
@@ -83,7 +83,7 @@ image: "/assets/images/2026-02-20-ai-email-writing-tools-hero.png"
 - **注意点**：日本語メールの主用途には適合しにくい（英語補助として有効）
 
 アフィリエイト導線例：  
-<!-- TODO: アフィリエイトリンク Grammarly -->  
+[AFF_LINK: Grammarly]  
 
 ---
 
@@ -114,7 +114,7 @@ image: "/assets/images/2026-02-20-ai-email-writing-tools-hero.png"
 | コスト最適化 | 「テンプレ資産化」で効果が出る | 「メール以外」も使うと回収しやすい | 英語対応部門に限定すると効率的 |
 
 コストは「メール作成にかかる時間×人件費」で回収計算すると判断が早くなります。たとえば、1通10分→3分になり、1日10通なら **70分/日** の削減余地があります（最終確認は必須）。  
-<!-- TODO: 内部リンク ai-productivity-roi -->  
+[INTERNAL: ai-productivity-roi]  
 
 ---
 
@@ -163,7 +163,7 @@ image: "/assets/images/2026-02-20-ai-email-writing-tools-hero.png"
 - 社内ルール（件名、署名、CC）
 
 この5ステップを定着させるだけで、AIメールの事故率は大きく下がります。  
-<!-- TODO: 内部リンク email-proofreading-checklist -->  
+[INTERNAL: email-proofreading-checklist]  
 
 ---
 
@@ -259,4 +259,4 @@ image: "/assets/images/2026-02-20-ai-email-writing-tools-hero.png"
 ![Team using AI to draft emails with review checklist on screen]({{ "/assets/images/2026-02-20-ai-email-writing-tools-5.png" | relative_url }})
 
 
-まずは、あなたの業務で頻出するメール（例：日程調整、依頼、催促、謝罪）を1つ選び、この記事のプロンプト例で下書きを作ってみてください。導入ツールの候補としては、柔軟性重視なら **<!-- TODO: アフィリエイトリンク ChatGPT -->**、英語メールの品質改善なら **<!-- TODO: アフィリエイトリンク Grammarly -->** を起点に検討すると比較が進めやすいはずです。
+まずは、あなたの業務で頻出するメール（例：日程調整、依頼、催促、謝罪）を1つ選び、この記事のプロンプト例で下書きを作ってみてください。導入ツールの候補としては、柔軟性重視なら **[AFF_LINK: ChatGPT]**、英語メールの品質改善なら **[AFF_LINK: Grammarly]** を起点に検討すると比較が進めやすいはずです。

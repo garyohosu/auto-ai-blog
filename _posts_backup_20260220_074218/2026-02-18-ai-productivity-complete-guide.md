@@ -59,7 +59,7 @@ image: "/assets/images/2026-02-18-ai-productivity-complete-guide-hero.png"
 
 ![Side-by-side comparison table visual for ChatGPT Claude Gemini]({{ "/assets/images/2026-02-18-ai-productivity-complete-guide-5.png" | relative_url }})
 
-関連して、社内の問い合わせ対応をAIで効率化したい場合は、チャットボット導入が最短です。→ <!-- TODO: 内部リンク ai-customer-support-chatbot-guide -->
+関連して、社内の問い合わせ対応をAIで効率化したい場合は、チャットボット導入が最短です。→ [INTERNAL: ai-customer-support-chatbot-guide]
 
 ---
 
@@ -146,8 +146,8 @@ AI生産性を伸ばすには「文章生成」だけでなく、**ワークフ�
 | 使いどころ例 | フォーム→Slack通知→CRM登録 | 複数分岐の承認フロー | 社内システム連携・独自処理 |
 
 自動化ツールの導入検討では、まず「月に何回実行するか」を見積もると、料金のブレが減ります。  
-<!-- TODO: アフィリエイトリンク Zapier -->  
-<!-- TODO: アフィリエイトリンク Make -->
+[AFF_LINK: Zapier]  
+[AFF_LINK: Make]
 
 ---
 
@@ -187,8 +187,8 @@ AI生産性を伸ばすには「文章生成」だけでなく、**ワークフ�
 - 各カテゴリで「質問→結論→手順→例外→関連リンク」を作成
 - 重要FAQは、社内ポータル上部に固定表示
 
-CS領域を本格的に自動化するなら、チャットボット導入手順もセットで確認してください。→ <!-- TODO: 内部リンク ai-customer-support-chatbot-guide -->  
-また、ナレッジ整備の基本設計（タグ、更新ルール、責任者）を別記事で扱う想定です。→ <!-- TODO: 内部リンク knowledge-base-operations -->  
+CS領域を本格的に自動化するなら、チャットボット導入手順もセットで確認してください。→ [INTERNAL: ai-customer-support-chatbot-guide]  
+また、ナレッジ整備の基本設計（タグ、更新ルール、責任者）を別記事で扱う想定です。→ [INTERNAL: knowledge-base-operations]  
 
 
 ![Example screens of FAQ workflow with AI summarization and tagging]({{ "/assets/images/2026-02-18-ai-productivity-complete-guide-10.png" | relative_url }})
@@ -213,7 +213,7 @@ AI導入はメリットが大きい一方、よくある落とし穴も固定化
 - **コストが膨らむ**  
   - 対策：利用上限、部門課金、実行回数の見積もり、低頻度は手作業維持
 
-運用ルール整備の観点は、セキュリティや情シスの巻き込みが重要です。関連ガイドへの内部リンク例：→ <!-- TODO: 内部リンク ai-governance-policy -->
+運用ルール整備の観点は、セキュリティや情シスの巻き込みが重要です。関連ガイドへの内部リンク例：→ [INTERNAL: ai-governance-policy]
 
 ---
 
@@ -270,4 +270,4 @@ AIで仕事効率化を成功させるポイントは、ツール選びよりも
 
 ![Roadmap graphic for scaling AI productivity across a team]({{ "/assets/images/2026-02-18-ai-productivity-complete-guide-13.png" | relative_url }})
 
-カスタマーサポートや社内問い合わせが多いなら、AIチャットボット導入が最も効果が見えやすい領域です。具体的手順は以下で確認できます。→ <!-- TODO: 内部リンク ai-customer-support-chatbot-guide -->
+カスタマーサポートや社内問い合わせが多いなら、AIチャットボット導入が最も効果が見えやすい領域です。具体的手順は以下で確認できます。→ [INTERNAL: ai-customer-support-chatbot-guide]

@@ -41,7 +41,7 @@ best ai music generators を選ぶ前に、まず「AI音楽生成ツールが�
 - **編集機能**：イントロ延長、歌詞差し替え、部分再生成の可否  
 - **生成の安定性**：意図したジャンルに寄るか、破綻率は低いか
 
-<!-- TODO: 内部リンク ai-music-copyright-guide -->  
+[INTERNAL: ai-music-copyright-guide]  
 （社内記事例：AI音楽の権利・クレジット表記の考え方）
 
 
@@ -89,7 +89,7 @@ best ai music generators を選ぶ前に、まず「AI音楽生成ツールが�
 | Soundraw | 体験〜書き出しで課金が多い | 動画BGMの継続制作 | 利用媒体（広告/配信/店舗）別の許諾 |
 | Boomy | 試しやすい | 公開/配信の拡張 | 配信時の取り扱い、収益化条件 |
 
-<!-- TODO: 内部リンク music-production-workflow -->  
+[INTERNAL: music-production-workflow]  
 （社内記事例：動画制作でのBGMワークフロー最適化）
 
 
@@ -126,7 +126,7 @@ best ai music generators を選ぶ前に、まず「AI音楽生成ツールが�
   - “似た曲量産”を避けるため、**年代**や**リズム**を1要素だけ変える（例：BPM120→98）
 
 導入の近道：  
-<!-- TODO: アフィリエイトリンク Suno -->
+[AFF_LINK: Suno]
 
 ### 使用例2：Udioで“サビの爆発力”を作り込む（配信用の下書き）
 - **目的**：曲展開の設計、サビの盛り上げ、ボーカル表情の調整
@@ -138,7 +138,7 @@ best ai music generators を選ぶ前に、まず「AI音楽生成ツールが�
   - ノイズ/不自然さがあるテイクは、部分的な再生成や作り直しで割り切る
 
 試し先：  
-<!-- TODO: アフィリエイトリンク Udio -->
+[AFF_LINK: Udio]
 
 ### 使用例3：AIVA��“映像用BGM（2分）”を作る（編集前提）
 - **目的**：企業VP、ゲーム、ドキュメンタリーの土台作り
@@ -149,7 +149,7 @@ best ai music generators を選ぶ前に、まず「AI音楽生成ツールが�
 - **コツ**
   - “生成物を納品”ではなく、**MIDI的に整える前提**にすると強い
 
-<!-- TODO: 内部リンク daw-beginner-guide -->  
+[INTERNAL: daw-beginner-guide]  
 （社内記事例：DAW初心者向けの書き出し・ミックス基礎）
 
 ## best ai music generatorsの手順：失敗しない5ステップ（共通）

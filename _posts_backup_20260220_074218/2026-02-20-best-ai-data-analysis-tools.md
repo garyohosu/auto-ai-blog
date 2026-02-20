@@ -67,13 +67,13 @@ AIデータ分析ツールとは、データの取り込み〜整形（場合に
 
 1. **データ接続**：DWH（BigQuery/Snowflake）やCRM（Salesforce）に直結できるか  
 2. **自然言語の強さ**：日本語で分析意図が通るか／曖昧さを確認質問してくれるか  
-3. **ガバナンス**：ワークスペース、承認フロー、行レベルセキュリティ  
+3. **ガバナンス**：ワークスペース、承認フロ���、行レベルセキュリティ  
 4. **可視化と共有**：ダッシュボード、埋め込み、PDF/PowerPoint出力  
 5. **前処理（ETL）**：ツール内で整形できるか、別ツールが必要か  
 6. **コスト構造**：閲覧者課金か、作成者課金か（人数増で爆発しやすい）  
 7. **再現性**：指標定義（売上、粗利、解約率）を統一できる仕組みがあるか  
 
-<!-- TODO: 内部リンク ai-data-quality-checklist -->（データ品質チェックの詳細記事をここに挿入）
+[INTERNAL: ai-data-quality-checklist]（データ品質チェックの詳細記事をここに挿入）
 
 ---
 
@@ -111,8 +111,8 @@ AIデータ分析ツールとは、データの取り込み〜整形（場合に
 - ダッシュボード本数（部署ごとに増殖）  
 まで含めて試算すると失敗が減ります。
 
-<!-- TODO: アフィリエイトリンク PowerBI -->  
-<!-- TODO: アフィリエイトリンク Tableau -->
+[AFF_LINK: PowerBI]  
+[AFF_LINK: Tableau]
 
 ---
 
@@ -127,7 +127,7 @@ AIデータ分析ツールとは、データの取り込み〜整形（場合に
 | いまあるCSVを即分析したい | ChatGPT（ADA） | Power BI | 立ち上がりが最速 |
 | “見落とし”を減らしたい | Qlik | Tableau | 連想探索で偏りを崩せる |
 
-<!-- TODO: 内部リンク bi-tool-selection-guide -->（BI選定の詳細ガイドをここに挿入）
+[INTERNAL: bi-tool-selection-guide]（BI選定の詳細ガイドをここに挿入）
 
 ---
 
@@ -364,5 +364,5 @@ AIデータ分析ツールとは、データの取り込み〜整形（場合に
 ![Team reviewing AI analytics dashboard in meeting room]({{ "/assets/images/2026-02-20-best-ai-data-analysis-tools-6.png" | relative_url }})
 
 
-- ツール選定のチェック項目をすぐ使える形で欲しい方： <!-- TODO: 内部リンク best-ai-data-analysis-tools-checklist -->  
+- ツール選定のチェック項目をすぐ使える形で欲しい方： [INTERNAL: best-ai-data-analysis-tools-checklist]  
 - 相談しながら進めたい方：比較条件（データ接続・権限・費用試算）を整理してから、社内の情報システム/データ担当に持ち込むのが最短です。

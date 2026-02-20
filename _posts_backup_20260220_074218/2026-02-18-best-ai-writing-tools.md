@@ -53,7 +53,7 @@ image: /assets/images/2026-02-18-best-ai-writing-tools.png
 - プロンプト次第でどんなジャンルにも対応
 - Custom GPTsで自分専用のライティングアシスタントを作れる
 
-<!-- TODO: アフィリエイトリンク chatgpt-plus -->
+[AFF_LINK: chatgpt-plus]
 
 #### 2. Claude — 長文の品質ならNo.1
 200Kトークンのコンテキストで、**3,000〜10,000字の長文記事**でも一貫性を保てる。
@@ -62,7 +62,7 @@ image: /assets/images/2026-02-18-best-ai-writing-tools.png
 - 文体が自然で、AIっぽさが少ない
 - 正確性が高く、ファクトチェックの手間が減る
 
-<!-- TODO: アフィリエイトリンク claude-pro -->
+[AFF_LINK: claude-pro]
 
 ---
 
@@ -75,7 +75,7 @@ SEOテンプレートが充実。キーワードを入力するだけで、構�
 - ブランドボイス設定で統一感のあるコンテンツ
 - Surfer SEOとの連携でSEOスコアをリアルタイム確認
 
-<!-- TODO: アフィリエイトリンク jasper -->
+[AFF_LINK: jasper]
 
 #### 4. Surfer SEO + AI Writer — SEO最適化の決定版
 **競合分析 → キーワード配置 → 記事生成**を一気通貫で行える。
@@ -84,7 +84,7 @@ SEOテンプレートが充実。キーワードを入力するだけで、構�
 - NLP分析でGoogleが求めるコンテンツ構成を提案
 - Content Scoreで記事の品質を数値化
 
-<!-- TODO: アフィリエイトリンク surfer-seo -->
+[AFF_LINK: surfer-seo]
 
 #### 5. Frase — リサーチからライティングまで
 検索結果を自動分析し、上位表示に必要な見出し・キーワードを提案。
@@ -93,7 +93,7 @@ SEOテンプレートが充実。キーワードを入力するだけで、構�
 - SERP分析が強力
 - 記事のアウトライン自動生成
 
-<!-- TODO: アフィリエイトリンク frase -->
+[AFF_LINK: frase]
 
 ---
 
@@ -106,7 +106,7 @@ LP、広告文、メール、SNS投稿など**短文のコピー生成**に特�
 - 90以上のテンプレート
 - A/Bテスト用に複数バリエーション生成
 
-<!-- TODO: アフィリエイトリンク copy-ai -->
+[AFF_LINK: copy-ai]
 
 #### 7. Writesonic — ブログも広告もオールラウンド
 SEOブログ記事、Google広告、Facebook広告など幅広い用途に対応。
@@ -115,7 +115,7 @@ SEOブログ記事、Google広告、Facebook広告など幅広い用途に対応
 - 無料プランあり
 - Factual記事モードで情報の正確性を向上
 
-<!-- TODO: アフィリエイトリンク writesonic -->
+[AFF_LINK: writesonic]
 
 ---
 
@@ -128,7 +128,7 @@ SEOブログ記事、Google広告、Facebook広告など幅広い用途に対応
 - 100以上の日本語テンプレート
 - 日本のビジネス文書に最適化
 
-<!-- TODO: アフィリエイトリンク catchy -->
+[AFF_LINK: catchy]
 
 ---
 
@@ -141,7 +141,7 @@ Notionユーザーなら追加料金$10/月でAI機能が使える。
 - 既存のドキュメントの要約・改善・翻訳
 - チームのナレッジベースと連携
 
-<!-- TODO: アフィリエイトリンク notion-ai -->
+[AFF_LINK: notion-ai]
 
 #### 10. Gemini — Googleエコシステムとの融合
 Google Docs、Sheetsとシームレスに連携。リサーチ力が高い。
@@ -150,7 +150,7 @@ Google Docs、Sheetsとシームレスに連携。リサーチ力が高い。
 - Google検索の知識をリアルタイムに活用
 - 無料プランが充実
 
-<!-- TODO: アフィリエイトリンク gemini -->
+[AFF_LINK: gemini]
 
 ---
 
@@ -191,8 +191,8 @@ AI文章作成ツールは、2026年のコンテンツ制作に**欠かせない
 
 まずは **ChatGPT** または **Claude** の無料プランで基本的な使い方を覚え、SEO記事を本格的に量産したいなら **Jasper** や **Surfer SEO** の導入を検討しましょう。
 
-<!-- TODO: アフィリエイトリンク chatgpt-plus -->
-<!-- TODO: アフィリエイトリンク jasper -->
+[AFF_LINK: chatgpt-plus]
+[AFF_LINK: jasper]
 
-<!-- TODO: 内部リンク chatgpt-vs-claude-comparison -->
-<!-- TODO: 内部リンク best-ai-meeting-tools-comparison -->
+[INTERNAL: chatgpt-vs-claude-comparison]
+[INTERNAL: best-ai-meeting-tools-comparison]

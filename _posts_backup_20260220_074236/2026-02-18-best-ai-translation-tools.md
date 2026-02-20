@@ -60,8 +60,8 @@ image: "/assets/images/2026-02-18-best-ai-translation-tools-hero.png"
 - **Google翻訳**：速度と対応範囲で最強クラス。多言語の一次翻訳に強い  
 - **ChatGPT**：翻訳そのものより「意図に合わせて整える」工程（口調/ターゲット/要約）で真価
 
-<!-- TODO: 内部リンク ai-writing-checklist -->（文章品質チェックの社内手順）  
-<!-- TODO: 内部リンク localization-guide -->（ローカライズ運用の基本）  
+[INTERNAL: ai-writing-checklist]（文章品質チェックの社内手順）  
+[INTERNAL: localization-guide]（ローカライズ運用の基本）  
 
 ---
 
@@ -97,7 +97,7 @@ image: "/assets/images/2026-02-18-best-ai-translation-tools-hero.png"
 - **料金の見方（目安）**
   - 個人：無料〜有料（文字数や機能制限）
   - 企業：ユーザー課金 + 管理機能/セキュリティ
-- 導入候補： <!-- TODO: アフィリエイトリンク DeepL -->
+- 導入候補： [AFF_LINK: DeepL]
 
 ### 2) Google翻訳（最速・最多言語のインフラ）
 - **メリット**
@@ -119,7 +119,7 @@ image: "/assets/images/2026-02-18-best-ai-translation-tools-hero.png"
 - **料金の見方**
   - 個人：月額制プランが中心（機能差あり）
   - 法人：管理/統制/データ利用設定が重要
-- 導入候補： <!-- TODO: アフィリエイトリンク ChatGPT -->
+- 導入候補： [AFF_LINK: ChatGPT]
 
 ### 4) Microsoft Translator（M365/Teams運用に強い）
 - **メリット**
@@ -148,7 +148,7 @@ image: "/assets/images/2026-02-18-best-ai-translation-tools-hero.png"
 - **デメリット**
   - 初期設計・調整が必要で、ライトユーザーには過剰になりうる
 
-<!-- TODO: 内部リンク translation-qa-process -->（翻訳レビュー手順・二重チェックの型）
+[INTERNAL: translation-qa-process]（翻訳レビュー手順・二重チェックの型）
 
 ---
 
@@ -266,5 +266,5 @@ ChatGPTは“翻訳+編集”が得意な一方、原文にない補足を入れ
 - 組織運用や大量処理は：**Microsoft / Amazon Translate** などで補完
 
 次のアクションとしては、まず「あなたの用途（メール/技術/マーケ/大量翻訳）」を1つ決め、**同じ文章を3ツールで翻訳→レビュー工数が最小のもの**を採用するのが最短です。導入検討中なら、候補はこの2つから比較すると早いです：  
-- <!-- TODO: アフィリエイトリンク DeepL -->  
-- <!-- TODO: アフィリエイトリンク ChatGPT -->
+- [AFF_LINK: DeepL]  
+- [AFF_LINK: ChatGPT]

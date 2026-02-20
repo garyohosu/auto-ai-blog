@@ -38,7 +38,7 @@ AIプレゼン作成ツールは、**構成案の自動生成・文章の整形�
   収益化目的なら、商用利用範囲・クレジット表記の要否も確認を。
 
 スライド作成の基本（構成の作り方）も合わせて見直したい方は、こちらもどうぞ：  
-<!-- TODO: 内部リンク presentation-structure-template -->
+[INTERNAL: presentation-structure-template]
 
 ---
 
@@ -68,7 +68,7 @@ Gammaの魅力は、**ドキュメントのように書いた文章を、スラ�
   - セミナー資料→LP/記事へ転用（テキスト資産化）
 
 導入の候補はこちら：  
-<!-- TODO: アフィリエイトリンク Gamma -->
+[AFF_LINK: Gamma]
 
 ---
 
@@ -88,7 +88,7 @@ Beautiful.aiは、要素を置くと**自動で整列・余白・バランスを
   - 外注せず内製で“それっぽい資料”が作れる
 
 導入の候補はこちら：  
-<!-- TODO: アフィリエイトリンク Beautiful.ai -->
+[AFF_LINK: Beautiful.ai]
 
 ---
 
@@ -104,7 +104,7 @@ Canvaは「AIプレゼン専用」ではないものの、テンプレ・素材�
   - ブランドキットで制作コストを下げて継続案件に強い
 
 導入の候補はこちら：  
-<!-- TODO: アフィリエイトリンク Canva -->
+[AFF_LINK: Canva]
 
 ---
 
@@ -119,7 +119,7 @@ Tomeは、短いプロンプトからストーリー仕立てのページ/スラ
   - 社内テンプレや日本語の細部調整は、後工程での手直し前提
 
 導入の候補はこちら：  
-<!-- TODO: アフィリエイトリンク Tome -->
+[AFF_LINK: Tome]
 
 ---
 
@@ -138,7 +138,7 @@ Tomeは、短いプロンプトからストーリー仕立てのページ/スラ
   - 利用できるプラン/管理者設定に左右される（組織導入前提）
 
 導入の候補はこちら：  
-<!-- TODO: アフィリエイトリンク Microsoft Copilot -->
+[AFF_LINK: Microsoft Copilot]
 
 ---
 
@@ -180,7 +180,7 @@ AIに投げる前に、まずこれだけ決めます。
 - 次の行動（相談、見積、トライアル）を明記
 
 CTA設計（資料→問い合わせ導線）も重要なら、こちらも参考に：  
-<!-- TODO: 内部リンク b2b-cta-templates -->
+[INTERNAL: b2b-cta-templates]
 
 ### 手順5：最後に“統一感”を整えるチェックリスト
 - フォントは2種類以内  
@@ -222,15 +222,15 @@ PowerPoint文化なら、**Copilot（PowerPoint）**が最短です。次点で�
 AIプレゼン作成ツールは、どれも万能ではありません。迷ったら次の指針でOKです。
 
 - **文章から一気に構成→見栄えまで作りたい**：Gamma  
-  <!-- TODO: アフィリエイトリンク Gamma -->
+  [AFF_LINK: Gamma]
 - **デザイン崩れを防いで整った資料にしたい**：Beautiful.ai  
-  <!-- TODO: アフィリエイトリンク Beautiful.ai -->
+  [AFF_LINK: Beautiful.ai]
 - **プレゼン以外の制作もまとめて効率化したい**：Canva  
-  <!-- TODO: アフィリエイトリンク Canva -->
+  [AFF_LINK: Canva]
 - **ストーリー型の初稿を爆速で作りたい**：Tome  
-  <!-- TODO: アフィリエイトリンク Tome -->
+  [AFF_LINK: Tome]
 - **PowerPoint資産を活かして最短で回したい**：Microsoft Copilot  
-  <!-- TODO: アフィリエイトリンク Microsoft Copilot -->
+  [AFF_LINK: Microsoft Copilot]
 
 次のアクション（CTA）：  
 1) まずは本記事の「プロンプト例」をコピペし、**10枚構成を1回生成**する  
@@ -238,4 +238,4 @@ AIプレゼン作成ツールは、どれも万能ではありません。迷っ
 3) 使えそうなら、上のリンクから最適ツールを導入して、資料作成の時間を“毎週”削る
 
 プレゼンの型・見出しテンプレも合わせて整えたい方は、こちらの記事もどうぞ：  
-<!-- TODO: 内部リンク ai-slide-prompt-library -->
+[INTERNAL: ai-slide-prompt-library]

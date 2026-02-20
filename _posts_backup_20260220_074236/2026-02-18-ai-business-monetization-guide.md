@@ -66,7 +66,7 @@ AIビジネスとは、[具体的な定義]を指します。近年の技術進�
 | ツールB | $99 | 高度な分析 | 日英 | 平日のみ |
 | ツールC | 無料 | 基本機能 | 英のみ | コミュニティ |
 
-<!-- TODO: アフィリエイトリンク tool-a --> <!-- TODO: アフィリエイトリンク tool-b -->
+[AFF_LINK: tool-a] [AFF_LINK: tool-b]
 
 ### 比較表2: 導入規模別おすすめツール
 
@@ -125,7 +125,7 @@ AIビジネスとは、[具体的な定義]を指します。近年の技術進�
 
 テスト結果を踏まえ、本格展開を実施します。
 
-<!-- TODO: 内部リンク ai-tools-comparison --> <!-- TODO: 内部リンク productivity-tips --> <!-- TODO: 内部リンク automation-guide -->
+[INTERNAL: ai-tools-comparison] [INTERNAL: productivity-tips] [INTERNAL: automation-guide]
 
 ## よくある課題と解決策
 
@@ -200,13 +200,13 @@ A7: 変革管理（チェンジマネジメント）の観点が重要です。�
 
 AIビジネスの導入は、もはや「やるかやらないか」ではなく、「いつやるか」の問題です。競合他社に先駆けて導入することで、大きな競争優位性を獲得できます。
 
-まずは無料プランや無料トライアルから始めてみてはいかがでしょうか？<!-- TODO: アフィリエイトリンク recommended-tool -->
+まずは無料プランや無料トライアルから始めてみてはいかがでしょうか？[AFF_LINK: recommended-tool]
 
 ---
 
 **関連記事**:
-- <!-- TODO: 内部リンク ai-automation-guide -->
-- <!-- TODO: 内部リンク productivity-tools-2026 -->
-- <!-- TODO: 内部リンク business-efficiency-tips -->
+- [INTERNAL: ai-automation-guide]
+- [INTERNAL: productivity-tools-2026]
+- [INTERNAL: business-efficiency-tips]
 
 この記事が、あなたのAIビジネス導入の第一歩に役立てば幸いです。質問やフィードバックがあれば、ぜひコメント欄でお知らせください！

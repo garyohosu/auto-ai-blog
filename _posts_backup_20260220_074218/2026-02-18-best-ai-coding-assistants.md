@@ -25,5 +25,5 @@ AIツールは日々進化しており、最適なツール選びが重要にな
 
 ![AI-assisted developer workflow from coding to deployment]({{ "/assets/images/2026-02-18-best-ai-coding-assistants-3.png" | relative_url }})
 
-<!-- TODO: アフィリエイトリンク chatgpt-plus -->
-<!-- TODO: アフィリエイトリンク claude-pro -->
+[AFF_LINK: chatgpt-plus]
+[AFF_LINK: claude-pro]

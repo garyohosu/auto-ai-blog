@@ -45,8 +45,8 @@ AIを使ってSEO記事やブログ記事を作成し、クラウドソーシン
 - 特定ジャンル（IT、金融、健康など）の専門性を持つ
 - SEOの基礎知識を身につける
 
-<!-- TODO: アフィリエイトリンク chatgpt-plus -->
-<!-- TODO: アフィリエイトリンク claude-pro -->
+[AFF_LINK: chatgpt-plus]
+[AFF_LINK: claude-pro]
 
 ---
 
@@ -67,8 +67,8 @@ Midjourneyなどで生成した画像をストックフォトサイトで販売�
 - シリーズ化して統一感のある画像セットを作る
 - 商用利用の権利をクリアにしておく
 
-<!-- TODO: アフィリエイトリンク midjourney -->
-<!-- TODO: アフィリエイトリンク adobe-stock -->
+[AFF_LINK: midjourney]
+[AFF_LINK: adobe-stock]
 
 ---
 
@@ -90,7 +90,7 @@ AIを活用して大量の高品質ブログ記事を作成し、アフィリエ
 - 1つのジャンルに特化してサイトの権威性を高める
 - Google E-E-A-T を意識した記事作り
 
-<!-- TODO: アフィリエイトリンク surfer-seo -->
+[AFF_LINK: surfer-seo]
 
 ---
 
@@ -111,7 +111,7 @@ AIを活用して大量の高品質ブログ記事を作成し、アフィリエ
 - ノーコードツール（Dify、Voiceflowなど）を活用
 - 導入企業の成功事例を作って営業に使う
 
-<!-- TODO: アフィリエイトリンク dify -->
+[AFF_LINK: dify]
 
 ---
 
@@ -152,7 +152,7 @@ AI動画生成ツールを使ってYouTube動画やSNS動画を制作。
 - 投稿頻度を維持する（週3本以上）
 - サムネイルとタイトルのABテスト
 
-<!-- TODO: アフィリエイトリンク elevenlabs -->
+[AFF_LINK: elevenlabs]
 
 ---
 
@@ -221,9 +221,9 @@ AIで稼ぐための最大のコツは、**今すぐ始めること**です。
 
 まずは **ChatGPT** か **Claude** の有料プランに加入し、この記事で紹介した7つの方法の中から**1つだけ選んで集中**してください。3ヶ月後には、確実に最初の収入が生まれているはずです。
 
-<!-- TODO: アフィリエイトリンク chatgpt-plus -->
-<!-- TODO: アフィリエイトリンク claude-pro -->
+[AFF_LINK: chatgpt-plus]
+[AFF_LINK: claude-pro]
 
-<!-- TODO: 内部リンク best-ai-writing-tools -->
-<!-- TODO: 内部リンク chatgpt-vs-claude-comparison -->
-<!-- TODO: 内部リンク best-free-ai-image-generators -->
+[INTERNAL: best-ai-writing-tools]
+[INTERNAL: chatgpt-vs-claude-comparison]
+[INTERNAL: best-free-ai-image-generators]

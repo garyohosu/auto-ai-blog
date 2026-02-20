@@ -57,7 +57,7 @@ image: /assets/images/2026-02-18-best-ai-meeting-tools-comparison.png
 
 **こんな人におすすめ:** 日本語メインで使いたい個人・小規模チーム
 
-<!-- TODO: アフィリエイトリンク notta -->
+[AFF_LINK: notta]
 
 ---
 
@@ -76,7 +76,7 @@ LINE（NAVER）が開発した完全無料のAI議事録ツール。
 
 **こんな人におすすめ:** まずは無料で試したい方、対面会議が多い方
 
-<!-- TODO: アフィリエイトリンク clova-note -->
+[AFF_LINK: clova-note]
 
 ---
 
@@ -95,7 +95,7 @@ LINE（NAVER）が開発した完全無料のAI議事録ツール。
 
 **こんな人におすすめ:** 英語での会議が多いグローバル企業
 
-<!-- TODO: アフィリエイトリンク otter-ai -->
+[AFF_LINK: otter-ai]
 
 ---
 
@@ -114,7 +114,7 @@ LINE（NAVER）が開発した完全無料のAI議事録ツール。
 
 **こんな人におすすめ:** 営業チーム、カスタマーサクセス担当
 
-<!-- TODO: アフィリエイトリンク tldv -->
+[AFF_LINK: tldv]
 
 ---
 
@@ -133,7 +133,7 @@ LINE（NAVER）が開発した完全無料のAI議事録ツール。
 
 **こんな人におすすめ:** SaaS連携を重視するITチーム
 
-<!-- TODO: アフィリエイトリンク fireflies -->
+[AFF_LINK: fireflies]
 
 ---
 
@@ -152,7 +152,7 @@ LINE（NAVER）が開発した完全無料のAI議事録ツール。
 
 **こんな人におすすめ:** セキュリティを重視する中〜大企業
 
-<!-- TODO: アフィリエイトリンク ai-gijiroku -->
+[AFF_LINK: ai-gijiroku]
 
 ---
 
@@ -171,7 +171,7 @@ LINE（NAVER）が開発した完全無料のAI議事録ツール。
 
 **こんな人におすすめ:** エンタープライズ利用、官公庁
 
-<!-- TODO: アフィリエイトリンク smart-shoki -->
+[AFF_LINK: smart-shoki]
 
 ---
 
@@ -219,7 +219,7 @@ AI議事録ツールは、**会議後の作業時間を劇的に削減**でき�
 
 まずは無料プランのある **Notta** や **CLOVA Note** で実際の精度を確認し、チームに合うツールを見つけることをおすすめします。
 
-<!-- TODO: アフィリエイトリンク notta -->
+[AFF_LINK: notta]
 
-<!-- TODO: 内部リンク best-ai-writing-tools -->
-<!-- TODO: 内部リンク chatgpt-vs-claude-comparison -->
+[INTERNAL: best-ai-writing-tools]
+[INTERNAL: chatgpt-vs-claude-comparison]

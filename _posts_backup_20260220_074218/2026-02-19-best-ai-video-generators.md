@@ -58,9 +58,9 @@ best ai video generatorsを選ぶ際は「画質」だけでなく、**制作フ
   - 画像から短尺動画化→字幕→書き出し  
   - 複数案を並行生成してA/Bテスト  
 - 注意点：クレジット消費が設計の要。長尺は連結運用前提。  
-- 導入導線： <!-- TODO: アフィリエイトリンク Runway -->
+- 導入導線： [AFF_LINK: Runway]
 
-<!-- TODO: 内部リンク ai-video-workflow-template -->
+[INTERNAL: ai-video-workflow-template]
 
 ### 2) Pika（手軽さと軽快さ。SNS向け）
 - 向く人：初めてのAI動画生成、**短尺の量産**
@@ -106,7 +106,7 @@ best ai video generatorsを選ぶ際は「画質」だけでなく、**制作フ
   - 自動字幕→強調テロップでCTR改善  
 - 注意点：生成部分は他ツール併用が前提になりやすい（生成の得意不得意がある）。
 
-<!-- TODO: 内部リンク short-video-seo -->
+[INTERNAL: short-video-seo]
 
 ---
 
@@ -135,7 +135,7 @@ best ai video generatorsを選ぶ際は「画質」だけでなく、**制作フ
 | 商品写真を動かす | I2Vの安定性 | Pika / Luma | 写真→短尺の成功率が高い |
 | インパクト広告 | 動きの派手さ | Kling | 強い演出に寄せやすい |
 
-<!-- TODO: 内部リンク ai-ad-creative-guide -->
+[INTERNAL: ai-ad-creative-guide]
 
 ---
 
@@ -190,7 +190,7 @@ best ai video generatorsを選ぶ際は「画質」だけでなく、**制作フ
   - 強調字幕（1行）  
   - 効果音（クリック、スワイプ等）  
   - 0.5秒以内のカットつなぎ  
-- 編集の導線： <!-- TODO: アフィリエイトリンク CapCut -->
+- 編集の導線： [AFF_LINK: CapCut]
 
 ---
 
