@@ -1,9 +1,9 @@
 # SEO Keyword Selection: 2026-02-21
 
 ## 選定キーワード
-- slug: best-ai-writing-assistants-2026
-- title: 【2026年】AI文章作成ツール おすすめ7選｜ブログ・SNS・広告コピーに
-- tags: [AI文章作成, ライティング, コピーライティング]
+- slug: ai-chatbot-comparison-2026
+- title: 【2026年版】AIチャットボット比較｜ChatGPT・Gemini・Claude・Copilot
+- tags: [AIチャットボット, ChatGPT, Gemini]
 
 ## 競合分析
 - 既存上位記事: 3000字前後
