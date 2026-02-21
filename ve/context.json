@@ -1,66 +1,66 @@
 {
-  "date": "2026-02-20",
-  "timestamp": "2026-02-19T22:38:18.043Z",
+  "date": "2026-02-21",
+  "timestamp": "2026-02-21T03:00:15.484Z",
   "phase": "done",
   "ceo_strategy": "ai_productivity",
   "selected_keyword": {
-    "slug": "best-ai-data-analysis-tools",
-    "title": "【2026年】AIデータ分析ツール おすすめ6選｜非エンジニアでも使える",
+    "slug": "chatgpt-api-getting-started",
+    "title": "ChatGPT APIの使い方完全ガイド｜初心者向け入門から実践まで",
     "tags": [
-      "AIデータ分析",
-      "BI",
-      "ノーコード"
+      "ChatGPT API",
+      "OpenAI",
+      "プログラミング"
     ]
   },
-  "article_path": "_posts/2026-02-20-best-ai-data-analysis-tools.md",
-  "image_path": "/assets/images/2026-02-20-best-ai-data-analysis-tools-hero.png",
+  "article_path": "_posts/2026-02-21-chatgpt-api-getting-started.md",
+  "image_path": "/assets/images/2026-02-21-chatgpt-api-getting-started-hero.png",
   "status": "completed",
   "agents_completed": [
     {
       "agent": "ceo",
-      "timestamp": "2026-02-19T22:38:18.072Z",
+      "timestamp": "2026-02-21T03:00:15.514Z",
       "duration": 0.03
     },
     {
       "agent": "seo",
-      "timestamp": "2026-02-19T22:38:18.101Z",
+      "timestamp": "2026-02-21T03:00:15.542Z",
       "duration": 0.03
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-19T22:39:52.199Z",
-      "duration": 94.06
+      "timestamp": "2026-02-21T03:01:33.745Z",
+      "duration": 78.16
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-19T22:39:52.203Z",
-      "duration": 94.1
+      "timestamp": "2026-02-21T03:01:33.749Z",
+      "duration": 78.21
     },
     {
       "agent": "designer",
-      "timestamp": "2026-02-19T22:45:19.546Z",
-      "duration": 327.32,
+      "timestamp": "2026-02-21T03:07:25.981Z",
+      "duration": 352.21,
       "real_image": true
     },
     {
       "agent": "designer",
-      "timestamp": "2026-02-19T22:45:19.551Z",
-      "duration": 327.35
+      "timestamp": "2026-02-21T03:07:25.986Z",
+      "duration": 352.24
     },
     {
       "agent": "linker",
-      "timestamp": "2026-02-19T22:45:19.584Z",
-      "duration": 0.03
+      "timestamp": "2026-02-21T03:07:26.027Z",
+      "duration": 0.04
     },
     {
       "agent": "editor",
-      "timestamp": "2026-02-19T22:45:19.615Z",
-      "duration": 0.03
+      "timestamp": "2026-02-21T03:07:26.073Z",
+      "duration": 0.04
     },
     {
       "agent": "analyst",
-      "timestamp": "2026-02-19T22:45:20.512Z",
-      "duration": 0.9
+      "timestamp": "2026-02-21T03:07:26.687Z",
+      "duration": 0.61
     }
   ],
   "retry_count": 0,
@@ -69,21 +69,21 @@
   "completed_agents": [
     {
       "agent": "linker",
-      "timestamp": "2026-02-19T22:45:19.579Z",
-      "duration": 0.01,
+      "timestamp": "2026-02-21T03:07:26.021Z",
+      "duration": 0.014,
       "resolvedLinks": 0,
-      "relatedArticlesAdded": false
+      "relatedArticlesAdded": true
     },
     {
       "agent": "editor",
-      "timestamp": "2026-02-19T22:45:19.610Z",
-      "duration": 0.007,
+      "timestamp": "2026-02-21T03:07:26.068Z",
+      "duration": 0.011,
       "decision": "approved"
     },
     {
       "agent": "analyst",
-      "timestamp": "2026-02-19T22:45:20.508Z",
-      "duration": 0.868
+      "timestamp": "2026-02-21T03:07:26.682Z",
+      "duration": 0.58
     }
   ],
   "editor_decision": "approved",
