@@ -6,7 +6,7 @@ categories: [AI比較, AIツール]
 tags: [ChatGPT, Claude, GPT-5, Claude-4.6, AI比較, LLM, コーディング, データ分析]
 author: Auto-AI Blog 編集部
 description: "2026年2月最新版！GPT-4o廃止後の新モデルGPT-5.2/5.3-CodexとClaude Opus 4.6/Sonnet 4.6を徹底比較。用途別の選び方、料金プラン、最新機能を解説します。"
-image: /auto-ai-blog/assets/images/2026-02-18-chatgpt-vs-claude-comparison.png
+image: /assets/images/2026-02-18-chatgpt-vs-claude-comparison.png
 published: true
 ---
 
