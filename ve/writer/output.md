@@ -1,9 +1,9 @@
 # Writer Output: 2026-02-21
 
 ## Generated Article
-- File: `2026-02-21-claude-api-usage-guide.md`
-- Title: Claude APIの使い方と料金｜Anthropic APIで何ができるか解説
-- Character count: 7391
+- File: `2026-02-21-ai-image-generator-comparison.md`
+- Title: 【2026年】AI画像生成ツール比較｜Midjourney・DALL-E・Stable Diffusion
+- Character count: 6990
 - Status: ✅ Complete
 - AI Summary Optimization: ✅ Included
 

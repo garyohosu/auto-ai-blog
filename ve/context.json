@@ -1,66 +1,66 @@
 {
   "date": "2026-02-21",
-  "timestamp": "2026-02-21T03:26:22.518Z",
+  "timestamp": "2026-02-21T06:52:24.766Z",
   "phase": "done",
   "ceo_strategy": "ai_productivity",
   "selected_keyword": {
-    "slug": "claude-api-usage-guide",
-    "title": "Claude APIの使い方と料金｜Anthropic APIで何ができるか解説",
+    "slug": "ai-image-generator-comparison",
+    "title": "【2026年】AI画像生成ツール比較｜Midjourney・DALL-E・Stable Diffusion",
     "tags": [
-      "Claude API",
-      "Anthropic",
-      "LLM"
+      "AI画像生成",
+      "Midjourney",
+      "DALL-E"
     ]
   },
-  "article_path": "_posts/2026-02-21-claude-api-usage-guide.md",
-  "image_path": "/assets/images/2026-02-21-claude-api-usage-guide-hero.png",
+  "article_path": "_posts/2026-02-21-ai-image-generator-comparison.md",
+  "image_path": "/assets/images/2026-02-21-ai-image-generator-comparison-hero.png",
   "status": "completed",
   "agents_completed": [
     {
       "agent": "ceo",
-      "timestamp": "2026-02-21T03:26:22.550Z",
+      "timestamp": "2026-02-21T06:52:24.798Z",
       "duration": 0.03
     },
     {
       "agent": "seo",
-      "timestamp": "2026-02-21T03:26:22.580Z",
+      "timestamp": "2026-02-21T06:52:24.828Z",
       "duration": 0.03
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-21T03:27:39.421Z",
-      "duration": 76.81
+      "timestamp": "2026-02-21T06:53:37.918Z",
+      "duration": 73.06
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-21T03:27:39.425Z",
-      "duration": 76.84
+      "timestamp": "2026-02-21T06:53:37.922Z",
+      "duration": 73.09
     },
     {
       "agent": "designer",
-      "timestamp": "2026-02-21T03:34:17.219Z",
-      "duration": 397.77,
+      "timestamp": "2026-02-21T06:59:24.694Z",
+      "duration": 346.75,
       "real_image": true
     },
     {
       "agent": "designer",
-      "timestamp": "2026-02-21T03:34:17.224Z",
-      "duration": 397.8
+      "timestamp": "2026-02-21T06:59:24.700Z",
+      "duration": 346.78
     },
     {
       "agent": "linker",
-      "timestamp": "2026-02-21T03:34:17.256Z",
+      "timestamp": "2026-02-21T06:59:24.732Z",
       "duration": 0.03
     },
     {
       "agent": "editor",
-      "timestamp": "2026-02-21T03:34:17.286Z",
+      "timestamp": "2026-02-21T06:59:24.763Z",
       "duration": 0.03
     },
     {
       "agent": "analyst",
-      "timestamp": "2026-02-21T03:34:17.935Z",
-      "duration": 0.65
+      "timestamp": "2026-02-21T06:59:25.434Z",
+      "duration": 0.67
     }
   ],
   "retry_count": 0,
@@ -69,21 +69,21 @@
   "completed_agents": [
     {
       "agent": "linker",
-      "timestamp": "2026-02-21T03:34:17.252Z",
+      "timestamp": "2026-02-21T06:59:24.728Z",
       "duration": 0.01,
       "resolvedLinks": 0,
-      "relatedArticlesAdded": true
+      "relatedArticlesAdded": false
     },
     {
       "agent": "editor",
-      "timestamp": "2026-02-21T03:34:17.282Z",
+      "timestamp": "2026-02-21T06:59:24.758Z",
       "duration": 0.007,
       "decision": "approved"
     },
     {
       "agent": "analyst",
-      "timestamp": "2026-02-21T03:34:17.930Z",
-      "duration": 0.618
+      "timestamp": "2026-02-21T06:59:25.429Z",
+      "duration": 0.641
     }
   ],
   "editor_decision": "approved",

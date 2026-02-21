@@ -1,17 +1,17 @@
 # Writer Input: 2026-02-21
 
 ## Selected Keyword
-- Slug: claude-api-usage-guide
-- Title: Claude APIの使い方と料金｜Anthropic APIで何ができるか解説
-- Tags: Claude API, Anthropic, LLM
+- Slug: ai-image-generator-comparison
+- Title: 【2026年】AI画像生成ツール比較｜Midjourney・DALL-E・Stable Diffusion
+- Tags: AI画像生成, Midjourney, DALL-E
 
 ## SEO Instructions
 # SEO Keyword Selection: 2026-02-21
 
 ## 選定キーワード
-- slug: claude-api-usage-guide
-- title: Claude APIの使い方と料金｜Anthropic APIで何ができるか解説
-- tags: [Claude API, Anthropic, LLM]
+- slug: ai-image-generator-comparison
+- title: 【2026年】AI画像生成ツール比較｜Midjourney・DALL-E・Stable Diffusion
+- tags: [AI画像生成, Midjourney, DALL-E]
 
 ## 競合分析
 - 既存上位記事: 3000字前後

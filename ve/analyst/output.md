@@ -1,6 +1,6 @@
 # Analyst Agent - 実行サマリー
 
-**日時**: 2026-02-21T03:34:17.930Z
+**日時**: 2026-02-21T06:59:25.429Z
 **ステータス**: in_progress
 
 ---
@@ -9,9 +9,9 @@
 
 ### 記事生成
 
-- **ファイル**: _posts/2026-02-21-claude-api-usage-guide.md
-- **タイトル**: Claude APIの使い方と料金｜Anthropic APIで何ができるか解説
-- **キーワード**: claude-api-usage-guide
+- **ファイル**: _posts/2026-02-21-ai-image-generator-comparison.md
+- **タイトル**: 【2026年】AI画像生成ツール比較｜Midjourney・DALL-E・Stable Diffusion
+- **キーワード**: ai-image-generator-comparison
 - **クラスター**: ai_productivity
 
 ### エージェント実行時間
@@ -26,7 +26,7 @@
 
 ## 📈 累計統計
 
-- **総記事数**: 20記事
+- **総記事数**: 21記事
 - **クラスター数**: 10個
 
 ### トップクラスター
@@ -35,9 +35,9 @@
 |-----------|--------|
 | Claude API | 1記事 |
 | ChatGPT API | 1記事 |
+| AI画像生成 | 1記事 |
 | ChatGPT | 1記事 |
 | AIデータ分析 | 1記事 |
-| AIメール | 1記事 |
 
 ---
 
