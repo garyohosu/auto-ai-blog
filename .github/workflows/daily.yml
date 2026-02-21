@@ -14,6 +14,7 @@ on:
 permissions:
   contents: write
   actions: write
+  issues: write
 
 jobs:
   run:
@@ -43,6 +44,74 @@ jobs:
           git add -A
           git diff --cached --quiet || git commit -m "ve: daily run $(date -u +%F)"
           git push
+
+      - name: Check keyword pool and alert if low
+        run: |
+          node -e "
+          const fs = require('fs');
+          const path = require('path');
+
+          // run.js から KEYWORD_POOL を抽出
+          const runJs = fs.readFileSync('ve/run.js', 'utf8');
+          const match = runJs.match(/const KEYWORD_POOL = \[([\s\S]*?)\];/);
+          const items = match ? (match[1].match(/\{[^}]+\}/g) || []) : [];
+          const pool = items.map(i => { const m = i.match(/slug:\s*\"([^\"]+)\"/); return m ? m[1] : null; }).filter(Boolean);
+
+          // 既存記事のスラッグ一覧
+          const postsDir = '_posts';
+          const existing = fs.existsSync(postsDir)
+            ? fs.readdirSync(postsDir).filter(f => f.endsWith('.md'))
+                .map(f => { const m = f.match(/\d{4}-\d{2}-\d{2}-(.+)\.md/); return m ? m[1] : null; })
+                .filter(Boolean)
+            : [];
+
+          const remaining = pool.filter(s => !existing.includes(s)).length;
+          const total = pool.length;
+          console.log('keyword_remaining=' + remaining);
+          console.log('keyword_total=' + total);
+
+          // 閾値: 残り5件以下でアラート
+          const threshold = 5;
+          if (remaining <= threshold) {
+            fs.writeFileSync('/tmp/keyword_alert.txt', String(remaining));
+          }
+          "
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create issue if keyword pool is low
+        run: |
+          if [ -f /tmp/keyword_alert.txt ]; then
+            REMAINING=$(cat /tmp/keyword_alert.txt)
+            # ラベルがなければ作成（エラーは無視）
+            gh label create "keyword-pool" --color "e4e669" --description "キーワードプール補充が必要" --repo ${{ github.repository }} 2>/dev/null || true
+            # 同ラベルのオープン Issue がなければ作成
+            EXISTING=$(gh issue list --repo ${{ github.repository }} --state open --label "keyword-pool" --json number --jq length)
+            if [ "$EXISTING" = "0" ]; then
+              gh issue create \
+                --repo ${{ github.repository }} \
+                --title "[自動通知] キーワードプールが残り${REMAINING}件です" \
+                --label "keyword-pool" \
+                --body "## キーワードプール補充が必要です
+
+          **残り件数:** ${REMAINING} 件
+
+          \`ve/run.js\` の \`KEYWORD_POOL\` にキーワードを追加してください。
+
+          ### 補充手順
+          1. \`ve/run.js\` を開く
+          2. \`KEYWORD_POOL\` 配列に \`{ slug, title, tags }\` 形式で追加
+          3. プール上限は **25件** を目安にする
+
+          ---
+          *このIssueは GitHub Actions により自動作成されました*"
+              echo "Issue created: keyword pool low (${REMAINING} remaining)"
+            else
+              echo "Issue already exists, skipping"
+            fi
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Trigger Jekyll Deploy
         run: |
