@@ -37,6 +37,14 @@ jobs:
         run: |
           node ve/orchestrator.js
 
+      - name: Lint and fix post front-matter
+        run: |
+          # image: パスに baseurl (/auto-ai-blog/) が混入していたら自動修正
+          grep -rl "image:.*\/auto-ai-blog\/assets" _posts/ | while read f; do
+            sed -i 's|image: \(.*\)/auto-ai-blog/assets/|image: \1/assets/|g' "$f"
+            echo "fixed: $f"
+          done
+
       - name: Commit & Push changes
         run: |
           git config user.name "virtual-employee-bot"
