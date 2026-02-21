@@ -1,17 +1,17 @@
 # Writer Input: 2026-02-21
 
 ## Selected Keyword
-- Slug: ai-image-generator-comparison
-- Title: 【2026年】AI画像生成ツール比較｜Midjourney・DALL-E・Stable Diffusion
-- Tags: AI画像生成, Midjourney, DALL-E
+- Slug: best-ai-writing-assistants-2026
+- Title: 【2026年】AI文章作成ツール おすすめ7選｜ブログ・SNS・広告コピーに
+- Tags: AI文章作成, ライティング, コピーライティング
 
 ## SEO Instructions
 # SEO Keyword Selection: 2026-02-21
 
 ## 選定キーワード
-- slug: ai-image-generator-comparison
-- title: 【2026年】AI画像生成ツール比較｜Midjourney・DALL-E・Stable Diffusion
-- tags: [AI画像生成, Midjourney, DALL-E]
+- slug: best-ai-writing-assistants-2026
+- title: 【2026年】AI文章作成ツール おすすめ7選｜ブログ・SNS・広告コピーに
+- tags: [AI文章作成, ライティング, コピーライティング]
 
 ## 競合分析
 - 既存上位記事: 3000字前後

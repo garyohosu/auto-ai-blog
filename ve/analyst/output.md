@@ -1,6 +1,6 @@
 # Analyst Agent - 実行サマリー
 
-**日時**: 2026-02-21T06:59:25.429Z
+**日時**: 2026-02-21T12:37:59.811Z
 **ステータス**: in_progress
 
 ---
@@ -9,9 +9,9 @@
 
 ### 記事生成
 
-- **ファイル**: _posts/2026-02-21-ai-image-generator-comparison.md
-- **タイトル**: 【2026年】AI画像生成ツール比較｜Midjourney・DALL-E・Stable Diffusion
-- **キーワード**: ai-image-generator-comparison
+- **ファイル**: _posts/2026-02-21-best-ai-writing-assistants-2026.md
+- **タイトル**: 【2026年】AI文章作成ツール おすすめ7選｜ブログ・SNS・広告コピーに
+- **キーワード**: best-ai-writing-assistants-2026
 - **クラスター**: ai_productivity
 
 ### エージェント実行時間
@@ -26,7 +26,7 @@
 
 ## 📈 累計統計
 
-- **総記事数**: 21記事
+- **総記事数**: 22記事
 - **クラスター数**: 10個
 
 ### トップクラスター
@@ -35,9 +35,9 @@
 |-----------|--------|
 | Claude API | 1記事 |
 | ChatGPT API | 1記事 |
+| AI文章作成 | 1記事 |
 | AI画像生成 | 1記事 |
 | ChatGPT | 1記事 |
-| AIデータ分析 | 1記事 |
 
 ---
 

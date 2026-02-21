@@ -1,9 +1,9 @@
 # Writer Output: 2026-02-21
 
 ## Generated Article
-- File: `2026-02-21-ai-image-generator-comparison.md`
-- Title: 【2026年】AI画像生成ツール比較｜Midjourney・DALL-E・Stable Diffusion
-- Character count: 6990
+- File: `2026-02-21-best-ai-writing-assistants-2026.md`
+- Title: 【2026年】AI文章作成ツール おすすめ7選｜ブログ・SNS・広告コピーに
+- Character count: 6601
 - Status: ✅ Complete
 - AI Summary Optimization: ✅ Included
 

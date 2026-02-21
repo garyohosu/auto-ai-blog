@@ -1,66 +1,66 @@
 {
   "date": "2026-02-21",
-  "timestamp": "2026-02-21T06:52:24.766Z",
+  "timestamp": "2026-02-21T12:31:48.638Z",
   "phase": "done",
   "ceo_strategy": "ai_productivity",
   "selected_keyword": {
-    "slug": "ai-image-generator-comparison",
-    "title": "【2026年】AI画像生成ツール比較｜Midjourney・DALL-E・Stable Diffusion",
+    "slug": "best-ai-writing-assistants-2026",
+    "title": "【2026年】AI文章作成ツール おすすめ7選｜ブログ・SNS・広告コピーに",
     "tags": [
-      "AI画像生成",
-      "Midjourney",
-      "DALL-E"
+      "AI文章作成",
+      "ライティング",
+      "コピーライティング"
     ]
   },
-  "article_path": "_posts/2026-02-21-ai-image-generator-comparison.md",
-  "image_path": "/assets/images/2026-02-21-ai-image-generator-comparison-hero.png",
+  "article_path": "_posts/2026-02-21-best-ai-writing-assistants-2026.md",
+  "image_path": "/assets/images/2026-02-21-best-ai-writing-assistants-2026-hero.png",
   "status": "completed",
   "agents_completed": [
     {
       "agent": "ceo",
-      "timestamp": "2026-02-21T06:52:24.798Z",
+      "timestamp": "2026-02-21T12:31:48.672Z",
       "duration": 0.03
     },
     {
       "agent": "seo",
-      "timestamp": "2026-02-21T06:52:24.828Z",
+      "timestamp": "2026-02-21T12:31:48.703Z",
       "duration": 0.03
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-21T06:53:37.918Z",
-      "duration": 73.06
+      "timestamp": "2026-02-21T12:32:58.404Z",
+      "duration": 69.67
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-21T06:53:37.922Z",
-      "duration": 73.09
+      "timestamp": "2026-02-21T12:32:58.408Z",
+      "duration": 69.7
     },
     {
       "agent": "designer",
-      "timestamp": "2026-02-21T06:59:24.694Z",
-      "duration": 346.75,
+      "timestamp": "2026-02-21T12:37:58.955Z",
+      "duration": 300.52,
       "real_image": true
     },
     {
       "agent": "designer",
-      "timestamp": "2026-02-21T06:59:24.700Z",
-      "duration": 346.78
+      "timestamp": "2026-02-21T12:37:58.961Z",
+      "duration": 300.55
     },
     {
       "agent": "linker",
-      "timestamp": "2026-02-21T06:59:24.732Z",
-      "duration": 0.03
+      "timestamp": "2026-02-21T12:37:58.996Z",
+      "duration": 0.04
     },
     {
       "agent": "editor",
-      "timestamp": "2026-02-21T06:59:24.763Z",
+      "timestamp": "2026-02-21T12:37:59.030Z",
       "duration": 0.03
     },
     {
       "agent": "analyst",
-      "timestamp": "2026-02-21T06:59:25.434Z",
-      "duration": 0.67
+      "timestamp": "2026-02-21T12:37:59.816Z",
+      "duration": 0.79
     }
   ],
   "retry_count": 0,
@@ -69,21 +69,21 @@
   "completed_agents": [
     {
       "agent": "linker",
-      "timestamp": "2026-02-21T06:59:24.728Z",
+      "timestamp": "2026-02-21T12:37:58.991Z",
       "duration": 0.01,
       "resolvedLinks": 0,
-      "relatedArticlesAdded": false
+      "relatedArticlesAdded": true
     },
     {
       "agent": "editor",
-      "timestamp": "2026-02-21T06:59:24.758Z",
-      "duration": 0.007,
+      "timestamp": "2026-02-21T12:37:59.025Z",
+      "duration": 0.008,
       "decision": "approved"
     },
     {
       "agent": "analyst",
-      "timestamp": "2026-02-21T06:59:25.429Z",
-      "duration": 0.641
+      "timestamp": "2026-02-21T12:37:59.811Z",
+      "duration": 0.754
     }
   ],
   "editor_decision": "approved",
