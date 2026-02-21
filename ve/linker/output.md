@@ -1,7 +1,7 @@
 # Linker Agent - リンク処理結果
 
-**日時**: 2026-02-21T03:07:26.021Z
-**記事**: _posts/2026-02-21-chatgpt-api-getting-started.md
+**日時**: 2026-02-21T03:34:17.252Z
+**記事**: _posts/2026-02-21-claude-api-usage-guide.md
 
 ---
 

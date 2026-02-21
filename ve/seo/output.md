@@ -1,9 +1,9 @@
 # SEO Keyword Selection: 2026-02-21
 
 ## 選定キーワード
-- slug: chatgpt-api-getting-started
-- title: ChatGPT APIの使い方完全ガイド｜初心者向け入門から実践まで
-- tags: [ChatGPT API, OpenAI, プログラミング]
+- slug: claude-api-usage-guide
+- title: Claude APIの使い方と料金｜Anthropic APIで何ができるか解説
+- tags: [Claude API, Anthropic, LLM]
 
 ## 競合分析
 - 既存上位記事: 3000字前後

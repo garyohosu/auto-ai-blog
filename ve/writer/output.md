@@ -1,9 +1,9 @@
 # Writer Output: 2026-02-21
 
 ## Generated Article
-- File: `2026-02-21-chatgpt-api-getting-started.md`
-- Title: ChatGPT APIの使い方完全ガイド｜初心者向け入門から実践まで
-- Character count: 7876
+- File: `2026-02-21-claude-api-usage-guide.md`
+- Title: Claude APIの使い方と料金｜Anthropic APIで何ができるか解説
+- Character count: 7391
 - Status: ✅ Complete
 - AI Summary Optimization: ✅ Included
 
