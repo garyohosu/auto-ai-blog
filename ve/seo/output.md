@@ -1,9 +1,9 @@
 # SEO Keyword Selection: 2026-02-22
 
 ## 選定キーワード
-- slug: ai-voice-generation-tools
-- title: 【2026年】AI音声合成ツール おすすめ6選｜テキスト読み上げ・ナレーション
-- tags: [AI音声, テキスト読み上げ, ナレーション]
+- slug: ai-no-code-app-builder
+- title: AIノーコードアプリ作成ツール おすすめ5選｜プログラミング不要で開発
+- tags: [ノーコード, AIアプリ開発, ローコード]
 
 ## 競合分析
 - 既存上位記事: 3000字前後
