@@ -1,17 +1,17 @@
 # Writer Input: 2026-02-22
 
 ## Selected Keyword
-- Slug: ai-document-summarizer-tools
-- Title: AI要約ツール おすすめ5選｜PDFや長文をワンクリックで要約する方法
-- Tags: AI要約, PDF要約, 文書処理
+- Slug: how-to-use-ai-for-job-hunting
+- Title: 就活・転職活動にAIを活用する方法｜履歴書・面接対策まで完全ガイド
+- Tags: AI転職, 就活, 履歴書
 
 ## SEO Instructions
 # SEO Keyword Selection: 2026-02-22
 
 ## 選定キーワード
-- slug: ai-document-summarizer-tools
-- title: AI要約ツール おすすめ5選｜PDFや長文をワンクリックで要約する方法
-- tags: [AI要約, PDF要約, 文書処理]
+- slug: how-to-use-ai-for-job-hunting
+- title: 就活・転職活動にAIを活用する方法｜履歴書・面接対策まで完全ガイド
+- tags: [AI転職, 就活, 履歴書]
 
 ## 競合分析
 - 既存上位記事: 3000字前後
@@ -28,4 +28,4 @@
 
 
 ## Source
-From context.json phase: writer
+From context.json phase: retry-writer

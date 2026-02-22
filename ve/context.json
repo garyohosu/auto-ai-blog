@@ -1,91 +1,138 @@
 {
   "date": "2026-02-22",
-  "timestamp": "2026-02-22T03:00:19.335Z",
+  "timestamp": "2026-02-22T03:39:28.649Z",
   "phase": "done",
   "ceo_strategy": "ai_productivity",
   "selected_keyword": {
-    "slug": "ai-document-summarizer-tools",
-    "title": "AI要約ツール おすすめ5選｜PDFや長文をワンクリックで要約する方法",
+    "slug": "how-to-use-ai-for-job-hunting",
+    "title": "就活・転職活動にAIを活用する方法｜履歴書・面接対策まで完全ガイド",
     "tags": [
-      "AI要約",
-      "PDF要約",
-      "文書処理"
+      "AI転職",
+      "就活",
+      "履歴書"
     ]
   },
-  "article_path": "_posts/2026-02-22-ai-document-summarizer-tools.md",
-  "image_path": "/assets/images/2026-02-22-ai-document-summarizer-tools-hero.png",
+  "article_path": "_posts/2026-02-22-how-to-use-ai-for-job-hunting.md",
+  "image_path": "/assets/images/2026-02-22-how-to-use-ai-for-job-hunting-hero.png",
   "status": "completed",
   "agents_completed": [
     {
       "agent": "ceo",
-      "timestamp": "2026-02-22T03:00:19.365Z",
+      "timestamp": "2026-02-22T03:39:28.680Z",
       "duration": 0.03
     },
     {
       "agent": "seo",
-      "timestamp": "2026-02-22T03:00:19.394Z",
+      "timestamp": "2026-02-22T03:39:28.708Z",
       "duration": 0.03
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-22T03:01:39.517Z",
-      "duration": 80.09
+      "timestamp": "2026-02-22T03:40:38.084Z",
+      "duration": 69.34
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-22T03:01:39.521Z",
-      "duration": 80.13
+      "timestamp": "2026-02-22T03:40:38.088Z",
+      "duration": 69.38
     },
     {
       "agent": "designer",
-      "timestamp": "2026-02-22T03:08:03.949Z",
-      "duration": 384.4,
+      "timestamp": "2026-02-22T03:46:28.494Z",
+      "duration": 350.38,
       "real_image": true
     },
     {
       "agent": "designer",
-      "timestamp": "2026-02-22T03:08:03.954Z",
-      "duration": 384.43
+      "timestamp": "2026-02-22T03:46:28.498Z",
+      "duration": 350.41
     },
     {
       "agent": "linker",
-      "timestamp": "2026-02-22T03:08:03.988Z",
+      "timestamp": "2026-02-22T03:46:28.533Z",
+      "duration": 0.03
+    },
+    {
+      "agent": "writer",
+      "timestamp": "2026-02-22T03:47:38.564Z",
+      "duration": 69.97
+    },
+    {
+      "agent": "writer",
+      "timestamp": "2026-02-22T03:47:38.568Z",
+      "duration": 70
+    },
+    {
+      "agent": "designer",
+      "timestamp": "2026-02-22T03:47:38.599Z",
+      "duration": 0.01,
+      "real_image": true
+    },
+    {
+      "agent": "designer",
+      "timestamp": "2026-02-22T03:47:38.603Z",
+      "duration": 0.03
+    },
+    {
+      "agent": "linker",
+      "timestamp": "2026-02-22T03:47:38.637Z",
       "duration": 0.03
     },
     {
       "agent": "editor",
-      "timestamp": "2026-02-22T03:08:04.018Z",
+      "timestamp": "2026-02-22T03:47:38.672Z",
       "duration": 0.03
     },
     {
       "agent": "analyst",
-      "timestamp": "2026-02-22T03:08:04.741Z",
-      "duration": 0.72
+      "timestamp": "2026-02-22T03:47:39.379Z",
+      "duration": 0.71
     }
   ],
-  "retry_count": 0,
-  "retry_history": [],
+  "retry_count": 1,
+  "retry_history": [
+    {
+      "attempt": 1,
+      "failed_at": "editor",
+      "reason": "Unknown rejection reason",
+      "timestamp": "2026-02-22T03:46:28.565Z"
+    }
+  ],
   "current_phase": "completed",
   "completed_agents": [
     {
       "agent": "linker",
-      "timestamp": "2026-02-22T03:08:03.983Z",
+      "timestamp": "2026-02-22T03:46:28.527Z",
       "duration": 0.01,
       "resolvedLinks": 0,
       "relatedArticlesAdded": false
     },
     {
       "agent": "editor",
-      "timestamp": "2026-02-22T03:08:04.014Z",
+      "timestamp": "2026-02-22T03:46:28.559Z",
       "duration": 0.007,
+      "decision": "rejected"
+    },
+    {
+      "agent": "linker",
+      "timestamp": "2026-02-22T03:47:38.633Z",
+      "duration": 0.011,
+      "resolvedLinks": 0,
+      "relatedArticlesAdded": false
+    },
+    {
+      "agent": "editor",
+      "timestamp": "2026-02-22T03:47:38.667Z",
+      "duration": 0.008,
       "decision": "approved"
     },
     {
       "agent": "analyst",
-      "timestamp": "2026-02-22T03:08:04.736Z",
-      "duration": 0.694
+      "timestamp": "2026-02-22T03:47:39.374Z",
+      "duration": 0.675
     }
   ],
   "editor_decision": "approved",
-  "editor_issues": []
+  "editor_issues": [],
+  "rejection_reason": "Unknown rejection reason"
 }
