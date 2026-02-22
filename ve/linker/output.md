@@ -1,7 +1,7 @@
 # Linker Agent - リンク処理結果
 
-**日時**: 2026-02-22T22:06:31.445Z
-**記事**: _posts/2026-02-23-ai-marketing-automation-guide.md
+**日時**: 2026-02-22T22:37:44.489Z
+**記事**: _posts/2026-02-23-best-ai-meeting-transcription.md
 
 ---
 

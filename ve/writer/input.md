@@ -1,17 +1,17 @@
 # Writer Input: 2026-02-23
 
 ## Selected Keyword
-- Slug: ai-marketing-automation-guide
-- Title: AIマーケティング自動化ガイド｜メール・広告・SNSを一元管理する方法
-- Tags: AIマーケティング, マーケティング自動化, デジタルマーケティング
+- Slug: best-ai-meeting-transcription
+- Title: AI議事録作成ツール おすすめ5選｜会議の自動文字起こしと要約
+- Tags: AI議事録, 文字起こし, 会議効率化
 
 ## SEO Instructions
 # SEO Keyword Selection: 2026-02-22
 
 ## 選定キーワード
-- slug: ai-marketing-automation-guide
-- title: AIマーケティング自動化ガイド｜メール・広告・SNSを一元管理する方法
-- tags: [AIマーケティング, マーケティング自動化, デジタルマーケティング]
+- slug: best-ai-meeting-transcription
+- title: AI議事録作成ツール おすすめ5選｜会議の自動文字起こしと要約
+- tags: [AI議事録, 文字起こし, 会議効率化]
 
 ## 競合分析
 - 既存上位記事: 3000字前後

@@ -1,9 +1,9 @@
 # Writer Output: 2026-02-23
 
 ## Generated Article
-- File: `2026-02-23-ai-marketing-automation-guide.md`
-- Title: AIマーケティング自動化ガイド｜メール・広告・SNSを一元管理する方法
-- Character count: 6453
+- File: `2026-02-23-best-ai-meeting-transcription.md`
+- Title: AI議事録作成ツール おすすめ5選｜会議の自動文字起こしと要約
+- Character count: 6690
 - Status: ✅ Complete
 - AI Summary Optimization: ✅ Included
 

@@ -1,66 +1,66 @@
 {
   "date": "2026-02-23",
-  "timestamp": "2026-02-22T22:00:21.077Z",
+  "timestamp": "2026-02-22T22:31:25.179Z",
   "phase": "done",
   "ceo_strategy": "ai_productivity",
   "selected_keyword": {
-    "slug": "ai-marketing-automation-guide",
-    "title": "AIマーケティング自動化ガイド｜メール・広告・SNSを一元管理する方法",
+    "slug": "best-ai-meeting-transcription",
+    "title": "AI議事録作成ツール おすすめ5選｜会議の自動文字起こしと要約",
     "tags": [
-      "AIマーケティング",
-      "マーケティング自動化",
-      "デジタルマーケティング"
+      "AI議事録",
+      "文字起こし",
+      "会議効率化"
     ]
   },
-  "article_path": "_posts/2026-02-23-ai-marketing-automation-guide.md",
-  "image_path": "/assets/images/2026-02-23-ai-marketing-automation-guide-hero.png",
+  "article_path": "_posts/2026-02-23-best-ai-meeting-transcription.md",
+  "image_path": "/assets/images/2026-02-23-best-ai-meeting-transcription-hero.png",
   "status": "completed",
   "agents_completed": [
     {
       "agent": "ceo",
-      "timestamp": "2026-02-22T22:00:21.108Z",
+      "timestamp": "2026-02-22T22:31:25.208Z",
       "duration": 0.03
     },
     {
       "agent": "seo",
-      "timestamp": "2026-02-22T22:00:21.137Z",
+      "timestamp": "2026-02-22T22:31:25.236Z",
       "duration": 0.03
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-22T22:01:30.582Z",
-      "duration": 69.42
+      "timestamp": "2026-02-22T22:32:31.118Z",
+      "duration": 65.86
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-22T22:01:30.586Z",
-      "duration": 69.45
+      "timestamp": "2026-02-22T22:32:31.122Z",
+      "duration": 65.89
     },
     {
       "agent": "designer",
-      "timestamp": "2026-02-22T22:06:31.410Z",
-      "duration": 300.8,
+      "timestamp": "2026-02-22T22:37:44.455Z",
+      "duration": 313.31,
       "real_image": true
     },
     {
       "agent": "designer",
-      "timestamp": "2026-02-22T22:06:31.415Z",
-      "duration": 300.83
+      "timestamp": "2026-02-22T22:37:44.460Z",
+      "duration": 313.34
     },
     {
       "agent": "linker",
-      "timestamp": "2026-02-22T22:06:31.451Z",
-      "duration": 0.04
+      "timestamp": "2026-02-22T22:37:44.493Z",
+      "duration": 0.03
     },
     {
       "agent": "editor",
-      "timestamp": "2026-02-22T22:06:31.481Z",
+      "timestamp": "2026-02-22T22:37:44.523Z",
       "duration": 0.03
     },
     {
       "agent": "analyst",
-      "timestamp": "2026-02-22T22:06:32.006Z",
-      "duration": 0.53
+      "timestamp": "2026-02-22T22:37:45.097Z",
+      "duration": 0.57
     }
   ],
   "retry_count": 0,
@@ -69,21 +69,21 @@
   "completed_agents": [
     {
       "agent": "linker",
-      "timestamp": "2026-02-22T22:06:31.445Z",
+      "timestamp": "2026-02-22T22:37:44.489Z",
       "duration": 0.011,
       "resolvedLinks": 0,
       "relatedArticlesAdded": false
     },
     {
       "agent": "editor",
-      "timestamp": "2026-02-22T22:06:31.477Z",
-      "duration": 0.008,
+      "timestamp": "2026-02-22T22:37:44.519Z",
+      "duration": 0.007,
       "decision": "approved"
     },
     {
       "agent": "analyst",
-      "timestamp": "2026-02-22T22:06:32.002Z",
-      "duration": 0.495
+      "timestamp": "2026-02-22T22:37:45.093Z",
+      "duration": 0.545
     }
   ],
   "editor_decision": "approved",
