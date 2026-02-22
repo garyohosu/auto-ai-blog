@@ -1,9 +1,9 @@
 # Writer Output: 2026-02-22
 
 ## Generated Article
-- File: `2026-02-22-how-to-use-ai-for-job-hunting.md`
-- Title: 就活・転職活動にAIを活用する方法｜履歴書・面接対策まで完全ガイド
-- Character count: 6367
+- File: `2026-02-22-ai-voice-generation-tools.md`
+- Title: 【2026年】AI音声合成ツール おすすめ6選｜テキスト読み上げ・ナレーション
+- Character count: 7364
 - Status: ✅ Complete
 - AI Summary Optimization: ✅ Included
 
