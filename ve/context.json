@@ -1,66 +1,66 @@
 {
   "date": "2026-02-22",
-  "timestamp": "2026-02-21T22:00:15.605Z",
+  "timestamp": "2026-02-22T03:00:19.335Z",
   "phase": "done",
   "ceo_strategy": "ai_productivity",
   "selected_keyword": {
-    "slug": "ai-chatbot-comparison-2026",
-    "title": "【2026年版】AIチャットボット比較｜ChatGPT・Gemini・Claude・Copilot",
+    "slug": "ai-document-summarizer-tools",
+    "title": "AI要約ツール おすすめ5選｜PDFや長文をワンクリックで要約する方法",
     "tags": [
-      "AIチャットボット",
-      "ChatGPT",
-      "Gemini"
+      "AI要約",
+      "PDF要約",
+      "文書処理"
     ]
   },
-  "article_path": "_posts/2026-02-22-ai-chatbot-comparison-2026.md",
-  "image_path": "/assets/images/2026-02-22-ai-chatbot-comparison-2026-hero.png",
+  "article_path": "_posts/2026-02-22-ai-document-summarizer-tools.md",
+  "image_path": "/assets/images/2026-02-22-ai-document-summarizer-tools-hero.png",
   "status": "completed",
   "agents_completed": [
     {
       "agent": "ceo",
-      "timestamp": "2026-02-21T22:00:15.635Z",
+      "timestamp": "2026-02-22T03:00:19.365Z",
       "duration": 0.03
     },
     {
       "agent": "seo",
-      "timestamp": "2026-02-21T22:00:15.664Z",
+      "timestamp": "2026-02-22T03:00:19.394Z",
       "duration": 0.03
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-21T22:01:26.963Z",
-      "duration": 71.27
+      "timestamp": "2026-02-22T03:01:39.517Z",
+      "duration": 80.09
     },
     {
       "agent": "writer",
-      "timestamp": "2026-02-21T22:01:26.968Z",
-      "duration": 71.3
+      "timestamp": "2026-02-22T03:01:39.521Z",
+      "duration": 80.13
     },
     {
       "agent": "designer",
-      "timestamp": "2026-02-21T22:07:16.165Z",
-      "duration": 349.17,
+      "timestamp": "2026-02-22T03:08:03.949Z",
+      "duration": 384.4,
       "real_image": true
     },
     {
       "agent": "designer",
-      "timestamp": "2026-02-21T22:07:16.171Z",
-      "duration": 349.2
+      "timestamp": "2026-02-22T03:08:03.954Z",
+      "duration": 384.43
     },
     {
       "agent": "linker",
-      "timestamp": "2026-02-21T22:07:16.220Z",
-      "duration": 0.05
+      "timestamp": "2026-02-22T03:08:03.988Z",
+      "duration": 0.03
     },
     {
       "agent": "editor",
-      "timestamp": "2026-02-21T22:07:16.251Z",
+      "timestamp": "2026-02-22T03:08:04.018Z",
       "duration": 0.03
     },
     {
       "agent": "analyst",
-      "timestamp": "2026-02-21T22:07:16.964Z",
-      "duration": 0.71
+      "timestamp": "2026-02-22T03:08:04.741Z",
+      "duration": 0.72
     }
   ],
   "retry_count": 0,
@@ -69,21 +69,21 @@
   "completed_agents": [
     {
       "agent": "linker",
-      "timestamp": "2026-02-21T22:07:16.215Z",
-      "duration": 0.025,
+      "timestamp": "2026-02-22T03:08:03.983Z",
+      "duration": 0.01,
       "resolvedLinks": 0,
-      "relatedArticlesAdded": true
+      "relatedArticlesAdded": false
     },
     {
       "agent": "editor",
-      "timestamp": "2026-02-21T22:07:16.247Z",
-      "duration": 0.008,
+      "timestamp": "2026-02-22T03:08:04.014Z",
+      "duration": 0.007,
       "decision": "approved"
     },
     {
       "agent": "analyst",
-      "timestamp": "2026-02-21T22:07:16.960Z",
-      "duration": 0.684
+      "timestamp": "2026-02-22T03:08:04.736Z",
+      "duration": 0.694
     }
   ],
   "editor_decision": "approved",

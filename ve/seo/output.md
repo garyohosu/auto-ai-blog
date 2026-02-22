@@ -1,9 +1,9 @@
-# SEO Keyword Selection: 2026-02-21
+# SEO Keyword Selection: 2026-02-22
 
 ## 選定キーワード
-- slug: ai-chatbot-comparison-2026
-- title: 【2026年版】AIチャットボット比較｜ChatGPT・Gemini・Claude・Copilot
-- tags: [AIチャットボット, ChatGPT, Gemini]
+- slug: ai-document-summarizer-tools
+- title: AI要約ツール おすすめ5選｜PDFや長文をワンクリックで要約する方法
+- tags: [AI要約, PDF要約, 文書処理]
 
 ## 競合分析
 - 既存上位記事: 3000字前後

@@ -1,9 +1,9 @@
 # Writer Output: 2026-02-22
 
 ## Generated Article
-- File: `2026-02-22-ai-chatbot-comparison-2026.md`
-- Title: 【2026年版】AIチャットボット比較｜ChatGPT・Gemini・Claude・Copilot
-- Character count: 6752
+- File: `2026-02-22-ai-document-summarizer-tools.md`
+- Title: AI要約ツール おすすめ5選｜PDFや長文をワンクリックで要約する方法
+- Character count: 7584
 - Status: ✅ Complete
 - AI Summary Optimization: ✅ Included
 
