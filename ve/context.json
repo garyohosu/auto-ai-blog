@@ -1,138 +1,38 @@
 {
   "date": "2026-02-23",
-  "timestamp": "2026-02-23T03:00:19.877Z",
+  "timestamp": "2026-02-23T11:42:19.116Z",
   "phase": "done",
   "ceo_strategy": "ai_productivity",
-  "selected_keyword": {
-    "slug": "ai-logo-design-tools",
-    "title": "AIロゴ作成ツール おすすめ5選｜無料で本格的なロゴをデザインする方法",
-    "tags": [
-      "AIロゴ",
-      "ロゴ作成",
-      "デザイン"
-    ]
-  },
-  "article_path": "_posts/2026-02-23-ai-logo-design-tools.md",
-  "image_path": "/assets/images/2026-02-23-ai-logo-design-tools-hero.png",
+  "selected_keyword": null,
+  "article_path": null,
+  "image_path": null,
   "status": "completed",
   "agents_completed": [
     {
       "agent": "ceo",
-      "timestamp": "2026-02-23T03:00:19.908Z",
+      "timestamp": "2026-02-23T11:42:19.148Z",
       "duration": 0.03
     },
     {
       "agent": "seo",
-      "timestamp": "2026-02-23T03:00:19.937Z",
-      "duration": 0.03
-    },
-    {
-      "agent": "writer",
-      "timestamp": "2026-02-23T03:01:35.368Z",
-      "duration": 75.41
-    },
-    {
-      "agent": "writer",
-      "timestamp": "2026-02-23T03:01:35.373Z",
-      "duration": 75.44
-    },
-    {
-      "agent": "designer",
-      "timestamp": "2026-02-23T03:07:53.412Z",
-      "duration": 378.01,
-      "real_image": true
-    },
-    {
-      "agent": "designer",
-      "timestamp": "2026-02-23T03:07:53.418Z",
-      "duration": 378.05
-    },
-    {
-      "agent": "linker",
-      "timestamp": "2026-02-23T03:07:53.452Z",
-      "duration": 0.03
-    },
-    {
-      "agent": "writer",
-      "timestamp": "2026-02-23T03:09:00.653Z",
-      "duration": 67.14
-    },
-    {
-      "agent": "writer",
-      "timestamp": "2026-02-23T03:09:00.657Z",
-      "duration": 67.17
-    },
-    {
-      "agent": "designer",
-      "timestamp": "2026-02-23T03:09:00.688Z",
-      "duration": 0.01,
-      "real_image": true
-    },
-    {
-      "agent": "designer",
-      "timestamp": "2026-02-23T03:09:00.691Z",
-      "duration": 0.03
-    },
-    {
-      "agent": "linker",
-      "timestamp": "2026-02-23T03:09:00.725Z",
-      "duration": 0.03
-    },
-    {
-      "agent": "editor",
-      "timestamp": "2026-02-23T03:09:00.755Z",
+      "timestamp": "2026-02-23T11:42:19.177Z",
       "duration": 0.03
     },
     {
       "agent": "analyst",
-      "timestamp": "2026-02-23T03:09:01.519Z",
-      "duration": 0.76
+      "timestamp": "2026-02-23T11:42:19.767Z",
+      "duration": 0.59
     }
   ],
-  "retry_count": 1,
-  "retry_history": [
-    {
-      "attempt": 1,
-      "failed_at": "editor",
-      "reason": "Unknown rejection reason",
-      "timestamp": "2026-02-23T03:07:53.484Z"
-    }
-  ],
+  "retry_count": 0,
+  "retry_history": [],
+  "seo_mode": "daily-note",
   "current_phase": "completed",
   "completed_agents": [
     {
-      "agent": "linker",
-      "timestamp": "2026-02-23T03:07:53.447Z",
-      "duration": 0.011,
-      "resolvedLinks": 0,
-      "relatedArticlesAdded": false
-    },
-    {
-      "agent": "editor",
-      "timestamp": "2026-02-23T03:07:53.478Z",
-      "duration": 0.007,
-      "decision": "rejected"
-    },
-    {
-      "agent": "linker",
-      "timestamp": "2026-02-23T03:09:00.720Z",
-      "duration": 0.011,
-      "resolvedLinks": 0,
-      "relatedArticlesAdded": false
-    },
-    {
-      "agent": "editor",
-      "timestamp": "2026-02-23T03:09:00.751Z",
-      "duration": 0.007,
-      "decision": "approved"
-    },
-    {
       "agent": "analyst",
-      "timestamp": "2026-02-23T03:09:01.514Z",
-      "duration": 0.734
+      "timestamp": "2026-02-23T11:42:19.762Z",
+      "duration": 0.551
     }
-  ],
-  "editor_decision": "approved",
-  "editor_issues": [],
-  "rejection_reason": "Unknown rejection reason"
+  ]
 }
