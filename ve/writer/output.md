@@ -1,9 +1,9 @@
 # Writer Output: 2026-02-23
 
 ## Generated Article
-- File: `2026-02-23-best-ai-meeting-transcription.md`
-- Title: AI議事録作成ツール おすすめ5選｜会議の自動文字起こしと要約
-- Character count: 6690
+- File: `2026-02-23-ai-logo-design-tools.md`
+- Title: AIロゴ作成ツール おすすめ5選｜無料で本格的なロゴをデザインする方法
+- Character count: 6455
 - Status: ✅ Complete
 - AI Summary Optimization: ✅ Included
 

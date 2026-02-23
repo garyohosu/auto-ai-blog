@@ -1,17 +1,17 @@
 # Writer Input: 2026-02-23
 
 ## Selected Keyword
-- Slug: best-ai-meeting-transcription
-- Title: AI議事録作成ツール おすすめ5選｜会議の自動文字起こしと要約
-- Tags: AI議事録, 文字起こし, 会議効率化
+- Slug: ai-logo-design-tools
+- Title: AIロゴ作成ツール おすすめ5選｜無料で本格的なロゴをデザインする方法
+- Tags: AIロゴ, ロゴ作成, デザイン
 
 ## SEO Instructions
-# SEO Keyword Selection: 2026-02-22
+# SEO Keyword Selection: 2026-02-23
 
 ## 選定キーワード
-- slug: best-ai-meeting-transcription
-- title: AI議事録作成ツール おすすめ5選｜会議の自動文字起こしと要約
-- tags: [AI議事録, 文字起こし, 会議効率化]
+- slug: ai-logo-design-tools
+- title: AIロゴ作成ツール おすすめ5選｜無料で本格的なロゴをデザインする方法
+- tags: [AIロゴ, ロゴ作成, デザイン]
 
 ## 競合分析
 - 既存上位記事: 3000字前後
@@ -28,4 +28,4 @@
 
 
 ## Source
-From context.json phase: writer
+From context.json phase: retry-writer
