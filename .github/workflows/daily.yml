@@ -6,10 +6,6 @@ on:
     types: [run-virtual-employee]
   schedule:
     - cron: "0 22 * * 0-4" # UTC Sun-Thu 22:00 = JST Mon-Fri 07:00（朝）
-    - cron: "0 11 * * 1-5" # UTC Mon-Fri 11:00 = JST Mon-Fri 20:00（夜・ゴールデンタイム）
-    - cron: "0 1 * * 0,6"  # UTC Sat-Sun 01:00 = JST Sat-Sun 10:00（朝）
-    - cron: "0 6 * * 0,6"  # UTC Sat-Sun 06:00 = JST Sat-Sun 15:00（昼）
-    - cron: "0 12 * * 0,6" # UTC Sat-Sun 12:00 = JST Sat-Sun 21:00（夜）
 
 permissions:
   contents: write
