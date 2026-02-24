@@ -4,8 +4,9 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types: [run-virtual-employee]
-  schedule:
-    - cron: "0 22 * * 0-4" # UTC Sun-Thu 22:00 = JST Mon-Fri 07:00（朝）
+  # schedule: disabled to reduce API costs
+  # schedule:
+  #   - cron: "0 22 * * 0-4" # UTC Sun-Thu 22:00 = JST Mon-Fri 07:00（朝）
 
 permissions:
   contents: write
