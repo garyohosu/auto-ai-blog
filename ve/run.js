@@ -655,23 +655,7 @@ async function main() {
     newPosts = result.created ? 1 : 0;
     articleTitle = result.title;
   } else {
-    console.log(`[info] All keywords exhausted, creating daily note`);
-    ensureDir(POSTS);
-    const postFile = path.join(POSTS, `${date}-daily-note.md`);
-    if (!fs.existsSync(postFile)) {
-      const content = `---
-layout: post
-title: "Daily Note – ${date}"
-date: ${date}
-categories: daily
----
-
-This is an automated daily note generated on ${date}.
-`;
-      fs.writeFileSync(postFile, content, "utf8");
-      newPosts = 1;
-      articleTitle = `Daily Note – ${date}`;
-    }
+    console.log(`[info] All keywords exhausted, skipping post creation`);
   }
 
   createDailyLog(date, articleTitle);
