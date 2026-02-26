@@ -1,12 +1,19 @@
 name: Daily Virtual Employee Run
 
+# NOTE: 記事生成はローカルPC（run-local.sh）で実行してください。
+#   claude CLI / gemini CLI / Codex CLI から run-local.sh をキックし、
+#   git push 後に自動で jekyll-pages.yml がデプロイします。
+#
+# このワークフローは手動実行時のポストプロセス（lint/commit/push）のみ担います。
+# （ローカル実行後に変更が残っている場合の補完用）
+
 on:
   workflow_dispatch:
   repository_dispatch:
     types: [run-virtual-employee]
-  # schedule: disabled to reduce API costs
+  # schedule: ローカル実行に移行済みのため無効
   # schedule:
-  #   - cron: "0 22 * * 0-4" # UTC Sun-Thu 22:00 = JST Mon-Fri 07:00（朝）
+  #   - cron: "0 22 * * 0-4"
 
 permissions:
   contents: write
@@ -26,13 +33,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-
-      - name: Run virtual employee
-        env:
-          TZ: Asia/Tokyo
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          node ve/orchestrator.js
 
       - name: Lint and fix post front-matter
         run: |
@@ -118,8 +118,5 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Trigger Jekyll Deploy
-        run: |
-          gh workflow run jekyll-pages.yml
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Jekyll deploy は push to main で自動トリガーされるため不要
+      # （jekyll-pages.yml の on.push.branches: ["main"] により自動実行）

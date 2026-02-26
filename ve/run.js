@@ -13,6 +13,38 @@ const VE = path.join(ROOT, "ve");
 const POSTS = path.join(ROOT, "_posts");
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
 
+const { execSync } = require("child_process");
+
+/**
+ * ローカルCLIでLLMを呼び出す（Claude Code CLI / Gemini CLI）
+ * 定額サブスクリプション対応
+ */
+function callCLI(prompt) {
+  const cliTools = [
+    { name: "claude", args: ["--print"] },
+    { name: "gemini", args: [] },
+  ];
+  for (const { name, args } of cliTools) {
+    try {
+      const result = execSync([name, ...args].join(" "), {
+        input: prompt,
+        maxBuffer: 1024 * 1024 * 10,
+        timeout: 300000,
+        encoding: "utf8",
+      });
+      const output = result.trim();
+      if (output && output.length > 200) {
+        console.log(`[cli] ✓ ${name}: ${output.length} chars`);
+        return output;
+      }
+      throw new Error("Output too short");
+    } catch (err) {
+      console.log(`[cli] ⚠️ ${name}: ${err.message.slice(0, 100)}`);
+    }
+  }
+  throw new Error("All CLI tools unavailable");
+}
+
 /** JST today as YYYY-MM-DD */
 function jstToday() {
   const now = new Date();
@@ -298,7 +330,7 @@ function buildRelatedSection(keyword, postIndex) {
 }
 
 // ---------------------------------------------------------------------------
-// LLM article generation (OpenAI API)
+// LLM article generation (CLI tools first, OpenAI API as fallback)
 // ---------------------------------------------------------------------------
 function callOpenAI(prompt) {
   return new Promise((resolve, reject) => {
@@ -347,6 +379,7 @@ function callOpenAI(prompt) {
 }
 
 async function generateArticleWithLLM(keyword) {
+  // ローカルCLI（定額）を優先、フォールバックでOpenAI API
   const prompt = `あなたはSEOに精通したプロのブログライターです。以下のキーワードで、収益化を意識した高品質な日本語ブログ記事を書いてください。
 
 タイトル: ${keyword.title}
@@ -366,6 +399,14 @@ async function generateArticleWithLLM(keyword) {
 
 本文のみを出力してください。`;
 
+  // 1. ローカルCLI（定額）を優先
+  try {
+    return callCLI(prompt);
+  } catch (cliErr) {
+    console.log(`[llm] CLI unavailable: ${cliErr.message}`);
+  }
+
+  // 2. OpenAI API（フォールバック）
   return await callOpenAI(prompt);
 }
 
@@ -475,13 +516,12 @@ async function createArticlePost(date, keyword) {
 
   let content;
 
-  // Try LLM generation first
-  if (OPENAI_API_KEY) {
-    try {
-      console.log(`[llm] Generating article with OpenAI API...`);
-      const body = await generateArticleWithLLM(keyword);
-      const imageField = imagePath ? `\nimage: ${imagePath}` : "";
-      const frontMatter = `---
+  // Try LLM generation (CLI tools first, OpenAI API as fallback)
+  try {
+    console.log(`[llm] Generating article (CLI → OpenAI fallback)...`);
+    const body = await generateArticleWithLLM(keyword);
+    const imageField = imagePath ? `\nimage: ${imagePath}` : "";
+    const frontMatter = `---
 layout: post
 title: "${keyword.title}"
 date: ${date}
@@ -490,14 +530,10 @@ tags: [${keyword.tags.join(", ")}]
 description: "${keyword.title}について詳しく解説します。"
 lang: ja${imageField}
 ---`;
-      content = `${frontMatter}\n\n${body}`;
-      console.log(`[llm] Article generated successfully`);
-    } catch (err) {
-      console.log(`[llm] Failed: ${err.message}, falling back to template`);
-      content = createFallbackArticle(date, keyword, imagePath);
-    }
-  } else {
-    console.log(`[info] No OPENAI_API_KEY, using template article`);
+    content = `${frontMatter}\n\n${body}`;
+    console.log(`[llm] Article generated successfully`);
+  } catch (err) {
+    console.log(`[llm] Failed: ${err.message}, falling back to template`);
     content = createFallbackArticle(date, keyword, imagePath);
   }
 

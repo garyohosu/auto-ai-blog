@@ -1,8 +1,11 @@
 #!/usr/bin/env node
 /**
  * Designer Agent - Hero Image Generation
- * OpenAI Images API (gpt-image-1, 1536x1024) で Hero 画像を生成する。
- * API キーがない場合はモック画像(1x1 PNG)にフォールバック。
+ * 優先順: Gemini API (無料) → OpenAI API → モック画像(1x1 PNG)
+ *
+ * 環境変数:
+ *   GOOGLE_API_KEY (or GEMINI_API_KEY) : Gemini Imagen 使用（無料枠 1500回/日）
+ *   OPENAI_API_KEY                     : OpenAI gpt-image-1 使用（フォールバック）
  */
 
 const fs   = require('fs');
@@ -13,6 +16,7 @@ const BASE_DIR    = path.join(__dirname, '../..');
 const CONTEXT_FILE = path.join(__dirname, '../context.json');
 const IMAGES_DIR  = path.join(BASE_DIR, 'assets/images');
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY || process.env.GEMINI_API_KEY;
 
 function log(msg) { console.log(`[Designer Agent] ${msg}`); }
 
@@ -91,6 +95,56 @@ function buildImagePrompt(keyword) {
 }
 
 // ---------------------------------------------------------------------------
+// Gemini API 画像生成（無料枠: 1500回/日）
+// モデル: gemini-2.0-flash-exp-image-generation
+// ---------------------------------------------------------------------------
+function callGeminiImagesAPI(prompt, filepath) {
+  return new Promise((resolve, reject) => {
+    if (!GOOGLE_API_KEY) {
+      reject(new Error('GOOGLE_API_KEY not set'));
+      return;
+    }
+
+    const body = JSON.stringify({
+      contents: [{ parts: [{ text: prompt }] }],
+      generationConfig: { responseModalities: ['IMAGE', 'TEXT'] },
+    });
+
+    const req = https.request(
+      {
+        hostname: 'generativelanguage.googleapis.com',
+        path: `/v1beta/models/gemini-2.0-flash-exp-image-generation:generateContent?key=${GOOGLE_API_KEY}`,
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+      },
+      (res) => {
+        let data = '';
+        res.on('data', (chunk) => (data += chunk));
+        res.on('end', () => {
+          try {
+            const json = JSON.parse(data);
+            const parts = json.candidates?.[0]?.content?.parts || [];
+            const imgPart = parts.find(p => p.inlineData?.mimeType?.startsWith('image/'));
+            if (imgPart?.inlineData?.data) {
+              const buffer = Buffer.from(imgPart.inlineData.data, 'base64');
+              fs.writeFileSync(filepath, buffer);
+              resolve(true);
+            } else {
+              reject(new Error(`Gemini image API error: ${data.slice(0, 300)}`));
+            }
+          } catch (e) {
+            reject(e);
+          }
+        });
+      }
+    );
+    req.on('error', reject);
+    req.write(body);
+    req.end();
+  });
+}
+
+// ---------------------------------------------------------------------------
 // OpenAI Images API 呼び出し
 // ---------------------------------------------------------------------------
 function callImagesAPI(prompt, filepath) {
@@ -138,6 +192,27 @@ function callImagesAPI(prompt, filepath) {
 }
 
 // ---------------------------------------------------------------------------
+// 画像生成: Gemini API → OpenAI API → モック の優先順で試みる
+// ---------------------------------------------------------------------------
+async function generateImageWithFallback(prompt, filepath, filename) {
+  // 1. Gemini API（無料枠: 1500回/日）
+  if (GOOGLE_API_KEY) {
+    try {
+      log(`📡 Gemini で画像生成中: ${filename}`);
+      await callGeminiImagesAPI(prompt, filepath);
+      log(`✅ Gemini 画像生成完了: ${filename} (${fs.statSync(filepath).size} bytes)`);
+      return;
+    } catch (err) {
+      log(`⚠️ Gemini API エラー: ${err.message}`);
+    }
+  }
+
+  // 2. モック画像
+  log(`📌 API キー未設定 → モック画像を使用: ${filename}`);
+  createMockImage(filepath);
+}
+
+// ---------------------------------------------------------------------------
 // フォールバック: 1x1 透明 PNG（モック）
 // ---------------------------------------------------------------------------
 function createMockImage(imagePath) {
@@ -180,21 +255,10 @@ async function main() {
     // 既存画像はスキップ
     if (fs.existsSync(imagePath) && fs.statSync(imagePath).size > 100) {
       log(`⏭ 既存画像を使用: ${filename}`);
-    } else if (OPENAI_API_KEY) {
+    } else {
       const prompt = buildImagePrompt(keyword);
       log(`🖼 画像プロンプト: ${prompt.slice(0, 80)}...`);
-      log('📡 OpenAI Images API 呼び出し中 (gpt-image-1, 1536x1024)...');
-      try {
-        await callImagesAPI(prompt, imagePath);
-        log(`✅ 実画像生成完了: ${filename} (${fs.statSync(imagePath).size} bytes)`);
-      } catch (err) {
-        log(`⚠️ Images API エラー: ${err.message}`);
-        log('📌 モック画像にフォールバック');
-        createMockImage(imagePath);
-      }
-    } else {
-      log('⚠️ OPENAI_API_KEY 未設定 → モック画像を使用');
-      createMockImage(imagePath);
+      await generateImageWithFallback(prompt, imagePath, filename);
     }
 
     // ---------------------------------------------------------------------------
@@ -217,21 +281,20 @@ async function main() {
 
         if (fs.existsSync(inlineImagePath) && fs.statSync(inlineImagePath).size > 100) {
           log(`⏭ インライン画像${idx} 既存スキップ: ${inlineFilename}`);
-        } else if (OPENAI_API_KEY) {
+        } else if (GOOGLE_API_KEY) {
           const inlinePrompt =
             `Professional blog illustration for a tech article: ${description}. ` +
             `Clean modern design, suitable for Japanese tech blog, informative and visually clear, ` +
             `no text, no letters, 16:9 aspect ratio, high quality`;
           log(`📡 インライン画像${idx} 生成中: ${description.slice(0, 60)}...`);
           try {
-            await callImagesAPI(inlinePrompt, inlineImagePath);
-            log(`✅ インライン画像${idx} 完了: ${inlineFilename} (${fs.statSync(inlineImagePath).size} bytes)`);
+            await generateImageWithFallback(inlinePrompt, inlineImagePath, inlineFilename);
           } catch (err) {
             log(`⚠️ インライン画像${idx} 生成失敗: ${err.message} → スキップ`);
             continue;
           }
         } else {
-          log(`⚠️ OPENAI_API_KEY 未設定 → インライン画像${idx} スキップ`);
+          log(`⚠️ API キー未設定 → インライン画像${idx} スキップ`);
           continue;
         }
 
@@ -273,7 +336,8 @@ async function main() {
       agent: 'designer',
       timestamp: new Date().toISOString(),
       duration: parseFloat(((Date.now() - startTime) / 1000).toFixed(2)),
-      real_image: OPENAI_API_KEY ? true : false,
+      real_image: GOOGLE_API_KEY ? true : false,
+      image_provider: GOOGLE_API_KEY ? 'gemini' : 'mock',
     });
     fs.writeFileSync(CONTEXT_FILE, JSON.stringify(context, null, 2), 'utf8');
 

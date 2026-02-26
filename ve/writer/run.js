@@ -36,7 +36,42 @@ const POSTS_DIR = path.join(ROOT_DIR, '_posts');
 
 // OpenAI API configuration (if available)
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-const USE_MOCK = !OPENAI_API_KEY; // Use mock data if no API key
+const USE_MOCK = false; // Always try LLM (CLI tools or API), fall back to mock on failure
+
+// CLI execution helper
+const { execSync } = require('child_process');
+
+/**
+ * ローカルCLIでLLMを呼び出す（Claude Code CLI / Gemini CLI）
+ * 定額サブスクリプション対応・API費用不要
+ */
+function callCLI(prompt) {
+  const cliTools = [
+    { name: 'claude', args: ['--print'] },
+    { name: 'gemini', args: [] },
+  ];
+
+  for (const { name, args } of cliTools) {
+    try {
+      log(`Trying ${name} CLI...`);
+      const result = execSync([name, ...args].join(' '), {
+        input: prompt,
+        maxBuffer: 1024 * 1024 * 10, // 10MB
+        timeout: 300000,              // 5分
+        encoding: 'utf8',
+      });
+      const output = result.trim();
+      if (output && output.length > 200) {
+        log(`✓ ${name} CLI: ${output.length} chars`);
+        return output;
+      }
+      throw new Error('Output too short');
+    } catch (err) {
+      log(`⚠️ ${name} CLI: ${err.message.slice(0, 100)}`);
+    }
+  }
+  throw new Error('All CLI tools unavailable');
+}
 
 // ============================================================
 // Utility Functions
@@ -243,7 +278,14 @@ function callOpenAI(prompt) {
 }
 
 async function mockOpenAICall(prompt) {
-  return await callOpenAI(prompt);
+  // 1. ローカルCLI（定額・無料）を優先
+  try {
+    return callCLI(prompt);
+  } catch (cliErr) {
+    log(`⚠️ CLI tools not available: ${cliErr.message}`);
+  }
+
+  throw new Error('No LLM available. Please install claude or gemini CLI.');
 }
 
 /**
@@ -500,17 +542,12 @@ From context.json phase: ${context.phase}
   log('Generating article with AI summary optimization...');
   let articleBody;
   
-  if (USE_MOCK) {
-    log('⚠️  No OPENAI_API_KEY found, using mock content');
+  try {
+    articleBody = await generateArticleWithAPI(keyword, seoOutput, rejectionReason);
+  } catch (error) {
+    log(`⚠️  LLM call failed: ${error.message}`);
+    log('Falling back to mock content');
     articleBody = generateMockArticle(keyword);
-  } else {
-    try {
-      articleBody = await generateArticleWithAPI(keyword, seoOutput, rejectionReason);
-    } catch (error) {
-      log(`⚠️  API call failed: ${error.message}`);
-      log('Falling back to mock content');
-      articleBody = generateMockArticle(keyword);
-    }
   }
   
   // 5. Create Jekyll post file
