@@ -110,6 +110,27 @@ const KEYWORD_POOL = [
   { slug: "ai-customer-review-analysis",    title: "口コミ分析をAIで自動化する方法｜感情分析で改善点を見える化",                 tags: ["口コミ分析", "感情分析", "CX改善"] },
   { slug: "best-ai-calendar-scheduling",    title: "AI日程調整ツール比較｜会議設定を自動化して調整ストレスを減らす",               tags: ["日程調整", "会議", "生産性"] },
   { slug: "ai-podcast-production-tools",    title: "AIポッドキャスト制作ツールおすすめ6選｜台本・編集・配信を効率化",             tags: ["ポッドキャスト", "音声編集", "AI音声"] },
+  // 第4弾キーワード
+  { slug: "chatgpt-prompt-engineering-guide",  title: "ChatGPTプロンプトエンジニアリング完全ガイド｜精度を上げる書き方と実例",       tags: ["プロンプトエンジニアリング", "ChatGPT", "AI活用術"] },
+  { slug: "ai-language-learning-apps",         title: "AI語学学習アプリ おすすめ7選｜英語・中国語を最短でマスターする方法",          tags: ["AI語学学習", "英語学習", "語学アプリ"] },
+  { slug: "ai-personal-finance-advisor",       title: "AI家計管理・資産運用ツール おすすめ5選｜お金の悩みをAIで解決",               tags: ["AI資産運用", "家計管理", "節約"] },
+  { slug: "ai-project-management-tools",       title: "AIプロジェクト管理ツール おすすめ6選｜タスク自動化で納期を守る方法",           tags: ["AIプロジェクト管理", "タスク管理", "業務効率化"] },
+  { slug: "ai-hr-recruitment-tools",           title: "AI採用・人事ツール おすすめ5選｜選考を自動化して採用コストを削減",             tags: ["AI採用", "人事", "HR Tech"] },
+  { slug: "ai-travel-planning-tools",          title: "AI旅行計画ツール おすすめ5選｜旅程・ホテル・予算を自動で最適化",              tags: ["AI旅行", "旅行計画", "観光"] },
+  { slug: "ai-for-teachers-education",         title: "先生・教育者向けAI活用ガイド｜授業準備・採点・教材作成を効率化する方法",        tags: ["AI教育", "EdTech", "授業効率化"] },
+  { slug: "best-ai-health-fitness-apps",       title: "AIヘルスケア・フィットネスアプリ おすすめ6選｜健康管理をAIに任せる",          tags: ["AIヘルスケア", "フィットネス", "健康管理"] },
+  { slug: "ai-news-summarizer-tools",          title: "AIニュース要約ツール おすすめ5選｜情報収集の時間を9割削減する方法",            tags: ["AIニュース", "情報収集", "要約"] },
+  { slug: "ai-interior-design-tools",          title: "AIインテリアデザインツール おすすめ5選｜部屋のレイアウトをAIで可視化",         tags: ["AIインテリア", "部屋づくり", "デザイン"] },
+  { slug: "best-ai-social-media-analytics",    title: "AIソーシャルメディア分析ツール おすすめ5選｜伸びるSNS運用の秘訣",             tags: ["SNS分析", "AIマーケ", "ソーシャルメディア"] },
+  { slug: "ai-legal-document-tools",           title: "AI法律・契約書ツール おすすめ5選｜契約書レビューを自動化してリスクを減らす",    tags: ["AI法律", "契約書", "リーガルテック"] },
+  { slug: "ai-recipe-meal-planning",           title: "AI料理レシピ・献立計画アプリ おすすめ5選｜食費を減らして栄養バランスを改善",   tags: ["AIレシピ", "献立", "食費節約"] },
+  { slug: "best-ai-3d-modeling-tools",         title: "AI 3Dモデリングツール おすすめ5選｜テキストから3Dオブジェクトを自動生成",      tags: ["AI 3D", "3Dモデリング", "デザイン"] },
+  { slug: "ai-real-estate-tools",              title: "AI不動産ツール おすすめ5選｜物件探しから価格査定まで自動化する方法",           tags: ["AI不動産", "物件探し", "不動産投資"] },
+  { slug: "ai-customer-segmentation-tools",    title: "AI顧客分析・セグメンテーションツール おすすめ5選｜売上を伸ばすデータ活用法",    tags: ["AI顧客分析", "マーケティング", "データ活用"] },
+  { slug: "ai-accessibility-tools",            title: "AIアクセシビリティツール おすすめ5選｜障害者支援・ユニバーサルデザインに活用",  tags: ["AIアクセシビリティ", "UX", "ユニバーサルデザイン"] },
+  { slug: "ai-startup-tools-guide",            title: "スタートアップ・起業家向けAIツール完全ガイド｜コスト0で始めるAI経営",          tags: ["AI起業", "スタートアップ", "副業"] },
+  { slug: "ai-content-repurposing-tools",      title: "AIコンテンツ再利用ツール おすすめ5選｜1本の記事を10種のコンテンツに変換",      tags: ["コンテンツ再利用", "AI効率化", "マーケ"] },
+  { slug: "best-ai-cybersecurity-tools",       title: "AIサイバーセキュリティツール おすすめ5選｜脅威検出・対策を自動化する方法",     tags: ["AIセキュリティ", "サイバー攻撃", "情報セキュリティ"] },
 ];
 
 // ---------------------------------------------------------------------------
