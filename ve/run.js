@@ -65,6 +65,19 @@ const KEYWORD_POOL = [
   { slug: "ai-marketing-automation-guide",  title: "AIマーケティング自動化ガイド｜メール・広告・SNSを一元管理する方法",        tags: ["AIマーケティング", "マーケティング自動化", "デジタルマーケティング"] },
   { slug: "best-ai-meeting-transcription",  title: "AI議事録作成ツール おすすめ5選｜会議の自動文字起こしと要約",              tags: ["AI議事録", "文字起こし", "会議効率化"] },
   { slug: "ai-logo-design-tools",           title: "AIロゴ作成ツール おすすめ5選｜無料で本格的なロゴをデザインする方法",       tags: ["AIロゴ", "ロゴ作成", "デザイン"] },
+  // 第3弾キーワード
+  { slug: "best-ai-pdf-tools-2026",         title: "【2026年】AI PDFツール おすすめ7選｜要約・翻訳・OCRまで一気に効率化",        tags: ["AI PDF", "OCR", "業務効率化"] },
+  { slug: "ai-research-automation-guide",   title: "AIリサーチ自動化ガイド｜調査・要約・比較を最短で終わらせる方法",             tags: ["AIリサーチ", "自動化", "情報収集"] },
+  { slug: "best-ai-note-taking-apps",       title: "AIノートアプリ比較｜議事録・メモ整理に強いおすすめ6選【2026年版】",          tags: ["AIノート", "メモ", "議事録"] },
+  { slug: "ai-resume-coverletter-tools",    title: "履歴書・職務経歴書をAIで作る方法｜転職で使える実践ツール6選",               tags: ["履歴書", "職務経歴書", "AI転職"] },
+  { slug: "best-ai-landing-page-builders",  title: "AIランディングページ作成ツール比較｜CVR改善に効くおすすめ5選",             tags: ["LP作成", "CVR", "AIマーケ"] },
+  { slug: "ai-youtube-script-tools",        title: "YouTube台本をAIで作る方法｜企画・構成・原稿作成の完全ガイド",               tags: ["YouTube", "台本作成", "動画マーケ"] },
+  { slug: "ai-ecommerce-copywriting",       title: "EC商品説明文をAIで量産する方法｜売れるコピー作成テンプレ付き",               tags: ["EC", "商品説明", "コピーライティング"] },
+  { slug: "best-ai-prompt-management-tools",title: "プロンプト管理ツールおすすめ5選｜AI活用を再現可能にする運用術",               tags: ["プロンプト", "ナレッジ管理", "AI活用"] },
+  { slug: "ai-workflow-automation-no-code", title: "ノーコードで作るAI業務フロー自動化｜Zapier・Make活用ガイド",                tags: ["ノーコード", "Zapier", "業務自動化"] },
+  { slug: "ai-customer-review-analysis",    title: "口コミ分析をAIで自動化する方法｜感情分析で改善点を見える化",                 tags: ["口コミ分析", "感情分析", "CX改善"] },
+  { slug: "best-ai-calendar-scheduling",    title: "AI日程調整ツール比較｜会議設定を自動化して調整ストレスを減らす",               tags: ["日程調整", "会議", "生産性"] },
+  { slug: "ai-podcast-production-tools",    title: "AIポッドキャスト制作ツールおすすめ6選｜台本・編集・配信を効率化",             tags: ["ポッドキャスト", "音声編集", "AI音声"] },
 ];
 
 // ---------------------------------------------------------------------------
