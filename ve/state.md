@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "【2026年】AI PDFツール おすすめ7選｜要約・翻訳・OCRまで一気に効率化"
+- today_objective: publish "AIノートアプリ比較｜議事録・メモ整理に強いおすすめ6選【2026年版】"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-research-automation-guide
+- next_run: publish article: ai-resume-coverletter-tools
