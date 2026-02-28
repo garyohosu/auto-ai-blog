@@ -4,6 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 const https = require("https");
+const http = require("http");
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -12,15 +13,75 @@ const ROOT = path.resolve(__dirname, "..");
 const VE = path.join(ROOT, "ve");
 const POSTS = path.join(ROOT, "_posts");
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
+const OLLAMA_MODEL = process.env.OLLAMA_MODEL || "phi3:mini";
 
 const { execSync } = require("child_process");
 
+/** WSL2 の default gateway を使って Windows 側 Ollama のURLを推定 */
+function detectOllamaBaseUrl() {
+  if (process.env.OLLAMA_HOST) return process.env.OLLAMA_HOST.replace(/\/$/, "");
+  try {
+    const gw = execSync("ip route | awk '/default/ {print $3}' | head -n1", {
+      encoding: "utf8",
+      timeout: 2000,
+    }).trim();
+    if (gw) return `http://${gw}:11434`;
+  } catch (_) {}
+  return "http://127.0.0.1:11434";
+}
+
+/** ローカルOllamaで本文生成（ラクダ君） */
+function callLocalOllama(prompt) {
+  const baseUrl = detectOllamaBaseUrl();
+  const url = new URL("/api/generate", baseUrl);
+  const body = JSON.stringify({
+    model: OLLAMA_MODEL,
+    prompt,
+    stream: false,
+  });
+
+  return new Promise((resolve, reject) => {
+    const req = http.request(
+      {
+        hostname: url.hostname,
+        port: url.port,
+        path: url.pathname,
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      },
+      (res) => {
+        let data = "";
+        res.on("data", (chunk) => (data += chunk));
+        res.on("end", () => {
+          try {
+            const json = JSON.parse(data || "{}");
+            const output = (json.response || "").trim();
+            if (output && output.length > 200) {
+              console.log(`[local] ✓ ollama(${OLLAMA_MODEL}): ${output.length} chars`);
+              resolve(output);
+              return;
+            }
+            reject(new Error("Ollama output too short"));
+          } catch (e) {
+            reject(e);
+          }
+        });
+      }
+    );
+    req.on("error", reject);
+    req.setTimeout(180000, () => req.destroy(new Error("Ollama timeout")));
+    req.write(body);
+    req.end();
+  });
+}
+
 /**
- * ローカルCLIでLLMを呼び出す（Claude Code CLI / Gemini CLI）
+ * ローカルCLIでLLMを呼び出す（Codex/Claude/Gemini）
  * 定額サブスクリプション対応
  */
 function callCLI(prompt) {
   const cliTools = [
+    { name: "codex", args: ["exec", "-"] },
     { name: "claude", args: ["--print"] },
     { name: "gemini", args: [] },
   ];
@@ -39,7 +100,7 @@ function callCLI(prompt) {
       }
       throw new Error("Output too short");
     } catch (err) {
-      console.log(`[cli] ⚠️ ${name}: ${err.message.slice(0, 100)}`);
+      console.log(`[cli] ⚠️ ${name}: ${String(err.message || err).slice(0, 100)}`);
     }
   }
   throw new Error("All CLI tools unavailable");
@@ -420,14 +481,21 @@ async function generateArticleWithLLM(keyword) {
 
 本文のみを出力してください。`;
 
-  // 1. ローカルCLI（定額）を優先
+  // 1. ローカルOllama（無料）を優先
+  try {
+    return await callLocalOllama(prompt);
+  } catch (localErr) {
+    console.log(`[llm] local ollama unavailable: ${localErr.message}`);
+  }
+
+  // 2. ローカルCLI（定額）
   try {
     return callCLI(prompt);
   } catch (cliErr) {
     console.log(`[llm] CLI unavailable: ${cliErr.message}`);
   }
 
-  // 2. OpenAI API（フォールバック）
+  // 3. OpenAI API（最終フォールバック）
   return await callOpenAI(prompt);
 }
 
