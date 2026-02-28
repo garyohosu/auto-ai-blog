@@ -637,7 +637,80 @@ lang: ja${imageField}
 }
 
 // ---------------------------------------------------------------------------
-// 3. Append row to ve/metrics.md
+// 3. Generate content support pack (titles/outline/faq/internal links)
+// ---------------------------------------------------------------------------
+function generateContentSupportPack(date, keyword) {
+  if (!keyword) return;
+
+  const plansDir = path.join(VE, "plans");
+  ensureDir(plansDir);
+  const outFile = path.join(plansDir, `${date}-content-pack.md`);
+
+  const baseTitle = keyword.title
+    .replace(/【2026年版】|【2026年】/g, "")
+    .split("｜")[0]
+    .trim();
+
+  const titleIdeas = [
+    `${baseTitle}の始め方｜失敗しない導入手順とおすすめツール`,
+    `${baseTitle}を最短で実践する方法｜初心者向けチェックリスト`,
+    `${baseTitle}の比較ガイド｜目的別に選ぶべきサービス`,
+    `${baseTitle}で業務効率を上げるコツ｜現場で使えるテンプレ付き`,
+    `${baseTitle}の費用対効果を検証｜無料プランでも使える？`,
+    `${baseTitle}導入でよくある失敗と対策10選`,
+    `${baseTitle}をチーム運用する方法｜ルール設計とKPI例`,
+    `${baseTitle}のセキュリティ注意点｜安全に運用するための実務`,
+    `${baseTitle}で成果を出すプロンプト設計｜再現性を高めるポイント`,
+    `${baseTitle}の最新トレンド｜2026年に押さえるべき変化`,
+  ];
+
+  const outline = [
+    "## はじめに",
+    "## このテーマで解決できる課題",
+    "## 失敗しない選び方（比較軸）",
+    "## おすすめツール/手法5選",
+    "## 導入手順（今日からできる）",
+    "## 運用のコツ（KPI・体制・頻度）",
+    "## よくある失敗と対策",
+    "## まとめ",
+  ];
+
+  const faq = [
+    "Q. 無料プランだけでも実運用できますか？\nA. 小規模運用なら可能ですが、継続運用では制限に注意が必要です。",
+    "Q. 導入に必要な期間はどれくらいですか？\nA. 小さく始めれば1日で検証、1〜2週間で運用定着が目安です。",
+    "Q. まず何から始めるべきですか？\nA. 目的を1つに絞り、最小のワークフローを作って効果測定します。",
+    "Q. 品質を保つコツは？\nA. テンプレート化・レビュー基準・定期見直しの3点を固定化します。",
+    "Q. セキュリティ面での注意点は？\nA. 機密データの投入制限、権限分離、ログ監査を必ず実施してください。",
+    "Q. ROIはどう測定しますか？\nA. 作業時間削減・CVR改善・運用コストの3軸で追うのが有効です。",
+  ];
+
+  const postIndex = buildPostIndex();
+  const internalLinks = Object.entries(postIndex).slice(-8).reverse();
+
+  let md = `# Content Support Pack (${date})\n\n`;
+  md += `- Seed keyword: \`${keyword.slug}\`\n`;
+  md += `- Seed title: ${keyword.title}\n\n`;
+
+  md += "## タイトル案10本\n";
+  titleIdeas.forEach((t, i) => { md += `${i + 1}. ${t}\n`; });
+
+  md += "\n## 見出し構成案\n";
+  outline.forEach((h) => { md += `- ${h}\n`; });
+
+  md += "\n## FAQ草案\n";
+  faq.forEach((q) => { md += `- ${q}\n`; });
+
+  md += "\n## 内部リンク候補\n";
+  internalLinks.forEach(([slug, post]) => {
+    md += `- [${post.title}](${post.url}) (slug: \`${slug}\`)\n`;
+  });
+
+  fs.writeFileSync(outFile, md, "utf8");
+  console.log(`[created] ${outFile}`);
+}
+
+// ---------------------------------------------------------------------------
+// 4. Append row to ve/metrics.md
 // ---------------------------------------------------------------------------
 function appendMetrics(date, newPosts) {
   const metricsFile = path.join(VE, "metrics.md");
@@ -747,6 +820,7 @@ async function main() {
     console.log(`[info] All keywords exhausted, skipping post creation`);
   }
 
+  generateContentSupportPack(date, keyword);
   createDailyLog(date, articleTitle);
   appendMetrics(date, newPosts);
   updateState(date, keyword);
