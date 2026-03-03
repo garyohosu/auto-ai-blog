@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "YouTube台本をAIで作る方法｜企画・構成・原稿作成の完全ガイド"
+- today_objective: publish "EC商品説明文をAIで量産する方法｜売れるコピー作成テンプレ付き"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-ecommerce-copywriting
+- next_run: publish article: best-ai-prompt-management-tools
