@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "EC商品説明文をAIで量産する方法｜売れるコピー作成テンプレ付き"
+- today_objective: publish "プロンプト管理ツールおすすめ5選｜AI活用を再現可能にする運用術"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: best-ai-prompt-management-tools
+- next_run: publish article: ai-workflow-automation-no-code
