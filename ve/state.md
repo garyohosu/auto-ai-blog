@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "プロンプト管理ツールおすすめ5選｜AI活用を再現可能にする運用術"
+- today_objective: publish "ノーコードで作るAI業務フロー自動化｜Zapier・Make活用ガイド"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-workflow-automation-no-code
+- next_run: publish article: ai-customer-review-analysis
