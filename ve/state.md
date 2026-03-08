@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AI日程調整ツール比較｜会議設定を自動化して調整ストレスを減らす"
+- today_objective: publish "AIポッドキャスト制作ツールおすすめ6選｜台本・編集・配信を効率化"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-podcast-production-tools
+- next_run: publish article: chatgpt-prompt-engineering-guide
