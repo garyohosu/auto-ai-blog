@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AIポッドキャスト制作ツールおすすめ6選｜台本・編集・配信を効率化"
+- today_objective: publish "ChatGPTプロンプトエンジニアリング完全ガイド｜精度を上げる書き方と実例"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: chatgpt-prompt-engineering-guide
+- next_run: publish article: ai-language-learning-apps
