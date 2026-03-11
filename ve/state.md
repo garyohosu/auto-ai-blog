@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AI語学学習アプリ おすすめ7選｜英語・中国語を最短でマスターする方法"
+- today_objective: publish "AI家計管理・資産運用ツール おすすめ5選｜お金の悩みをAIで解決"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-personal-finance-advisor
+- next_run: publish article: ai-project-management-tools
