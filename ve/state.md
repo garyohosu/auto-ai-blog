@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AI家計管理・資産運用ツール おすすめ5選｜お金の悩みをAIで解決"
+- today_objective: publish "AIプロジェクト管理ツール おすすめ6選｜タスク自動化で納期を守る方法"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-project-management-tools
+- next_run: publish article: ai-hr-recruitment-tools
