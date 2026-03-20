@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AIニュース要約ツール おすすめ5選｜情報収集の時間を9割削減する方法"
+- today_objective: publish "AIインテリアデザインツール おすすめ5選｜部屋のレイアウトをAIで可視化"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-interior-design-tools
+- next_run: publish article: best-ai-social-media-analytics
