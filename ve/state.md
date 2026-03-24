@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AIインテリアデザインツール おすすめ5選｜部屋のレイアウトをAIで可視化"
+- today_objective: publish "AIソーシャルメディア分析ツール おすすめ5選｜伸びるSNS運用の秘訣"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: best-ai-social-media-analytics
+- next_run: publish article: ai-legal-document-tools
