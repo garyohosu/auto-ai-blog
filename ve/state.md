@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AIソーシャルメディア分析ツール おすすめ5選｜伸びるSNS運用の秘訣"
+- today_objective: publish "AI法律・契約書ツール おすすめ5選｜契約書レビューを自動化してリスクを減らす"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-legal-document-tools
+- next_run: publish article: ai-recipe-meal-planning
