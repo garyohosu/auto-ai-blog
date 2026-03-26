@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AI法律・契約書ツール おすすめ5選｜契約書レビューを自動化してリスクを減らす"
+- today_objective: publish "AI料理レシピ・献立計画アプリ おすすめ5選｜食費を減らして栄養バランスを改善"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-recipe-meal-planning
+- next_run: publish article: best-ai-3d-modeling-tools
