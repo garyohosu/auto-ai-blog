@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AI料理レシピ・献立計画アプリ おすすめ5選｜食費を減らして栄養バランスを改善"
+- today_objective: publish "AI 3Dモデリングツール おすすめ5選｜テキストから3Dオブジェクトを自動生成"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: best-ai-3d-modeling-tools
+- next_run: publish article: ai-real-estate-tools
