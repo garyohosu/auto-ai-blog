@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AI顧客分析・セグメンテーションツール おすすめ5選｜売上を伸ばすデータ活用法"
+- today_objective: publish "AIアクセシビリティツール おすすめ5選｜障害者支援・ユニバーサルデザインに活用"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-accessibility-tools
+- next_run: publish article: ai-startup-tools-guide
