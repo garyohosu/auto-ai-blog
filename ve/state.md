@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AIコンテンツ再利用ツール おすすめ5選｜1本の記事を10種のコンテンツに変換"
+- today_objective: publish "AIサイバーセキュリティツール おすすめ5選｜脅威検出・対策を自動化する方法"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: best-ai-cybersecurity-tools
+- next_run: replenish keyword pool
