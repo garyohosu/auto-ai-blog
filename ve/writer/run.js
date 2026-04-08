@@ -147,7 +147,7 @@ ${rejectionReason}
 - FAQが不足なら 5+ 追加
 - アフィリエイトリンクが不足なら 2+ 追加
 - スパムキーワード（「無料」「今すぐ」等）が上限超過なら削除
-- 文字数不足なら 4000+ 文字に増やす
+- 文字数不足なら 6000+ 文字に増やす
 `;
   }
   
@@ -177,7 +177,7 @@ ${soul}${retryInstructions}
    - よくある [課題] とその解決策
    ※このセクションがAI要約に引用されるため、主要キーワードを必ず含めること
 
-2. 文字数: 4000字以上
+2. 文字数: 6000字以上
 3. 比較表: 3つ以上（Markdown table形式）
 4. FAQ: 5問以上（## FAQ セクションにまとめる）
 5. 構成: 導入 → **AI要約最適化セクション** → 本論（比較・手順） → FAQ → まとめ（CTA）
@@ -583,7 +583,7 @@ tags: ${JSON.stringify(keyword.tags)}
 - AI Summary Optimization: ✅ Included
 
 ## Quality Checklist
-- [${wordCount >= 4000 ? 'x' : ' '}] 4000+ characters (AI-optimized target)
+- [${wordCount >= 6000 ? 'x' : ' '}] 6000+ characters (AI-optimized target)
 - [x] AI summary optimization section
 - [x] Comparison tables (3+)
 - [x] FAQ section (5+)
@@ -611,7 +611,7 @@ Pass to Designer for hero image generation.
 - Title: ${keyword.title}
 - Characters: ${wordCount}
 - Tags: ${keyword.tags.join(', ')}
-- Quality: ${wordCount >= 4000 ? '✅' : '⚠️'}  ${wordCount >= 4000 ? 'Pass (AI-optimized)' : 'Below target'}
+- Quality: ${wordCount >= 6000 ? '✅' : '⚠️'}  ${wordCount >= 6000 ? 'Pass (AI-optimized)' : 'Below target'}
 - AI Summary: ✅ Optimized for Google AI Overview, ChatGPT, Perplexity
 `;
   appendMD(MEMORY_MD, memoryEntry);
