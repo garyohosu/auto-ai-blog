@@ -192,6 +192,22 @@ const KEYWORD_POOL = [
   { slug: "ai-startup-tools-guide",            title: "スタートアップ・起業家向けAIツール完全ガイド｜コスト0で始めるAI経営",          tags: ["AI起業", "スタートアップ", "副業"] },
   { slug: "ai-content-repurposing-tools",      title: "AIコンテンツ再利用ツール おすすめ5選｜1本の記事を10種のコンテンツに変換",      tags: ["コンテンツ再利用", "AI効率化", "マーケ"] },
   { slug: "best-ai-cybersecurity-tools",       title: "AIサイバーセキュリティツール おすすめ5選｜脅威検出・対策を自動化する方法",     tags: ["AIセキュリティ", "サイバー攻撃", "情報セキュリティ"] },
+  // 第5弾キーワード（在庫補充）
+  { slug: "ai-agent-observability-tools",      title: "AIエージェント運用の可観測性ツール比較｜失敗検知・再実行を仕組み化する",         tags: ["AIエージェント", "可観測性", "運用監視"] },
+  { slug: "ai-github-actions-automation",      title: "GitHub ActionsをAIで自動化する方法｜CI/CD運用を軽くする実践ガイド",            tags: ["GitHub Actions", "CI/CD", "AI自動化"] },
+  { slug: "ai-small-business-ops",             title: "小規模事業の業務をAIで回す方法｜1人運用でも回る仕組みづくり",                 tags: ["業務自動化", "中小企業", "AI活用"] },
+  { slug: "ai-knowledge-base-tools",           title: "AIナレッジベース構築ツールおすすめ6選｜社内知見を検索可能にする",             tags: ["ナレッジベース", "社内FAQ", "情報整理"] },
+  { slug: "ai-customer-onboarding-automation", title: "AIで顧客オンボーディングを自動化する方法｜離脱を減らす導入設計",             tags: ["オンボーディング", "SaaS", "顧客体験"] },
+  { slug: "ai-sales-prospecting-tools",        title: "AI営業リスト作成ツール比較｜見込み客探索を効率化する実践手順",               tags: ["営業DX", "リード獲得", "AI営業"] },
+  { slug: "ai-email-newsletter-workflow",      title: "AIでニュースレター運用を自動化する方法｜企画・執筆・配信まで",               tags: ["ニュースレター", "メールマーケ", "自動化"] },
+  { slug: "ai-product-roadmap-planning",       title: "AIでプロダクトロードマップを作る方法｜意思決定を速くする運用術",             tags: ["プロダクト管理", "ロードマップ", "意思決定"] },
+  { slug: "ai-community-management-tools",     title: "AIコミュニティ運用ツールおすすめ5選｜投稿分析とモデレーション効率化",         tags: ["コミュニティ運用", "モデレーション", "SNS"] },
+  { slug: "ai-bug-triage-workflow",            title: "AIでバグトリアージを自動化する方法｜Issue分類と優先度付けを最適化",           tags: ["バグ管理", "Issue運用", "開発効率"] },
+  { slug: "ai-research-assistant-for-devs",    title: "開発者向けAIリサーチアシスタント活用法｜技術調査を最短で終わらせる",          tags: ["開発者向け", "技術調査", "AIアシスタント"] },
+  { slug: "ai-content-qa-automation",          title: "AIでコンテンツ品質チェックを自動化する方法｜誤情報・重複・体裁を防ぐ",         tags: ["品質管理", "コンテンツ運用", "ファクトチェック"] },
+  { slug: "ai-dashboard-reporting-tools",      title: "AIダッシュボード作成ツール比較｜週次レポートを自動生成する",                 tags: ["ダッシュボード", "レポート自動化", "BI"] },
+  { slug: "ai-support-ticket-routing",         title: "AIでサポートチケット振り分けを自動化する方法｜一次対応を高速化",             tags: ["カスタマーサポート", "チケット管理", "自動分類"] },
+  { slug: "ai-work-documentation-tools",       title: "AIドキュメント整備ツールおすすめ5選｜手順書・運用記録を継続可能にする",       tags: ["ドキュメント", "運用設計", "ナレッジ共有"] },
 ];
 
 // ---------------------------------------------------------------------------
