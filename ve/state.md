@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "GitHub ActionsをAIで自動化する方法｜CI/CD運用を軽くする実践ガイド"
+- today_objective: publish "小規模事業の業務をAIで回す方法｜1人運用でも回る仕組みづくり"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-small-business-ops
+- next_run: publish article: ai-knowledge-base-tools

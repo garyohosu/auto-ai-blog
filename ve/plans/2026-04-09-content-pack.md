@@ -1,19 +1,19 @@
 # Content Support Pack (2026-04-09)
 
-- Seed keyword: `ai-github-actions-automation`
-- Seed title: GitHub ActionsをAIで自動化する方法｜CI/CD運用を軽くする実践ガイド
+- Seed keyword: `ai-small-business-ops`
+- Seed title: 小規模事業の業務をAIで回す方法｜1人運用でも回る仕組みづくり
 
 ## タイトル案10本
-1. GitHub ActionsをAIで自動化する方法の始め方｜失敗しない導入手順とおすすめツール
-2. GitHub ActionsをAIで自動化する方法を最短で実践する方法｜初心者向けチェックリスト
-3. GitHub ActionsをAIで自動化する方法の比較ガイド｜目的別に選ぶべきサービス
-4. GitHub ActionsをAIで自動化する方法で業務効率を上げるコツ｜現場で使えるテンプレ付き
-5. GitHub ActionsをAIで自動化する方法の費用対効果を検証｜無料プランでも使える？
-6. GitHub ActionsをAIで自動化する方法導入でよくある失敗と対策10選
-7. GitHub ActionsをAIで自動化する方法をチーム運用する方法｜ルール設計とKPI例
-8. GitHub ActionsをAIで自動化する方法のセキュリティ注意点｜安全に運用するための実務
-9. GitHub ActionsをAIで自動化する方法で成果を出すプロンプト設計｜再現性を高めるポイント
-10. GitHub ActionsをAIで自動化する方法の最新トレンド｜2026年に押さえるべき変化
+1. 小規模事業の業務をAIで回す方法の始め方｜失敗しない導入手順とおすすめツール
+2. 小規模事業の業務をAIで回す方法を最短で実践する方法｜初心者向けチェックリスト
+3. 小規模事業の業務をAIで回す方法の比較ガイド｜目的別に選ぶべきサービス
+4. 小規模事業の業務をAIで回す方法で業務効率を上げるコツ｜現場で使えるテンプレ付き
+5. 小規模事業の業務をAIで回す方法の費用対効果を検証｜無料プランでも使える？
+6. 小規模事業の業務をAIで回す方法導入でよくある失敗と対策10選
+7. 小規模事業の業務をAIで回す方法をチーム運用する方法｜ルール設計とKPI例
+8. 小規模事業の業務をAIで回す方法のセキュリティ注意点｜安全に運用するための実務
+9. 小規模事業の業務をAIで回す方法で成果を出すプロンプト設計｜再現性を高めるポイント
+10. 小規模事業の業務をAIで回す方法の最新トレンド｜2026年に押さえるべき変化
 
 ## 見出し構成案
 - ## はじめに
@@ -40,6 +40,7 @@ A. 機密データの投入制限、権限分離、ログ監査を必ず実施�
 A. 作業時間削減・CVR改善・運用コストの3軸で追うのが有効です。
 
 ## 内部リンク候補
+- [小規模事業の業務をAIで回す方法｜1人運用でも回る仕組みづくり](/2026/04/09/ai-small-business-ops/) (slug: `ai-small-business-ops`)
 - [GitHub ActionsをAIで自動化する方法｜CI/CD運用を軽くする実践ガイド](/2026/04/09/ai-github-actions-automation/) (slug: `ai-github-actions-automation`)
 - [AIエージェント運用の可観測性ツール比較｜失敗検知・再実行を仕組み化する](/2026/04/08/ai-agent-observability-tools/) (slug: `ai-agent-observability-tools`)
 - [AIサイバーセキュリティツール おすすめ5選｜脅威検出・対策を自動化する方法](/2026/04/03/best-ai-cybersecurity-tools/) (slug: `best-ai-cybersecurity-tools`)
@@ -47,4 +48,3 @@ A. 作業時間削減・CVR改善・運用コストの3軸で追うのが有効�
 - [スタートアップ・起業家向けAIツール完全ガイド｜コスト0で始めるAI経営](/2026/04/01/ai-startup-tools-guide/) (slug: `ai-startup-tools-guide`)
 - [AIアクセシビリティツール おすすめ5選｜障害者支援・ユニバーサルデザインに活用](/2026/03/31/ai-accessibility-tools/) (slug: `ai-accessibility-tools`)
 - [AI顧客分析・セグメンテーションツール おすすめ5選｜売上を伸ばすデータ活用法](/2026/03/30/ai-customer-segmentation-tools/) (slug: `ai-customer-segmentation-tools`)
-- [AI不動産ツール おすすめ5選｜物件探しから価格査定まで自動化する方法](/2026/03/29/ai-real-estate-tools/) (slug: `ai-real-estate-tools`)
