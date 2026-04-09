@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AIエージェント運用の可観測性ツール比較｜失敗検知・再実行を仕組み化する"
+- today_objective: publish "GitHub ActionsをAIで自動化する方法｜CI/CD運用を軽くする実践ガイド"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-github-actions-automation
+- next_run: publish article: ai-small-business-ops
