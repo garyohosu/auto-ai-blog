@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "小規模事業の業務をAIで回す方法｜1人運用でも回る仕組みづくり"
+- today_objective: publish "AIナレッジベース構築ツールおすすめ6選｜社内知見を検索可能にする"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-knowledge-base-tools
+- next_run: publish article: ai-customer-onboarding-automation
