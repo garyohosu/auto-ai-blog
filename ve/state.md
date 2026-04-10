@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AIナレッジベース構築ツールおすすめ6選｜社内知見を検索可能にする"
+- today_objective: publish "AIで顧客オンボーディングを自動化する方法｜離脱を減らす導入設計"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-customer-onboarding-automation
+- next_run: publish article: ai-sales-prospecting-tools
