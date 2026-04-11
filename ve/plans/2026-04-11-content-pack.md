@@ -1,19 +1,19 @@
 # Content Support Pack (2026-04-11)
 
-- Seed keyword: `ai-sales-prospecting-tools`
-- Seed title: AI営業リスト作成ツール比較｜見込み客探索を効率化する実践手順
+- Seed keyword: `ai-email-newsletter-workflow`
+- Seed title: AIでニュースレター運用を自動化する方法｜企画・執筆・配信まで
 
 ## タイトル案10本
-1. AI営業リスト作成ツール比較の始め方｜失敗しない導入手順とおすすめツール
-2. AI営業リスト作成ツール比較を最短で実践する方法｜初心者向けチェックリスト
-3. AI営業リスト作成ツール比較の比較ガイド｜目的別に選ぶべきサービス
-4. AI営業リスト作成ツール比較で業務効率を上げるコツ｜現場で使えるテンプレ付き
-5. AI営業リスト作成ツール比較の費用対効果を検証｜無料プランでも使える？
-6. AI営業リスト作成ツール比較導入でよくある失敗と対策10選
-7. AI営業リスト作成ツール比較をチーム運用する方法｜ルール設計とKPI例
-8. AI営業リスト作成ツール比較のセキュリティ注意点｜安全に運用するための実務
-9. AI営業リスト作成ツール比較で成果を出すプロンプト設計｜再現性を高めるポイント
-10. AI営業リスト作成ツール比較の最新トレンド｜2026年に押さえるべき変化
+1. AIでニュースレター運用を自動化する方法の始め方｜失敗しない導入手順とおすすめツール
+2. AIでニュースレター運用を自動化する方法を最短で実践する方法｜初心者向けチェックリスト
+3. AIでニュースレター運用を自動化する方法の比較ガイド｜目的別に選ぶべきサービス
+4. AIでニュースレター運用を自動化する方法で業務効率を上げるコツ｜現場で使えるテンプレ付き
+5. AIでニュースレター運用を自動化する方法の費用対効果を検証｜無料プランでも使える？
+6. AIでニュースレター運用を自動化する方法導入でよくある失敗と対策10選
+7. AIでニュースレター運用を自動化する方法をチーム運用する方法｜ルール設計とKPI例
+8. AIでニュースレター運用を自動化する方法のセキュリティ注意点｜安全に運用するための実務
+9. AIでニュースレター運用を自動化する方法で成果を出すプロンプト設計｜再現性を高めるポイント
+10. AIでニュースレター運用を自動化する方法の最新トレンド｜2026年に押さえるべき変化
 
 ## 見出し構成案
 - ## はじめに
@@ -41,10 +41,10 @@ A. 作業時間削減・CVR改善・運用コストの3軸で追うのが有効�
 
 ## 内部リンク候補
 - [AI営業リスト作成ツール比較｜見込み客探索を効率化する実践手順](/2026/04/11/ai-sales-prospecting-tools/) (slug: `ai-sales-prospecting-tools`)
+- [AIでニュースレター運用を自動化する方法｜企画・執筆・配信まで](/2026/04/11/ai-email-newsletter-workflow/) (slug: `ai-email-newsletter-workflow`)
 - [AIナレッジベース構築ツールおすすめ6選｜社内知見を検索可能にする](/2026/04/10/ai-knowledge-base-tools/) (slug: `ai-knowledge-base-tools`)
 - [AIで顧客オンボーディングを自動化する方法｜離脱を減らす導入設計](/2026/04/10/ai-customer-onboarding-automation/) (slug: `ai-customer-onboarding-automation`)
 - [小規模事業の業務をAIで回す方法｜1人運用でも回る仕組みづくり](/2026/04/09/ai-small-business-ops/) (slug: `ai-small-business-ops`)
 - [GitHub ActionsをAIで自動化する方法｜CI/CD運用を軽くする実践ガイド](/2026/04/09/ai-github-actions-automation/) (slug: `ai-github-actions-automation`)
 - [AIエージェント運用の可観測性ツール比較｜失敗検知・再実行を仕組み化する](/2026/04/08/ai-agent-observability-tools/) (slug: `ai-agent-observability-tools`)
 - [AIサイバーセキュリティツール おすすめ5選｜脅威検出・対策を自動化する方法](/2026/04/03/best-ai-cybersecurity-tools/) (slug: `best-ai-cybersecurity-tools`)
-- [AIコンテンツ再利用ツール おすすめ5選｜1本の記事を10種のコンテンツに変換](/2026/04/03/ai-content-repurposing-tools/) (slug: `ai-content-repurposing-tools`)
