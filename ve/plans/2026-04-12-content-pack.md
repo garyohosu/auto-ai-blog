@@ -1,19 +1,19 @@
 # Content Support Pack (2026-04-12)
 
-- Seed keyword: `ai-product-roadmap-planning`
-- Seed title: AIでプロダクトロードマップを作る方法｜意思決定を速くする運用術
+- Seed keyword: `ai-community-management-tools`
+- Seed title: AIコミュニティ運用ツールおすすめ5選｜投稿分析とモデレーション効率化
 
 ## タイトル案10本
-1. AIでプロダクトロードマップを作る方法の始め方｜失敗しない導入手順とおすすめツール
-2. AIでプロダクトロードマップを作る方法を最短で実践する方法｜初心者向けチェックリスト
-3. AIでプロダクトロードマップを作る方法の比較ガイド｜目的別に選ぶべきサービス
-4. AIでプロダクトロードマップを作る方法で業務効率を上げるコツ｜現場で使えるテンプレ付き
-5. AIでプロダクトロードマップを作る方法の費用対効果を検証｜無料プランでも使える？
-6. AIでプロダクトロードマップを作る方法導入でよくある失敗と対策10選
-7. AIでプロダクトロードマップを作る方法をチーム運用する方法｜ルール設計とKPI例
-8. AIでプロダクトロードマップを作る方法のセキュリティ注意点｜安全に運用するための実務
-9. AIでプロダクトロードマップを作る方法で成果を出すプロンプト設計｜再現性を高めるポイント
-10. AIでプロダクトロードマップを作る方法の最新トレンド｜2026年に押さえるべき変化
+1. AIコミュニティ運用ツールおすすめ5選の始め方｜失敗しない導入手順とおすすめツール
+2. AIコミュニティ運用ツールおすすめ5選を最短で実践する方法｜初心者向けチェックリスト
+3. AIコミュニティ運用ツールおすすめ5選の比較ガイド｜目的別に選ぶべきサービス
+4. AIコミュニティ運用ツールおすすめ5選で業務効率を上げるコツ｜現場で使えるテンプレ付き
+5. AIコミュニティ運用ツールおすすめ5選の費用対効果を検証｜無料プランでも使える？
+6. AIコミュニティ運用ツールおすすめ5選導入でよくある失敗と対策10選
+7. AIコミュニティ運用ツールおすすめ5選をチーム運用する方法｜ルール設計とKPI例
+8. AIコミュニティ運用ツールおすすめ5選のセキュリティ注意点｜安全に運用するための実務
+9. AIコミュニティ運用ツールおすすめ5選で成果を出すプロンプト設計｜再現性を高めるポイント
+10. AIコミュニティ運用ツールおすすめ5選の最新トレンド｜2026年に押さえるべき変化
 
 ## 見出し構成案
 - ## はじめに
@@ -41,10 +41,10 @@ A. 作業時間削減・CVR改善・運用コストの3軸で追うのが有効�
 
 ## 内部リンク候補
 - [AIでプロダクトロードマップを作る方法｜意思決定を速くする運用術](/2026/04/12/ai-product-roadmap-planning/) (slug: `ai-product-roadmap-planning`)
+- [AIコミュニティ運用ツールおすすめ5選｜投稿分析とモデレーション効率化](/2026/04/12/ai-community-management-tools/) (slug: `ai-community-management-tools`)
 - [AI営業リスト作成ツール比較｜見込み客探索を効率化する実践手順](/2026/04/11/ai-sales-prospecting-tools/) (slug: `ai-sales-prospecting-tools`)
 - [AIでニュースレター運用を自動化する方法｜企画・執筆・配信まで](/2026/04/11/ai-email-newsletter-workflow/) (slug: `ai-email-newsletter-workflow`)
 - [AIナレッジベース構築ツールおすすめ6選｜社内知見を検索可能にする](/2026/04/10/ai-knowledge-base-tools/) (slug: `ai-knowledge-base-tools`)
 - [AIで顧客オンボーディングを自動化する方法｜離脱を減らす導入設計](/2026/04/10/ai-customer-onboarding-automation/) (slug: `ai-customer-onboarding-automation`)
 - [小規模事業の業務をAIで回す方法｜1人運用でも回る仕組みづくり](/2026/04/09/ai-small-business-ops/) (slug: `ai-small-business-ops`)
 - [GitHub ActionsをAIで自動化する方法｜CI/CD運用を軽くする実践ガイド](/2026/04/09/ai-github-actions-automation/) (slug: `ai-github-actions-automation`)
-- [AIエージェント運用の可観測性ツール比較｜失敗検知・再実行を仕組み化する](/2026/04/08/ai-agent-observability-tools/) (slug: `ai-agent-observability-tools`)
