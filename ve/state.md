@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AIでバグトリアージを自動化する方法｜Issue分類と優先度付けを最適化"
+- today_objective: publish "開発者向けAIリサーチアシスタント活用法｜技術調査を最短で終わらせる"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-research-assistant-for-devs
+- next_run: publish article: ai-content-qa-automation
