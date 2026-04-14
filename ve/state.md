@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AIでコンテンツ品質チェックを自動化する方法｜誤情報・重複・体裁を防ぐ"
+- today_objective: publish "AIダッシュボード作成ツール比較｜週次レポートを自動生成する"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-dashboard-reporting-tools
+- next_run: publish article: ai-support-ticket-routing
