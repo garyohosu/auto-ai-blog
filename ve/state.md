@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AIでサポートチケット振り分けを自動化する方法｜一次対応を高速化"
+- today_objective: publish "AIドキュメント整備ツールおすすめ5選｜手順書・運用記録を継続可能にする"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-work-documentation-tools
+- next_run: replenish keyword pool
