@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AIダッシュボード作成ツール比較｜週次レポートを自動生成する"
+- today_objective: publish "AIでサポートチケット振り分けを自動化する方法｜一次対応を高速化"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-support-ticket-routing
+- next_run: publish article: ai-work-documentation-tools
