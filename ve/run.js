@@ -208,6 +208,22 @@ const KEYWORD_POOL = [
   { slug: "ai-dashboard-reporting-tools",      title: "AIダッシュボード作成ツール比較｜週次レポートを自動生成する",                 tags: ["ダッシュボード", "レポート自動化", "BI"] },
   { slug: "ai-support-ticket-routing",         title: "AIでサポートチケット振り分けを自動化する方法｜一次対応を高速化",             tags: ["カスタマーサポート", "チケット管理", "自動分類"] },
   { slug: "ai-work-documentation-tools",       title: "AIドキュメント整備ツールおすすめ5選｜手順書・運用記録を継続可能にする",       tags: ["ドキュメント", "運用設計", "ナレッジ共有"] },
+  // 第6弾キーワード（在庫補充）
+  { slug: "ai-runbook-automation",             title: "AIで運用Runbookを自動化する方法｜障害対応を標準化して属人化を防ぐ",             tags: ["運用Runbook", "障害対応", "標準化"] },
+  { slug: "ai-release-notes-generator",        title: "AIでリリースノートを自動生成する方法｜開発更新の共有を高速化",                 tags: ["リリースノート", "開発運用", "自動生成"] },
+  { slug: "ai-internal-helpdesk-tools",        title: "社内ヘルプデスクをAIで効率化する方法｜問い合わせ削減と回答速度向上",             tags: ["社内ヘルプデスク", "情シス", "業務改善"] },
+  { slug: "ai-procurement-ops",                title: "AIで調達業務を効率化する方法｜見積比較・発注管理・コスト最適化",               tags: ["調達", "購買", "コスト削減"] },
+  { slug: "ai-sop-builder-tools",              title: "AI手順書作成ツール比較｜SOP整備を高速化して教育コストを下げる",                 tags: ["SOP", "手順書", "教育"] },
+  { slug: "ai-meeting-minutes-workflow",       title: "AI議事録自動化ワークフロー｜会議後の整理と共有を最短にする",                   tags: ["議事録", "会議効率化", "自動化"] },
+  { slug: "ai-vendor-monitoring-tools",        title: "AIで外注・ベンダー管理を見える化する方法｜納期遅延と品質ばらつきを減らす",       tags: ["ベンダー管理", "外注管理", "品質管理"] },
+  { slug: "ai-employee-handbook-tools",        title: "AIで社内規程・ハンドブックを整備する方法｜更新漏れを防いで検索性を高める",       tags: ["社内規程", "ハンドブック", "情報整備"] },
+  { slug: "ai-inbox-triage-workflow",          title: "AIでメール受信箱を整理する方法｜重要返信の見落としを防ぐトリアージ術",           tags: ["メール整理", "Inbox Zero", "業務効率"] },
+  { slug: "ai-renewal-reminder-system",        title: "AI更新リマインダー設計｜契約・ドメイン・サブスクの期限切れを防ぐ",             tags: ["更新管理", "サブスク管理", "契約管理"] },
+  { slug: "ai-changelog-automation",           title: "AIで変更履歴を自動生成する方法｜開発と運用の情報差分を埋める",                 tags: ["変更履歴", "changelog", "開発情報共有"] },
+  { slug: "ai-small-team-knowledge-ops",       title: "少人数チームのナレッジ運用をAIで回す方法｜情報散逸を止める実践ルール",         tags: ["ナレッジ運用", "小規模チーム", "情報共有"] },
+  { slug: "ai-backoffice-automation-stack",    title: "バックオフィスをAIで自動化するツール構成｜経理・総務・労務の負担を減らす",       tags: ["バックオフィス", "経理", "総務"] },
+  { slug: "ai-risk-log-management",            title: "AIリスクログ管理の始め方｜障害・監査・運用ミスを横断で記録する",               tags: ["リスク管理", "監査対応", "運用改善"] },
+  { slug: "ai-postmortem-writing-tools",       title: "AIで障害ポストモーテムを書く方法｜再発防止を形骸化させない記録術",             tags: ["ポストモーテム", "障害分析", "再発防止"] },
 ];
 
 // ---------------------------------------------------------------------------
