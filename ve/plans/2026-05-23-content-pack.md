@@ -1,19 +1,19 @@
 # Content Support Pack (2026-05-23)
 
-- Seed keyword: `ai-runbook-automation`
-- Seed title: AIで運用Runbookを自動化する方法｜障害対応を標準化して属人化を防ぐ
+- Seed keyword: `ai-release-notes-generator`
+- Seed title: AIでリリースノートを自動生成する方法｜開発更新の共有を高速化
 
 ## タイトル案10本
-1. AIで運用Runbookを自動化する方法の始め方｜失敗しない導入手順とおすすめツール
-2. AIで運用Runbookを自動化する方法を最短で実践する方法｜初心者向けチェックリスト
-3. AIで運用Runbookを自動化する方法の比較ガイド｜目的別に選ぶべきサービス
-4. AIで運用Runbookを自動化する方法で業務効率を上げるコツ｜現場で使えるテンプレ付き
-5. AIで運用Runbookを自動化する方法の費用対効果を検証｜無料プランでも使える？
-6. AIで運用Runbookを自動化する方法導入でよくある失敗と対策10選
-7. AIで運用Runbookを自動化する方法をチーム運用する方法｜ルール設計とKPI例
-8. AIで運用Runbookを自動化する方法のセキュリティ注意点｜安全に運用するための実務
-9. AIで運用Runbookを自動化する方法で成果を出すプロンプト設計｜再現性を高めるポイント
-10. AIで運用Runbookを自動化する方法の最新トレンド｜2026年に押さえるべき変化
+1. AIでリリースノートを自動生成する方法の始め方｜失敗しない導入手順とおすすめツール
+2. AIでリリースノートを自動生成する方法を最短で実践する方法｜初心者向けチェックリスト
+3. AIでリリースノートを自動生成する方法の比較ガイド｜目的別に選ぶべきサービス
+4. AIでリリースノートを自動生成する方法で業務効率を上げるコツ｜現場で使えるテンプレ付き
+5. AIでリリースノートを自動生成する方法の費用対効果を検証｜無料プランでも使える？
+6. AIでリリースノートを自動生成する方法導入でよくある失敗と対策10選
+7. AIでリリースノートを自動生成する方法をチーム運用する方法｜ルール設計とKPI例
+8. AIでリリースノートを自動生成する方法のセキュリティ注意点｜安全に運用するための実務
+9. AIでリリースノートを自動生成する方法で成果を出すプロンプト設計｜再現性を高めるポイント
+10. AIでリリースノートを自動生成する方法の最新トレンド｜2026年に押さえるべき変化
 
 ## 見出し構成案
 - ## はじめに
@@ -41,10 +41,10 @@ A. 作業時間削減・CVR改善・運用コストの3軸で追うのが有効�
 
 ## 内部リンク候補
 - [AIで運用Runbookを自動化する方法｜障害対応を標準化して属人化を防ぐ](/2026/05/23/ai-runbook-automation/) (slug: `ai-runbook-automation`)
+- [AIでリリースノートを自動生成する方法｜開発更新の共有を高速化](/2026/05/23/ai-release-notes-generator/) (slug: `ai-release-notes-generator`)
 - [AIドキュメント整備ツールおすすめ5選｜手順書・運用記録を継続可能にする](/2026/04/15/ai-work-documentation-tools/) (slug: `ai-work-documentation-tools`)
 - [AIでサポートチケット振り分けを自動化する方法｜一次対応を高速化](/2026/04/15/ai-support-ticket-routing/) (slug: `ai-support-ticket-routing`)
 - [AIダッシュボード作成ツール比較｜週次レポートを自動生成する](/2026/04/14/ai-dashboard-reporting-tools/) (slug: `ai-dashboard-reporting-tools`)
 - [AIでコンテンツ品質チェックを自動化する方法｜誤情報・重複・体裁を防ぐ](/2026/04/14/ai-content-qa-automation/) (slug: `ai-content-qa-automation`)
 - [開発者向けAIリサーチアシスタント活用法｜技術調査を最短で終わらせる](/2026/04/13/ai-research-assistant-for-devs/) (slug: `ai-research-assistant-for-devs`)
 - [AIでバグトリアージを自動化する方法｜Issue分類と優先度付けを最適化](/2026/04/13/ai-bug-triage-workflow/) (slug: `ai-bug-triage-workflow`)
-- [AIでプロダクトロードマップを作る方法｜意思決定を速くする運用術](/2026/04/12/ai-product-roadmap-planning/) (slug: `ai-product-roadmap-planning`)
