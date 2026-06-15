@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "社内ヘルプデスクをAIで効率化する方法｜問い合わせ削減と回答速度向上"
+- today_objective: publish "AIで調達業務を効率化する方法｜見積比較・発注管理・コスト最適化"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-procurement-ops
+- next_run: publish article: ai-sop-builder-tools
