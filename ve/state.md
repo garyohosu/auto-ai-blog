@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AIで社内規程・ハンドブックを整備する方法｜更新漏れを防いで検索性を高める"
+- today_objective: publish "AIでメール受信箱を整理する方法｜重要返信の見落としを防ぐトリアージ術"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-inbox-triage-workflow
+- next_run: publish article: ai-renewal-reminder-system
