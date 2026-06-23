@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AIでメール受信箱を整理する方法｜重要返信の見落としを防ぐトリアージ術"
+- today_objective: publish "AI更新リマインダー設計｜契約・ドメイン・サブスクの期限切れを防ぐ"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-renewal-reminder-system
+- next_run: publish article: ai-changelog-automation
