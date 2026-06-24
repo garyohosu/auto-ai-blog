@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AI更新リマインダー設計｜契約・ドメイン・サブスクの期限切れを防ぐ"
+- today_objective: publish "AIで変更履歴を自動生成する方法｜開発と運用の情報差分を埋める"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-changelog-automation
+- next_run: publish article: ai-small-team-knowledge-ops
