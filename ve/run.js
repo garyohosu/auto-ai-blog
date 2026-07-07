@@ -224,6 +224,11 @@ const KEYWORD_POOL = [
   { slug: "ai-backoffice-automation-stack",    title: "バックオフィスをAIで自動化するツール構成｜経理・総務・労務の負担を減らす",       tags: ["バックオフィス", "経理", "総務"] },
   { slug: "ai-risk-log-management",            title: "AIリスクログ管理の始め方｜障害・監査・運用ミスを横断で記録する",               tags: ["リスク管理", "監査対応", "運用改善"] },
   { slug: "ai-postmortem-writing-tools",       title: "AIで障害ポストモーテムを書く方法｜再発防止を形骸化させない記録術",             tags: ["ポストモーテム", "障害分析", "再発防止"] },
+  { slug: "ai-incident-management-automation", title: "AIでインシデント管理を自動化する方法｜検知から記録までを速くする実践設計",       tags: ["インシデント管理", "障害対応", "運用自動化"] },
+  { slug: "ai-status-page-workflow",           title: "AIでステータスページ運用を効率化する方法｜障害告知と復旧報告を整える",           tags: ["ステータスページ", "障害告知", "運用広報"] },
+  { slug: "ai-change-management-assistant",    title: "AI変更管理アシスタント活用法｜リリース前後の確認漏れを減らす運用術",           tags: ["変更管理", "リリース運用", "確認フロー"] },
+  { slug: "ai-sre-handoff-documentation",      title: "AIでSRE引き継ぎ資料を整える方法｜夜間対応と運用知識の断絶を防ぐ",             tags: ["SRE", "引き継ぎ", "運用ドキュメント"] },
+  { slug: "ai-ops-review-dashboard",           title: "AI運用レビュー用ダッシュボードの作り方｜日報と障害記録を一画面で追う",         tags: ["運用ダッシュボード", "日報", "可視化"] },
 ];
 
 // ---------------------------------------------------------------------------
