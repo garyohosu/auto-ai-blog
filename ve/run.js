@@ -229,6 +229,22 @@ const KEYWORD_POOL = [
   { slug: "ai-change-management-assistant",    title: "AI変更管理アシスタント活用法｜リリース前後の確認漏れを減らす運用術",           tags: ["変更管理", "リリース運用", "確認フロー"] },
   { slug: "ai-sre-handoff-documentation",      title: "AIでSRE引き継ぎ資料を整える方法｜夜間対応と運用知識の断絶を防ぐ",             tags: ["SRE", "引き継ぎ", "運用ドキュメント"] },
   { slug: "ai-ops-review-dashboard",           title: "AI運用レビュー用ダッシュボードの作り方｜日報と障害記録を一画面で追う",         tags: ["運用ダッシュボード", "日報", "可視化"] },
+  // 第7弾キーワード（2026-07 補充）
+  { slug: "ai-slack-triage-bot",               title: "AI SlackトリアージBotの作り方｜通知洪水を止めて重要案件だけ拾う",             tags: ["Slack", "通知整理", "トリアージ"] },
+  { slug: "ai-oncall-summary-assistant",       title: "AIオンコール要約アシスタント活用法｜夜間障害の引き継ぎを3分で終える",         tags: ["オンコール", "障害対応", "引き継ぎ"] },
+  { slug: "ai-change-audit-trail",             title: "AIで変更監査ログを整える方法｜誰が何を変えたかを追える運用設計",             tags: ["監査ログ", "変更管理", "運用記録"] },
+  { slug: "ai-incident-retrospective-workflow",title: "AIで障害ふりかえりを回す方法｜事実整理から再発防止までテンプレ化する",         tags: ["障害ふりかえり", "ポストモーテム", "再発防止"] },
+  { slug: "ai-team-ops-wiki",                  title: "AI運用Wikiの育て方｜散らばった手順書を検索できるチーム資産に変える",         tags: ["Wiki", "ナレッジ共有", "運用改善"] },
+  { slug: "ai-policy-document-review",         title: "AIで社内規程レビューを効率化する方法｜抜け漏れと表記ゆれをまとめて検知",       tags: ["社内規程", "レビュー", "文書管理"] },
+  { slug: "ai-customer-feedback-digest",       title: "AIで顧客フィードバック日報を自動化する方法｜要望と不満を毎日ひと目で掴む",     tags: ["顧客フィードバック", "日報", "VOC"] },
+  { slug: "ai-knowledge-retention-playbook",   title: "AIで属人化を防ぐナレッジ継承術｜退職・異動前にやるべき記録の仕組み",         tags: ["ナレッジ継承", "属人化防止", "業務整理"] },
+  { slug: "ai-saas-usage-audit",               title: "AIでSaaS利用監査を軽くする方法｜使われていない契約を洗い出してコストを削る",   tags: ["SaaS管理", "コスト削減", "監査"] },
+  { slug: "ai-asset-inventory-automation",     title: "AIでIT資産台帳を自動更新する方法｜端末・アカウント・契約情報を一元化",       tags: ["IT資産管理", "台帳", "自動化"] },
+  { slug: "ai-executive-status-reporting",     title: "AIで経営向けステータス報告を自動化する方法｜現場ログから役員向け要約を作る",   tags: ["経営レポート", "ステータス報告", "要約"] },
+  { slug: "ai-ops-capacity-planning",          title: "AIで運用キャパシティ計画を立てる方法｜問い合わせ量と担当負荷を先読みする",     tags: ["キャパシティ計画", "運用負荷", "予測"] },
+  { slug: "ai-service-catalog-builder",        title: "AIサービスカタログ構築ガイド｜社内サービス一覧を更新し続ける仕組み",         tags: ["サービスカタログ", "社内IT", "情報整理"] },
+  { slug: "ai-compliance-evidence-tracking",   title: "AIで監査証跡を集める方法｜コンプライアンス証拠の保管と検索を楽にする",       tags: ["コンプライアンス", "監査証跡", "証拠管理"] },
+  { slug: "ai-release-readiness-checklist",    title: "AIでリリース準備チェックリストを作る方法｜本番前の抜け漏れを潰す実践術",     tags: ["リリース準備", "チェックリスト", "本番運用"] },
 ];
 
 // ---------------------------------------------------------------------------
