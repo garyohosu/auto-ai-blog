@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AIオンコール要約アシスタント活用法｜夜間障害の引き継ぎを3分で終える"
+- today_objective: publish "AIで変更監査ログを整える方法｜誰が何を変えたかを追える運用設計"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-change-audit-trail
+- next_run: publish article: ai-incident-retrospective-workflow
