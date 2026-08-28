@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AIで変更監査ログを整える方法｜誰が何を変えたかを追える運用設計"
+- today_objective: publish "AIで障害ふりかえりを回す方法｜事実整理から再発防止までテンプレ化する"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-incident-retrospective-workflow
+- next_run: publish article: ai-team-ops-wiki
