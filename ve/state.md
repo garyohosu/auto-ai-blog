@@ -1,6 +1,6 @@
 # state
 - phase: publishing
-- today_objective: publish "AIで障害ふりかえりを回す方法｜事実整理から再発防止までテンプレ化する"
+- today_objective: publish "AI運用Wikiの育て方｜散らばった手順書を検索できるチーム資産に変える"
 - focus_cluster: ai-tools
 - blockers: -
-- next_run: publish article: ai-team-ops-wiki
+- next_run: publish article: ai-policy-document-review
